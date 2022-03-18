@@ -174,6 +174,31 @@ public class Kata {
         {highest = n5;}
        return highest;
     }
+    public int factor(int n6){
+        int n7 = 1;
+        int count = 1;
+        for(int i = 1; i < n6; i++){
+            if (n6 % n7 == 0){
+                count++;
+            }
+            n7++;
+        }
+        return count;
+
+    }
+    public boolean prime(int n8){
+       // boolean result = true;
+        int n9 = 1;
+        int count = 1;
+        for ( int i = 1; i < n8; i++){
+            if(n8 % n9 == 0){
+count = count+1;
+            }
+            n9++;
+        }
+        if(count == 2){return true;}
+        return true;
+    }
 }
 
 

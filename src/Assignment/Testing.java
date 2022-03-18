@@ -2,7 +2,7 @@ package Assignment;
 import java.sql.SQLOutput;
 import java.util.Scanner;
 
-public class Testing {
+public class Testing<i> {
 
     public static void main(String[] args) {
         Scanner keyboard = new Scanner(System.in);
@@ -82,8 +82,15 @@ public class Testing {
         if (x > 10)
 
             System.out.println("Green");
-          System.out.println("Blue");
+        System.out.println("Blue");
 
         System.out.println("Red");
+        for (int i = 21; i >20; i=i+1) // loop to repeat 5 times
+
+        {
+            System.out.println(i); // instruction to display one row
+
+        }
     }
+
 }

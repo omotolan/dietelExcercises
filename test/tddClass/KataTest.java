@@ -37,13 +37,14 @@ public class KataTest {
         television.tvSwitch();
         assertTrue(television.isOn());
         //when
-       // television.tvSwitch(); comment line 37 and 38 out and this would work other way round
+        // television.tvSwitch(); comment line 37 and 38 out and this would work other way round
         television.tvSwitch();
         //assert
         assertFalse(television.isOn());
     }
+
     @Test
-    public void TelevisionName(){
+    public void TelevisionName() {
         //given
         Kata television = new Kata();
         television.tvSwitch();
@@ -85,8 +86,9 @@ public class KataTest {
         assertEquals(1, television.changingVolume());
 
     }
+
     @Test
-    public void MuteTest(){
+    public void MuteTest() {
         //given
         Kata television = new Kata();
         television.tvSwitch();
@@ -101,8 +103,9 @@ public class KataTest {
         //assert
         assertEquals(0, television.changingVolume());
     }
+
     @Test
-    public void UnMuteTest(){
+    public void UnMuteTest() {
         //given
         Kata television = new Kata();
         television.tvSwitch();
@@ -113,7 +116,7 @@ public class KataTest {
         television.volumeIncrease();
         assertEquals(4, television.changingVolume());
         //when
-         television.checkMute(); // i mute
+        television.checkMute(); // i mute
         television.checkMute();
         //assert
         assertEquals(4, television.changingVolume());
@@ -186,40 +189,41 @@ public class KataTest {
 
     }
 
-   /* @Test
-    public void add() {
-        int number = 2;
-       // number = number + 2;
-        while (number <= 10) {
-            System.out.print(number+ "");
-            number = number + 2;
-        }
+    /* @Test
+     public void add() {
+         int number = 2;
+        // number = number + 2;
+         while (number <= 10) {
+             System.out.print(number+ "");
+             number = number + 2;
+         }
 
-    }*/
+     }*/
     @Test
     public void add() {
         int number = 1;
         // number = number + 2;
         while (number <= 10) {
-        if(number%2==0){
-            System.out.print(number+ "");
+            if (number % 2 == 0) {
+                System.out.print(number + "");
 
-        }
+            }
             number = number + 1;
         }
 
     }
-   /* @Test
-    public void unmute(){
-        tv.power();
-        int number =1;
-        while (number<9){
-            tv.increasevolume();
-            number = number +2;
-        }
-    }*/
+
+    /* @Test
+     public void unmute(){
+         tv.power();
+         int number =1;
+         while (number<9){
+             tv.increasevolume();
+             number = number +2;
+         }
+     }*/
     @Test
-     public void checkIfOddOrEvenTest(){
+    public void checkIfOddOrEvenTest() {
         //given
         Kata checkNumber = new Kata();
         //when
@@ -228,22 +232,44 @@ public class KataTest {
         assertEquals(false, result);
 
     }
+
     @Test
-    public void biggestNumberTest(){
+    public void biggestNumberTest() {
         //given
         Kata bigNumber = new Kata();
         //when
-        int result = bigNumber.biggestNumber(3,4,5,7,9);
+        int result = bigNumber.biggestNumber(3, 4, 5, 7, 9);
         //assert
         assertEquals(9, result);
     }
+
     @Test
-    public void highestNumberTest(){
+    public void highestNumberTest() {
         //given
         Kata highestNumber = new Kata();
         //when
         int result = highestNumber.highestNumber(6, 9, 45, 67, 35);
         //assert
         assertEquals(67, result);
+    }
+
+    @Test
+    public void factorTest() {
+        //given
+        Kata factor = new Kata();
+        //when
+        int result = factor.factor(24);
+        //assert
+        assertEquals(8, result);
+    }
+    @Test
+    public void primeTest(){
+        //given
+        Kata prime = new Kata();
+        //when
+        boolean result = prime.prime(15);
+        //assert
+       // assertEquals(2,result);
+        assertTrue(result);
     }
 }
