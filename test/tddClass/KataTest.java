@@ -228,4 +228,13 @@ public class KataTest {
         assertEquals(false, result);
 
     }
+    @Test
+    public void biggestNumberTest(){
+        //given
+        Kata bigNumber = new Kata();
+        //when
+        int result = bigNumber.biggestNumber(3,4,5,7,9);
+        //assert
+        assertEquals(9, result);
+    }
 }

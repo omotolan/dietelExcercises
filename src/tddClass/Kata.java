@@ -142,6 +142,26 @@ public class Kata {
         }
         return evenOrOdd;
     }
+    public int biggestNumber(int digit1, int digit2, int digit3, int digit4, int digit5){
+        int biggest = 0;
+        if( digit1 > digit2 && digit1 > digit3 && digit1 > digit4 && digit1 > digit5){
+            biggest = digit1;
+        }
+        if(digit2 > digit1 && digit1 > digit3 && digit2 > digit4 && digit2 > digit5 ){
+            biggest = digit2;
+        }
+        if(digit3 > digit1 && digit3 > digit2 && digit3 > digit4 && digit3 > digit5 ){
+            biggest = digit3;
+        }
+        if(digit4 > digit1 && digit4 > digit2 && digit4 > digit3 && digit4 > digit5 ){
+            biggest = digit4;
+        }
+        if(digit5 > digit1 && digit5 > digit2 && digit5 > digit3 && digit5 > digit4 ){
+            biggest = digit5;
+        }
+
+        return biggest;
+    }
 }
 
 
