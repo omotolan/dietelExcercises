@@ -218,4 +218,14 @@ public class KataTest {
             number = number +2;
         }
     }*/
+    @Test
+     public void checkIfOddOrEvenTest(){
+        //given
+        Kata checkNumber = new Kata();
+        //when
+        boolean result = checkNumber.enterInteger(5);
+        //assert
+        assertEquals(false, result);
+
+    }
 }

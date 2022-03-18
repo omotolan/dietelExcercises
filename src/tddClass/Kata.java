@@ -34,6 +34,7 @@ public class Kata {
         }*/
         isOn = !isOn;
     }
+
     public boolean isOn() {
         return isOn;
     }
@@ -41,11 +42,12 @@ public class Kata {
 
     public void tvName(String name) {
         if (isOn) {
-           name = "panasonic";
-           this.name = name;
+            name = "panasonic";
+            this.name = name;
         }
     }
-    public String getTVName(){
+
+    public String getTVName() {
         return name;
     }
 
@@ -109,25 +111,39 @@ public class Kata {
             number = firstNumber / secondNumber;
             // return number;
         }
-            // if (secondNumber > firstNumber) {
-          else {
-                number = secondNumber / firstNumber;
-              //  return number;
-            }
+        // if (secondNumber > firstNumber) {
+        else {
+            number = secondNumber / firstNumber;
+            //  return number;
+        }
 
-            return number;
+        return number;
+        /*how i did mine
+         *public int quotient(int number){
+         * int number1 = 9;
+         * int number2 = 3;
+         * number = number1/number2
+         * return number;
+         *
+         *
+         * */
+
+
+    }
+
+    public boolean enterInteger(int digit) {
+        boolean evenOrOdd = false;
+        if (digit % 2 == 0) {
+            evenOrOdd = true;
+        }
+        if (digit % 2 == 1) {
+            evenOrOdd = false;
 
         }
+        return evenOrOdd;
     }
-    /*how i did mine
-     *public int quotient(int number){
-     * int number1 = 9;
-     * int number2 = 3;
-     * number = number1/number2
-     * return number;
-     *
-     *
-     * */
+}
+
 
 
 
