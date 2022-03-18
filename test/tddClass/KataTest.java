@@ -237,4 +237,13 @@ public class KataTest {
         //assert
         assertEquals(9, result);
     }
+    @Test
+    public void highestNumberTest(){
+        //given
+        Kata highestNumber = new Kata();
+        //when
+        int result = highestNumber.highestNumber(6, 9, 45, 67, 35);
+        //assert
+        assertEquals(67, result);
+    }
 }

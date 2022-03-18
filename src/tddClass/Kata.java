@@ -162,6 +162,18 @@ public class Kata {
 
         return biggest;
     }
+    public int highestNumber(int n1, int n2, int n3, int n4, int n5){
+        int highest = n1;
+        if (n2 >highest)
+        {highest= n2;}
+        if (n3 >highest)
+        {highest= n3;}
+        if (n4 >highest)
+        {highest= n4;}
+        if (n5 >highest)
+        {highest = n5;}
+       return highest;
+    }
 }
 
 
