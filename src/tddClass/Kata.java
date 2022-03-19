@@ -187,18 +187,23 @@ public class Kata {
 
     }
     public boolean prime(int n8){
-       // boolean result = true;
+      // boolean result = true;
         int n9 = 1;
         int count = 1;
-        for ( int i = 1; i < n8; i++){
-            if(n8 % n9 == 0){
-count = count+1;
+        for ( int i = 1; i < n8; i++) {
+            if (n8 % n9 == 0) {
+                count++;
             }
-            n9++;
+           n9++;
         }
-        if(count == 2){return true;}
-        return true;
+        if (count == 2) {
+           return true;
+        }
+       return false;
     }
+   // if(factor(digit)<=2) return true;
+   // return false;
+
 }
 
 

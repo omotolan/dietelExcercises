@@ -267,7 +267,7 @@ public class KataTest {
         //given
         Kata prime = new Kata();
         //when
-        boolean result = prime.prime(15);
+        boolean result = prime.prime(11);
         //assert
        // assertEquals(2,result);
         assertTrue(result);
