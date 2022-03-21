@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class TestRun {
     static Scanner input = new Scanner(System.in);
-    public void all4Triangles(int number1, int number2, int number3, String whatToPrint){
+    public void all4Triangles(int number1, int number2, int number3, int number4, String whatToPrint){
         for (int numberOfRows = 1; numberOfRows <= number1; numberOfRows++)
         {
             for (int numberOfStars = 1; numberOfStars <= numberOfRows; numberOfStars++)
@@ -28,12 +28,27 @@ public class TestRun {
 
         for (int numberOfRows2 = 1; numberOfRows2 <= number3; numberOfRows2++)
         {
-            for(int n = 2; n<=numberOfRows2; n++  ) {
-                System.out.print(" ");}
+            for(int numberOfSpaces = 2; numberOfSpaces<=numberOfRows2; numberOfSpaces++  ) {
+                System.out.print(" ");
+            }
                 for (int numberOfStars2= 10; numberOfStars2 >= numberOfRows2; numberOfStars2--) {
                     System.out.print("*");
                 }
-              //  System.out.print("*");
+
+            System.out.println();
+        }
+
+        for (int numberOfRows3 = 10; numberOfRows3 >= number4; numberOfRows3--)
+        {
+            for (int numberOfStars3= 1; numberOfStars3 <= numberOfRows3; numberOfStars3++) {
+                System.out.print("*");
+            }
+            for(int numberOfSpaces1 = 9; numberOfSpaces1>=numberOfRows3; numberOfSpaces1--  ) {
+                System.out.print(" ");}
+//            for (int numberOfStars3= 1; numberOfStars3 <= numberOfRows3; numberOfStars3++) {
+//                System.out.print("*");
+//            }
+            //  System.out.print("*");
 
             System.out.println();
         }
@@ -41,25 +56,25 @@ public class TestRun {
 
 
 
-    public void barChart(int number4, int number5, int number6, int number7, int number8, String whatToPrint){
+    public void barChart(int number5, int number6, int number7, int number8, int number9, String whatToPrint){
         //whatToPrint = "*";
-        for (int a=1; a<=number4; a++){
+        for (int a=1; a<=number5; a++){
             if(a<=30){System.out.print(whatToPrint);}
         }
         System.out.println();
-        for (int  b=1; b<=number5; b++){
+        for (int  b=1; b<=number6; b++){
             if(b<=30){System.out.print(whatToPrint);}
         }
         System.out.println();
-        for (int c=1; c<=number6; c++){
+        for (int c=1; c<=number7; c++){
             if(c<=30){System.out.print(whatToPrint);}
         }
         System.out.println();
-        for (int d=1; d<=number7; d++){
+        for (int d=1; d<=number8; d++){
             if(d<=30){System.out.print(whatToPrint);}
         }
         System.out.println();
-        for (int e=1; e<=number8; e++){
+        for (int e=1; e<=number9; e++){
             if(e<=30){System.out.print(whatToPrint);}
         }
         System.out.println();
@@ -68,7 +83,7 @@ public class TestRun {
 
     public static void main(String[] args) {
         TestRun triangle = new TestRun();
-        triangle.all4Triangles(7,1,10,"*");
+        triangle.all4Triangles(7,1,10,1,"*");
 
         System.out.println();
 
