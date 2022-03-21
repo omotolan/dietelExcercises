@@ -6,9 +6,9 @@ import java.util.Scanner;
 public class TestRun {
     static Scanner input = new Scanner(System.in);
     public void all4Triangles(int number1, int number2, int number3, String whatToPrint){
-        for (int i = 1; i <= number1; i++)
+        for (int numberOfRows = 1; numberOfRows <= number1; numberOfRows++)
         {
-            for (int j = 1; j <= i; j++)
+            for (int numberOfStars = 1; numberOfStars <= numberOfRows; numberOfStars++)
             {
                 System.out.print(whatToPrint);
             }
@@ -16,9 +16,9 @@ public class TestRun {
         }
         System.out.println();
 
-        for (int k = 10; k >= number2; k--)
+        for (int numberOfRows1 = 10; numberOfRows1 >= number2; numberOfRows1--)
         {
-            for ( int l = 1; l <= k; l++)
+            for ( int numberOfStars1 = 1; numberOfStars1 <= numberOfRows1; numberOfStars1++)
             {
                 System.out.print(whatToPrint);
             }
@@ -26,14 +26,15 @@ public class TestRun {
         }
 
 
-        for (int m = 1; m <= number3; m++)
+        for (int numberOfRows2 = 1; numberOfRows2 <= number3; numberOfRows2++)
         {
-            for(int n = 1; n<=number3; n++  ) {
-                for (int o= 1; o <= number3; o++) {
-                    System.out.print(whatToPrint);
+            for(int n = 2; n<=numberOfRows2; n++  ) {
+                System.out.print(" ");}
+                for (int numberOfStars2= 10; numberOfStars2 >= numberOfRows2; numberOfStars2--) {
+                    System.out.print("*");
                 }
-                System.out.print("#");
-            }
+              //  System.out.print("*");
+
             System.out.println();
         }
     }
@@ -86,12 +87,14 @@ public class TestRun {
         System.out.println("enter number: ");
         int numberr = input.nextInt();
         for (int number =1; number <=12; number++) {
-            if(number<=12){
-                System.out.print(numberr+ " * " + number);
+                System.out.print(numberr+ " * " + number + " = "+number*numberr);
             }
-                System.out.println(" = "+number*numberr);
 
 
+        int count =1;
+        while(count<=12){
+            System.out.println(numberr + "*" + count + "=" + count);
+            count++;
         }
 //        Scanner keyboard = new Scanner (System.in);
 //        final int SECRET = 27; // secret number
