@@ -5,10 +5,10 @@ import java.util.Scanner;
 
 public class TestRun {
     Scanner input = new Scanner(System.in);
-    public void all4Triangles(int i, int j, int k, int l, int m, int n,int o, String whatToPrint){
-        for (i = 1; i <= 10; i++)
+    public void all4Triangles(int number1, int number2, int number3, String whatToPrint){
+        for (int i = 1; i <= number1; i++)
         {
-            for (j = 1; j <= i; j++)
+            for (int j = 1; j <= i; j++)
             {
                 System.out.print(whatToPrint);
             }
@@ -16,9 +16,9 @@ public class TestRun {
         }
         System.out.println();
 
-        for ( k = 10; k >= 1; k--)
+        for (int k = 10; k >= number2; k--)
         {
-            for ( l = 1; l <= k; l++)
+            for ( int l = 1; l <= k; l++)
             {
                 System.out.print(whatToPrint);
             }
@@ -26,35 +26,35 @@ public class TestRun {
         }
 
 
-        for ( m = 10; m >= 1; m--)
+        for (int m = 10; m >= number3; m--)
         {
-            for ( n = 1; n <=10- m; n++)
+            for (int n = 1; n <=10- m; n++)
             {
-                for( o =1; o<=m; o++) {
+                for(int o =1; o<=m; o++) {
                     System.out.print(whatToPrint);
                 }
             }
             System.out.println();
         }
     }
-    public void barChart(int a, int b, int c, int d, int e, String whatToPrint){
-        for (a=1; a<=2; a++){
+    public void barChart(int number4, int number5, int number6, int number7, int number8, String whatToPrint){
+        for (int a=1; a<=number4; a++){
             if(a<=30){System.out.print("*");}
         }
         System.out.println();
-        for ( b=1; b<=17; b++){
+        for (int  b=1; b<=number5; b++){
             if(b<=30){System.out.print("*");}
         }
         System.out.println();
-        for ( c=1; c<=24; c++){
+        for (int c=1; c<=number6; c++){
             if(c<=30){System.out.print("*");}
         }
         System.out.println();
-        for ( d=1; d<=5; d++){
+        for (int d=1; d<=number7; d++){
             if(d<=30){System.out.print("*");}
         }
         System.out.println();
-        for ( e=1; e<=9; e++){
+        for (int e=1; e<=number8; e++){
             if(e<=30){System.out.print("*");}
         }
         System.out.println();
@@ -63,12 +63,13 @@ public class TestRun {
 
     public static void main(String[] args) {
         TestRun triangle = new TestRun();
-        triangle.all4Triangles(1,1,10,1,10,1, 1,"*");
+        triangle.all4Triangles(7,1,10,"*");
 
         System.out.println();
 
         TestRun barChart = new TestRun();
-        barChart.barChart(1,1,1,1,1, "A");
+        System.out.println("number for barchart should be between 0 to 30");
+        barChart.barChart(7,27,16,9,30, "A");
 
 
 
