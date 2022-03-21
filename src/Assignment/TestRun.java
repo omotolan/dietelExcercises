@@ -4,7 +4,7 @@ package Assignment;
 import java.util.Scanner;
 
 public class TestRun {
-    Scanner input = new Scanner(System.in);
+    static Scanner input = new Scanner(System.in);
     public void all4Triangles(int number1, int number2, int number3, String whatToPrint){
         for (int i = 1; i <= number1; i++)
         {
@@ -26,36 +26,40 @@ public class TestRun {
         }
 
 
-        for (int m = 10; m >= number3; m--)
+        for (int m = 1; m <= number3; m++)
         {
-            for (int n = 1; n <=10- m; n++)
-            {
-                for(int o =1; o<=m; o++) {
+            for(int n = 1; n<=number3; n++  ) {
+                for (int o= 1; o <= number3; o++) {
                     System.out.print(whatToPrint);
                 }
+                System.out.print("#");
             }
             System.out.println();
         }
     }
+
+
+
     public void barChart(int number4, int number5, int number6, int number7, int number8, String whatToPrint){
+        //whatToPrint = "*";
         for (int a=1; a<=number4; a++){
-            if(a<=30){System.out.print("*");}
+            if(a<=30){System.out.print(whatToPrint);}
         }
         System.out.println();
         for (int  b=1; b<=number5; b++){
-            if(b<=30){System.out.print("*");}
+            if(b<=30){System.out.print(whatToPrint);}
         }
         System.out.println();
         for (int c=1; c<=number6; c++){
-            if(c<=30){System.out.print("*");}
+            if(c<=30){System.out.print(whatToPrint);}
         }
         System.out.println();
         for (int d=1; d<=number7; d++){
-            if(d<=30){System.out.print("*");}
+            if(d<=30){System.out.print(whatToPrint);}
         }
         System.out.println();
         for (int e=1; e<=number8; e++){
-            if(e<=30){System.out.print("*");}
+            if(e<=30){System.out.print(whatToPrint);}
         }
         System.out.println();
 
@@ -72,8 +76,23 @@ public class TestRun {
         barChart.barChart(7,27,16,9,30, "A");
 
 
+        int z = 10;
+        while(z>0){
+            z--;
+            System.out.print(z+" ");
+        }
 
 
+        System.out.println("enter number: ");
+        int numberr = input.nextInt();
+        for (int number =1; number <=12; number++) {
+            if(number<=12){
+                System.out.print(numberr+ " * " + number);
+            }
+                System.out.println(" = "+number*numberr);
+
+
+        }
 //        Scanner keyboard = new Scanner (System.in);
 //        final int SECRET = 27; // secret number
 //        int num; // to hold user's guess
