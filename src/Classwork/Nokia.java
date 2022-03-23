@@ -226,15 +226,15 @@ public class Nokia {
                 System.out.println("");
                 numberSelected = keyboard.nextInt();
                 switch (numberSelected) {
-                    case 1 -> System.out.println(" ");
-                    case 2 -> System.out.println(" ");
-                    case 3 -> System.out.println(" ");
-                    case 4 -> System.out.println(" ");
-                    case 5 -> System.out.println(" ");
-                    case 6 -> System.out.println(" ");
-                    case 7 -> System.out.println(" ");
-                    case 8 -> System.out.println(" ");
-                    case 9 -> System.out.println(" ");
+                    case 1 -> System.out.println("Ringing tone");
+                    case 2 -> System.out.println("Ringing volume");
+                    case 3 -> System.out.println("Incoming call alert");
+                    case 4 -> System.out.println("Composer");
+                    case 5 -> System.out.println("Message alert tone");
+                    case 6 -> System.out.println(" Keypad tones");
+                    case 7 -> System.out.println("Warning and game tones");
+                    case 8 -> System.out.println("Vibrating alert");
+                    case 9 -> System.out.println("Screen saver");
                 }
                 break;
             case 6 :
