@@ -2,7 +2,7 @@ package tddClass;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class AutomaticBikeTest {
     @Test
@@ -12,7 +12,7 @@ public class AutomaticBikeTest {
     //when
     tjayBike.powerBike(false);
     //assert
-    assertEquals( true, tjayBike.isOn());
+        assertTrue(tjayBike.isOn());
     }
     @Test
     public void offBikeTest(){
@@ -22,7 +22,7 @@ public class AutomaticBikeTest {
         //given
         tjayBike.powerBike(false);
         //assert
-        assertEquals( false, tjayBike.isOn());
+        assertFalse(tjayBike.isOn());
     }
 
     @Test

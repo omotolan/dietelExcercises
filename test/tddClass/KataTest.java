@@ -229,7 +229,7 @@ public class KataTest {
         //when
         boolean result = checkNumber.enterInteger(5);
         //assert
-        assertEquals(false, result);
+        assertFalse(result);
 
     }
 

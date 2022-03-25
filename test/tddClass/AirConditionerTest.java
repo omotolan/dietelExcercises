@@ -2,7 +2,7 @@ package tddClass;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class AirConditionerTest {
     @Test
@@ -10,7 +10,7 @@ public class AirConditionerTest {
 
         AirConditioner tolaniAir = new AirConditioner();
         tolaniAir.powerOn(true);
-        assertEquals(true, tolaniAir.getOn());
+        assertTrue(tolaniAir.getOn());
     }
 
      @Test
@@ -18,7 +18,7 @@ public class AirConditionerTest {
 
          AirConditioner tolaniAir = new AirConditioner();
          tolaniAir.powerOff(false);
-         assertEquals( false, tolaniAir.getOff());
+         assertFalse(tolaniAir.getOff());
      }
     @Test
     public void testIncreaseTemp() {
