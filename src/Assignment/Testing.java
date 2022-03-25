@@ -1,8 +1,7 @@
 package Assignment;
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
-public class Testing<i> {
+public class Testing {
 
     public static void main(String[] args) {
         Scanner keyboard = new Scanner(System.in);
