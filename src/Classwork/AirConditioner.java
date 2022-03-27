@@ -1,9 +1,10 @@
 package Classwork;
 
 public class AirConditioner {
-public static int temp;
+    public int temp;
 
-    public static void setTemperature(int temp){
+    public void setTemperature(int temp) {
+this.temp=temp;
 
     }
     public int getTemperature(){
