@@ -13,6 +13,7 @@ public class AccountTest {
         secondAccount.amount = 0.00;
         secondAccount.name = "akinsola";
         secondAccount.balance = 0.00;
+        System.out.println(secondAccount.name);
 
         firstAccount.deposit(20000);
         System.out.println(firstAccount.balance);
@@ -33,5 +34,10 @@ public class AccountTest {
         firstAccount.transfer(secondAccount, 500);
         System.out.println(firstAccount.balance);
         System.out.println(secondAccount.balance);
+
+        //practiced assigning method to variable name
+        double test = firstAccount.withdrawal(200);
+        System.out.println(test);
+        System.out.println(firstAccount.withdrawal(200));
     }
 }
