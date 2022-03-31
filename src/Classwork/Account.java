@@ -1,9 +1,23 @@
 package Classwork;
 
 public class Account {
-    String name;
-    double amount;
-    double balance;
+    String name = "";
+    double amount = 0.0;
+   static double balance = 0.0;
+    private static String accountNumber = "";
+    public static double interestRate = 0;
+
+    public Account(String accNumber){
+        this.accountNumber = accNumber;
+    }
+    public static void setInterestRate(double interest){
+        interestRate = interest;
+    }
+
+    public double  addInterest(){
+        balance += (balance * interestRate)/100;
+        return balance;
+    }
 
     public void deposit(int amount){
         this.amount += amount;

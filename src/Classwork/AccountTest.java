@@ -4,12 +4,12 @@ public class AccountTest {
 
     public static void main(String[] args) {
 
-        Account firstAccount = new Account();
+        Account firstAccount = new Account("267723763873");
         firstAccount.amount = 0.00;
         firstAccount.name = "tolani";
         firstAccount.balance = 0.00;
 
-        Account secondAccount = new Account();
+        Account secondAccount = new Account("48038937842");
         secondAccount.amount = 0.00;
         secondAccount.name = "akinsola";
         secondAccount.balance = 0.00;
@@ -39,5 +39,14 @@ public class AccountTest {
         double test = firstAccount.withdrawal(200);
         System.out.println(test);
         System.out.println(firstAccount.withdrawal(200));
+
+        // static method
+        Account.setInterestRate(10);
+
+        firstAccount.addInterest();
+        secondAccount.addInterest();
+
+        System.out.println("first account number balance is"+firstAccount.addInterest());
+       System.out.println("second account number balance is"+secondAccount.addInterest());
     }
 }

@@ -75,20 +75,25 @@ public class Testing {
             price = price / 2;
             System.out.println("Ticket price = " + price);
         }*/
-        int x;
-        System.out.print("Enter a number: ");
-        x = keyboard.nextInt();
-        if (x > 10)
+//        int x;
+//        System.out.print("Enter a number: ");
+//        x = keyboard.nextInt();
+//        if (x > 10)
+//
+//            System.out.println("Green");
+//        System.out.println("Blue");
+//
+//        System.out.println("Red");
+//        for (int i = 21; i >20; i=i+1) // loop to repeat 5 times
+//
+//        {
+//            System.out.println(i); // instruction to display one row
+//
+//        }
 
-            System.out.println("Green");
-        System.out.println("Blue");
-
-        System.out.println("Red");
-        for (int i = 21; i >20; i=i+1) // loop to repeat 5 times
-
-        {
-            System.out.println(i); // instruction to display one row
-
+        String word = "tolani";
+        for(int i = 0; i<=word.length(); i++){
+            System.out.println(word.charAt(i));
         }
     }
 
