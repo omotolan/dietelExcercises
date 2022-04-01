@@ -275,7 +275,6 @@ public class Myers_Briggs_Questionnaire {
 
 
 
-
         }
     }
 
