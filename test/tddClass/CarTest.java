@@ -13,10 +13,10 @@ public class CarTest{
         assertSame("toyota", toyota.getModel());
         toyota.setYear("2020");
         assertSame("2020", toyota.getYear());
-        toyota.setPrice(3_000_000.0);
-        assertEquals(3_000_000.0, toyota.getPrice());
+        toyota.setPrice(3_000.0);
+        assertEquals(3_000.0, toyota.getPrice());
         toyota.discountedPrice5();
-        assertEquals(2_850_000.0, toyota.discountedPrice5());
+        assertEquals(1_500_000.0, toyota.discountedPrice5());
 
     }
     @Test
@@ -26,10 +26,10 @@ public class CarTest{
         assertSame("4Matic", benz.getModel());
         benz.setYear("2022");
         assertSame("2022", benz.getYear());
-        benz.setPrice(4_000_000.0);
-        assertEquals(4_000_000.0, benz.getPrice());
+        benz.setPrice(4_000.0);
+        assertEquals(4_000.0, benz.getPrice());
         benz.discountedPrice7();
-        assertEquals(3_720_000.0, benz.discountedPrice7());
+        assertEquals(280_0000.0, benz.discountedPrice7());
 
 
     }

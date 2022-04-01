@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertSame;
 
 public class PetrolPurchaseTest {
     @Test
-    public void PetrolPurchaseTest(){
+    public void PetrolPurchaseTests(){
             PetrolPurchase total = new PetrolPurchase("anywhere", "petrol", 9, 165.0, 9.0);
             total.setLocation("ojota");
             assertSame("ojota", total.getLocation());

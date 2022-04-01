@@ -4,6 +4,7 @@ public class Car {
         String model;
         String year;
         double price;
+
         public Car(String model, String year, double price){
             this.model = model;
             this.year = year;
@@ -28,12 +29,10 @@ public class Car {
             return price;
         }
         public double discountedPrice5(){
-//            double amount = (price * 5)/100;
-            double amount = price * 0.05;
-            return price-=amount;
+
+            return  (price * 5)/0.01;
         }
     public double discountedPrice7(){
-        double amount = (price * 7)/100;
-        return price-=amount;
+        return (price * 7)/0.01;
     }
 }
