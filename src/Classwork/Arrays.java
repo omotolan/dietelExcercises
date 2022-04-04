@@ -28,8 +28,9 @@ public class Arrays {
 
   //assigment
         int[] figures = {34, 223, 53, 57, 43, 32, 566, 234, 344, 78};
-        for(int l = 0; l< figures.length; l++)
-        System.out.print(figures[l] + " ");
+        for (int figure : figures) {
+            System.out.print(figure + " ");
+        }
         System.out.println();
         System.out.println("Sum of the array is" + " " + sumOfFigures(figures));
         System.out.println();
@@ -39,9 +40,9 @@ public class Arrays {
         }
         public static int highestFigure(int[] array){
         int highest = array[0] ;
-            for (int o = 0; o< array.length; o++){
-                if(array[o]>highest){
-                    highest =  array[o];
+            for (int i : array) {
+                if (i > highest) {
+                    highest = i;
                 }
             }
             return  highest;
@@ -55,9 +56,9 @@ public class Arrays {
         }
         public static  double sumOfFigures(int[] array){
        int sum = 0;
-        for(int j = 0; j<array.length; j++){
-            sum += array[j];
-        }
+            for (int i : array) {
+                sum += i;
+            }
             return sum;
         }
 }

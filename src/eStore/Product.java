@@ -1,4 +1,4 @@
-package Estore;
+package eStore;
 
 public class Product {
     int producId;

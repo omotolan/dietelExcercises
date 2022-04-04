@@ -1,4 +1,4 @@
-package Estore;
+package eStore;
 
 public class Users {
     private int age;
