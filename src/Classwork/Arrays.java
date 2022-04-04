@@ -37,12 +37,16 @@ public class Arrays {
         System.out.println( "highest number in the array list is " + " " + highestFigure(figures));
         System.out.println();
         System.out.println("average of the array is" + " " + averageOfFigure(figures));
+        System.out.println();
+        System.out.println("highest number in the array list using Math  class is " + " " + maxWithMaxClass(figures));
         }
+
+
         public static int highestFigure(int[] array){
-        int highest = array[0] ;
-            for (int i : array) {
-                if (i > highest) {
-                    highest = i;
+            int highest = array[0] ;
+            for (int i = 0; i< array.length; i++){
+                if(array[i]>highest){
+                    highest =  array[i];
                 }
             }
             return  highest;
@@ -55,11 +59,21 @@ public class Arrays {
         return  sumOfFigures(array)/ array.length;
         }
         public static  double sumOfFigures(int[] array){
-       int sum = 0;
-            for (int i : array) {
-                sum += i;
+            int sum = 0;
+            for(int i = 0; i<array.length; i++){
+                sum += array[i];
             }
             return sum;
         }
+        public static int maxWithMaxClass(int[] array){
+            // finding max figure with Math class
+            int max = array[0];
+            for (int i = 1; i<array.length; i++) {
+                max = Math.max(max, array[i]);
+            }
+            System.out.println(max);
+        return max;
+        }
+    // int result = Math.max(45, Math.max(34, Math.max(232, Math.max(2346, 5))));
 }
 
