@@ -1,6 +1,8 @@
 package Classwork;
 
 
+import java.util.Scanner;
+
 //practising array
 public class Arrays {
     public static void main(String[] args) {
@@ -53,6 +55,35 @@ public class Arrays {
         System.out.println("average of the array is" + " " + averageOfFigure(figures));
         System.out.println();
         System.out.println("highest number in the array list using Math  class is " + " " + maxWithMaxClass(figures));
+
+
+        // printing out student and subject grade
+
+        Scanner input = new Scanner(System.in);
+        System.out.println();
+        System.out.println("enter number of students");
+        int numberOfStudent = input.nextInt();
+        System.out.println("enter number of subjects");
+        int    numberOfSubject = input.nextInt();
+        int[][] studentData = new int [numberOfStudent][numberOfSubject];
+
+        for(int i = 0; i<numberOfStudent; i++) {
+            System.out.println("serial number for student" + " " + (i+1));
+            for(int j = 0; j<numberOfSubject; j++) {
+                System.out.println("Enter score of student");
+                studentData[i][j] = input.nextInt();
+            }
+        }
+        System.out.println("S/N");
+        for(int i = 0; i<numberOfStudent; i++){
+            System.out.print(i+1 + "    ");
+
+            for(int j = 0; j<numberOfSubject; j++){
+                System.out.print(studentData[i][j] + "  ");
+            }
+            System.out.println();
+        }
+
 
     }
 
