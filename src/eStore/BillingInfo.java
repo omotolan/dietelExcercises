@@ -3,6 +3,6 @@ package eStore;
 public class BillingInfo {
     String receiverPhoneNumber;
     String receiverName;
-    String deliveryAddress;
+     DeliveryAddress deliveryAddress;
     CreditCardInformation creditCardInformation;
 }

@@ -1,6 +1,6 @@
 package eStore;
 
-public class Addresses {
+public class HomeAddresses {
     String cityName;
     String countryName;
     String houseNumber;

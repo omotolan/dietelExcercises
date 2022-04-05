@@ -1,4 +1,4 @@
-package Classwork;
+package FreeStyle;
 
 import java.util.Scanner;
 

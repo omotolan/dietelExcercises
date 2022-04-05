@@ -1,5 +1,6 @@
 package Classwork;
 
+
 //practising array
 public class Arrays {
     public static void main(String[] args) {
@@ -20,17 +21,30 @@ public class Arrays {
 
         int[] numbers = new int[300];
         for (int j =0; j<300; j++) {
-            numbers[j]=j+1;}
+            numbers[j]=j+1;
+        }
             for (int i = 0; i <300; i++) {
                 System.out.print(numbers[i]+ " ");
             }
         System.out.println();
+            // enhanced for loop of what's above
+        for(int number : numbers){
+            System.out.print(number+ " ");
+        }
+        //easy way to use for loop for arrays and also the enhanced for loop
+        //numbers.for
+        System.out.println();
 
   //assigment
         int[] figures = {34, 223, 53, 57, 43, 32, 566, 234, 344, 78};
-        for (int figure : figures) {
+        for (int i = 0; i < figures.length; i++) {
+            int figure = figures[i];
             System.out.print(figure + " ");
         }
+        // to print out the numbers in the array
+        System.out.println(java.util.Arrays.toString(figures));
+
+
         System.out.println();
         System.out.println("Sum of the array is" + " " + sumOfFigures(figures));
         System.out.println();
@@ -39,14 +53,16 @@ public class Arrays {
         System.out.println("average of the array is" + " " + averageOfFigure(figures));
         System.out.println();
         System.out.println("highest number in the array list using Math  class is " + " " + maxWithMaxClass(figures));
-        }
+
+    }
 
 
+        // methods
         public static int highestFigure(int[] array){
             int highest = array[0] ;
-            for (int i = 0; i< array.length; i++){
-                if(array[i]>highest){
-                    highest =  array[i];
+            for (int j : array) {
+                if (j > highest) {
+                    highest = j;
                 }
             }
             return  highest;
@@ -60,16 +76,16 @@ public class Arrays {
         }
         public static  double sumOfFigures(int[] array){
             int sum = 0;
-            for(int i = 0; i<array.length; i++){
-                sum += array[i];
+            for (int j : array) {
+                sum += j;
             }
             return sum;
         }
         public static int maxWithMaxClass(int[] array){
             // finding max figure with Math class
             int max = array[0];
-            for (int i = 1; i<array.length; i++) {
-                max = Math.max(max, array[i]);
+            for (int i : array){ // i<array.length; i++) {
+                max = Math.max(max, i);
             }
             System.out.println(max);
         return max;
