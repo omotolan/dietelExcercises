@@ -18,7 +18,7 @@ public class BankTest {
     public void bankCanCreateAccountTest(){
         Bank accessBank = new Bank("Access Bank", 10);
         accessBank.createAccountFor("saheed", "osupa", "1234");
-        assertEquals(0, accessBank.getNumberOfCustomers());
+        assertEquals(1, accessBank.getNumberOfCustomers());
     }
 
 }
