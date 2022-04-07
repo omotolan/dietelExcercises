@@ -40,8 +40,8 @@ public class Arrays {
   //assigment
         int[] figures = {34, 223, 53, 57, 43, 32, 566, 234, 344, 78};
         for (int i = 0; i < figures.length; i++) {
-            int figure = figures[i];
-            System.out.print(figure + " ");
+            //int figure = figures[i];
+            System.out.print(figures[i] + " ");
         }
         // to print out the numbers in the array
         System.out.println(java.util.Arrays.toString(figures));
