@@ -21,10 +21,10 @@ public class InvoiceTest {
 
         // using the get invoice amount method
         invoice.getAmount(5);
-        System.out.println( invoice.getAmount(5));
+        System.out.println("invoice when quantity is positive " + invoice.getAmount(5));
         // to check for the if condition
         invoice.getAmount(5);
-        System.out.println( invoice.getAmount(0));
+        System.out.println("invoice when quantity purchased is zero " + invoice.getAmount(0));
 
 
 
