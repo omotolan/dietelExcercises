@@ -31,7 +31,7 @@ public class Account {
        }
      else{
          this.amount -= amount;
-         this.balance=this.amount;
+         this.balance = this.amount;
          System.out.println("transaction successful");
          return true;
        }
