@@ -16,11 +16,11 @@ public class DivisionWithoutDivisionSign {
         int divisor = keyboard.nextInt();
 
         int i = 0;
-        while (dividend >= 0) {
+        while (dividend >= divisor) {
            i++;
            dividend -= divisor;
         }
-        System.out.println(i-1);
+        System.out.println(i);
         System.out.println(dividend);
 
     }
