@@ -18,15 +18,12 @@ public class SalesCommissionCalculator {
 
         System.out.println("enter number of item 2: ");
         int item2Quantity = keyboard.nextInt();
-       // double item2Sales = item2Price * item2Quantity;
 
         System.out.println("enter number of item 3: ");
         int item3Quantity = keyboard.nextInt();
-       // double item3Sales = item3Price * item3Quantity;
 
         System.out.println("enter number of item 4: ");
         int item4Quantity = keyboard.nextInt();
-        //double item4Sales = item4Price * item4Quantity;
 
         int counter = 0;
         double item1Sales = 0;
@@ -69,5 +66,6 @@ public class SalesCommissionCalculator {
         double earning = wage + totalItemBonus;
 
         System.out.println("sales person total earning is: " + earning);
+        System.out.println(counter);
     }
 }
