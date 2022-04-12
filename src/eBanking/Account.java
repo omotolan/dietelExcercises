@@ -22,9 +22,22 @@ public class Account {
         balance+=amount;
     }
 
+    @Override
+    public String toString() {
+        return "Account{" +
+                "ACCOUNT_NUMBER='" + ACCOUNT_NUMBER + '\'' +
+                ", accountName='" + accountName + '\'' +
+                ", balance=" + balance +
+                '}';
+    }
+
     public void withdrawal(int amount, String pin) {
         if(pin.equals(this.pin)) {
             balance -= amount;
         }
+    }
+
+    public String getAccountName() {
+        return accountName;
     }
 }

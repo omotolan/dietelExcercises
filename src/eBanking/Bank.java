@@ -20,11 +20,13 @@ public class Bank {
         return accounts.length;
     }
 
-    public void createAccountFor(String firstName, String lastName, String pin) {
+    public Account createAccountFor(String firstName, String lastName, String pin) {
         String accountNumber = (numberOfCustomer+1)+"";
         Account account = new Account(accountNumber,firstName,lastName,pin);
         accounts[numberOfCustomer] = account;
         numberOfCustomer++;
+
+        return account;
     }
 
     public int getNumberOfCustomers() {
