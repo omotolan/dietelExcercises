@@ -24,11 +24,12 @@ public class Account {
 
     @Override
     public String toString() {
-        return "Account{" +
-                "ACCOUNT_NUMBER='" + ACCOUNT_NUMBER + '\'' +
-                ", accountName='" + accountName + '\'' +
-                ", balance=" + balance +
-                '}';
+        String toReturn = String.format("""
+                Account Name: %s
+                Account Number: %s
+                Balance: %d
+                """, accountName, ACCOUNT_NUMBER, balance);
+        return toReturn;
     }
 
     public void withdrawal(int amount, String pin) {

@@ -1,10 +1,10 @@
 package Chapter3;
 
 public class PetrolPurchase {
-    String location;
-    String petrolType;
-    int quantity;
-    double pricePerLiter;
+    private String location;
+    private String petrolType;
+    private int quantity;
+    private double pricePerLiter;
     double percentageDiscount;
     double netAmountPurchased;
     public PetrolPurchase(String location, String petrolType, int quantity, double pricePerLiter, double percentageDiscount){

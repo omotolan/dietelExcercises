@@ -7,7 +7,6 @@ public class Atm {
     private  static Bank zuBank = new Bank("Zubank", 10);
     public static void main(String[] args) {
         runApp();
-
     }
 
     private static void runApp() {
@@ -30,9 +29,15 @@ public class Atm {
             case 3 -> withdrawal();
             case 4 -> transfer();
             case 5 -> checkBalance();
+            case 6 -> exit();
             default -> runApp();
         }
 
+    }
+
+    private static void exit() {
+        System.out.println("Thank you for banking with us");
+        System.exit(0);
     }
 
     private static void transfer() {
@@ -55,7 +60,7 @@ public class Atm {
 
     private static void deposit() {
         System.out.println("which account");
-        String accountNumber = keyboard.nextLine();
+        String accountNumber = keyboard.next();
         Account account = zuBank.findAccount(Integer.parseInt(accountNumber));
         System.out.println("the account name is " + account.getAccountName());
         System.out.println("how much");
@@ -93,16 +98,16 @@ public class Atm {
         System.out.println("your pin");
         String pin = keyboard.nextLine();
         Account account = zuBank.findAccount(Integer.parseInt(accountNumber));
-        System.out.println("Your balance is");
+        System.out.println("Your balance is" + account.getAccountBalance(pin));
     }
 
     private static void createAccount() {
         System.out.println("Enter your name");
-        String firstName = keyboard.nextLine();
+        String firstName = keyboard.next();
         System.out.println("Enter your lastname");
-        String lastName = keyboard.nextLine();
+        String lastName = keyboard.next();
         System.out.println("create pin");
-        String pin = keyboard.nextLine();
+        String pin = keyboard.next();
         System.out.println();
         System.out.println();
         Account savedAccount = zuBank.createAccountFor(firstName, lastName, pin);
