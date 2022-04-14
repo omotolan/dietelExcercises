@@ -27,6 +27,7 @@ public class GasMileage {
             trip = keyboard.nextInt();
             counter++;
 
+
         }
         milesPerGallon = (double) miles / gallons;
         milesPerGallon += totalTrips * milesPerGallon;

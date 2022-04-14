@@ -34,6 +34,24 @@ public class StackTest {
         stack.push(3);
         stack.pop();
         assertFalse(stack.isEmpty());
+    }
+    @Test
+    public void pushX_popX_elementShouldBeXTest(){
+        stack.push(34);
+        int element = stack.pop();
+        assertEquals(34,element);
+    }
+    @Test
+    public void pushXandY_popYandX_elementIsYthenXTest(){
+        stack.push(34);
+        stack.push(67);
+        int element = stack.pop();
+        assertEquals(67, element);
+        element = stack.pop();
+        assertEquals(34, element);
+    }
+    @Test
+    public void pushXandY_peekReturnsYTest(){
 
     }
 }

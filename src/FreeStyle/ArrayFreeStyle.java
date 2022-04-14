@@ -23,6 +23,19 @@ public class ArrayFreeStyle {
         String[] string = new String[4];
         System.out.println(Arrays.toString(string));
 
+        // collecting array indexes from user
+        Scanner keyboard = new Scanner(System.in);
+        int[] ar = new int[5];
+        System.out.println(Arrays.toString(ar));
+        for(int i = 0; i< ar.length; i++){
+            System.out.println("enter array indexes: ");
+            ar[i] = keyboard.nextInt();
+        }
+        for (int j = 0; j < ar.length; j++) {
+            System.out.println(ar[j]);
+        }
+
+
     }
     public static int sum(int[] array){
         int sum = 0;

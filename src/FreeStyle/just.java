@@ -30,6 +30,10 @@ public class just {
 
         grade();
 
+        display();
+        display();
+        display();
+        display();
     }
    static int studentGrade = 40;
     public static void grade(){
@@ -38,5 +42,8 @@ public class just {
             System.out.println("Passed");
         }
         System.out.println("Passed");
+    }
+    public static void display(){
+        System.out.println("i love you");
     }
 }
