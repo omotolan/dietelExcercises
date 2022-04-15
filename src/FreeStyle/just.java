@@ -35,15 +35,18 @@ public class just {
         display();
         display();
     }
-   static int studentGrade = 40;
-    public static void grade(){
+
+    static int studentGrade = 40;
+
+    public static void grade() {
         if (studentGrade >= 60) {
-           // return true;
+            // return true;
             System.out.println("Passed");
         }
         System.out.println("Passed");
     }
-    public static void display(){
+
+    public static void display() {
         System.out.println("i love you");
     }
 }

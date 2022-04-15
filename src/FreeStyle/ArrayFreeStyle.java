@@ -7,7 +7,7 @@ public class ArrayFreeStyle {
     public static void main(String[] args) {
 
         int[] figures = {34, 223, 53, -57, 43, 32, -566, 234, 344, 78};
-        for (int i : figures){  //0; i < figures.length; i++){
+        for (int i : figures) {  //0; i < figures.length; i++){
             System.out.print(i + " ");
         }
         System.out.println();
@@ -27,7 +27,7 @@ public class ArrayFreeStyle {
         Scanner keyboard = new Scanner(System.in);
         int[] ar = new int[5];
         System.out.println(Arrays.toString(ar));
-        for(int i = 0; i< ar.length; i++){
+        for (int i = 0; i < ar.length; i++) {
             System.out.println("enter array indexes: ");
             ar[i] = keyboard.nextInt();
         }
@@ -37,9 +37,10 @@ public class ArrayFreeStyle {
 
 
     }
-    public static int sum(int[] array){
+
+    public static int sum(int[] array) {
         int sum = 0;
-        for(int i : array){
+        for (int i : array) {
             sum += i;
         }
         return sum;
