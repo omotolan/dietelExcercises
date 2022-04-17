@@ -17,8 +17,8 @@ public class DivisionWithoutDivisionSign {
 
         int i = 0;
         while (dividend >= divisor) {
-           i++;
-           dividend -= divisor;
+            i++;
+            dividend -= divisor;
         }
         System.out.println(i);
         System.out.println(dividend);

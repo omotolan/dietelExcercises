@@ -10,13 +10,13 @@ public class Testing {
         int studentsNumber = input.nextInt();
         System.out.println("enter subjects: ");
         int studentSubject = input.nextInt();
-       // int[] score = {2, 3, 7, 8};
-        int [] grade = new int [studentSubject];
+        // int[] score = {2, 3, 7, 8};
+        int[] grade = new int[studentSubject];
         int[] students = new int[studentsNumber];
 
         for (int n = 0; n < students.length; n++) {
             //System.out.println(" enter nuber of student: ");
-           // students[n] = input.nextInt();
+            // students[n] = input.nextInt();
             System.out.println(n);
 
 
@@ -31,11 +31,10 @@ public class Testing {
             System.out.println();
 
 
-
             for (int i = 0; i < grade.length; i++) {
                 //System.out.print(student[i] + " ");
-               // total = 0;
-               //2 total = 0;
+                // total = 0;
+                //2 total = 0;
                 total += grade[i];
 
 

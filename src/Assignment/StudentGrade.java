@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class StudentGrade {
     private static int totalGrade;
+
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println();
@@ -13,7 +14,6 @@ public class StudentGrade {
         System.out.println("enter number of subjects");
         int numberOfSubject = input.nextInt();
         int[][] studentData = new int[numberOfStudent][numberOfSubject];
-
 
 
         for (int i = 0; i < numberOfStudent; i++) {
