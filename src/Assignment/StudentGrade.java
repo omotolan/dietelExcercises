@@ -3,17 +3,18 @@ package Assignment;
 import java.util.Scanner;
 
 public class StudentGrade {
-    private static int totalGrade;
+    private static int sum;
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println();
-        String[] heading = {"Student", "    SUB1", "    SUB2", "    SUB3", "    TOT", " AVE", " POS"};
         System.out.println("enter number of students");
         int numberOfStudent = input.nextInt();
         System.out.println("enter number of subjects");
         int numberOfSubject = input.nextInt();
         int[][] studentData = new int[numberOfStudent][numberOfSubject];
+        int[][] total = new int[numberOfStudent][numberOfSubject];
+        double[][] average = new double[numberOfStudent][numberOfSubject];
 
 
         for (int i = 0; i < numberOfStudent; i++) {
@@ -21,42 +22,79 @@ public class StudentGrade {
             for (int j = 0; j < numberOfSubject; j++) {
                 System.out.println("Enter score of student");
                 studentData[i][j] = input.nextInt();
-//                for (int a = 0; a <numberOfSubject ; a++) {
-//                    System.out.println(totalGrade);
-//                    totalGrade = 0;
-//                    totalGrade += studentData[i][j];
-//                }
-                for (int a = 0; a < numberOfSubject; a++) {
-
-                    totalGrade = 0;
-                    totalGrade = studentData[i][a] + totalGrade;
                 }
             }
 
-        }
-
-
-        System.out.println("S/N");
-//        for (int i = 0; i < heading.length; i++) {
-//            System.out.print(heading[i]);
-//        }
         System.out.println();
         for (int i = 0; i < numberOfStudent; i++) {
-            System.out.print(i + 1 + "    ");
-
+            sum = 0;
             for (int j = 0; j < numberOfSubject; j++) {
-                System.out.print(studentData[i][j] + "        ");
-                //
 
+                sum +=studentData[i][j];
+                total[i][0] = sum;
+                average[i][0] = (double) total[i][0] / numberOfSubject;
             }
-            System.out.println();
+        }
+        //method call
+        equals();
+        System.out.println();
+        System.out.print("s/n" + "\t");
+        for (int i = 0; i < numberOfSubject; i++) {
+            System.out.print("Sub"+ (i+1) + "\t" );
 
         }
-//        for (int i = 0; i <numberOfStudent ; i++) {
-//            System.out.println();
-//
-//
-//        }
-        System.out.println(totalGrade);
+        System.out.print("tot"+ "\t\t");
+        System.out.print("avg"+ "\t\t");
+        System.out.println();
+        // method call
+        equals();
+        for (int i = 0; i < numberOfStudent; i++) {
+            System.out.print(i + 1 + "\t");
+
+            for (int j = 0; j < numberOfSubject; j++) {
+                System.out.print(studentData[i][j] + " \t\t");
+            }
+            for (int j = 0; j < 1; j++) {
+
+                System.out.print(total[i][j] + "\t\t");
+
+            }
+            for (int j = 0; j < 1; j++) {
+
+                System.out.println(average[i][j] + "\t");
+
+            }
+           System.out.println();
+        }
+        equals();
+
+
+
+        // subject summary
+        System.out.println("subject 1");
+        int highest = 0;
+        for (int i = 0; i < numberOfStudent; i++) {
+            for (int j = 0; j <= 0; j++) {
+               // highest = 0;
+                highest = studentData[i][j];
+                if (highest < studentData[i][j]){
+                    studentData[i][j] = highest;
+                }
+
+
+            }
+
+
+        }
+        System.out.println();
+        System.out.println(highest);
+
+    }
+    private static void equals(){
+        //loop for equal signs
+        for (int i = 0; i <60 ; i++) {
+            System.out.print("=");
+        }
+        System.out.println();
     }
 }
