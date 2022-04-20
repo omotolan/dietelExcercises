@@ -13,7 +13,7 @@ public class BodyMassIndexCalculator {
 
         double BMI = weight / (height * height);
 
-        System.out.println("BMI is:" + BMI);
+        System.out.println("BMI is: " + BMI);
         System.out.println("BMI VALUES");
         System.out.println("Underweight: less than 18.5");
         System.out.println("Normal: between 18.5 and 24.9");

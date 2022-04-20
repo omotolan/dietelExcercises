@@ -11,7 +11,10 @@ public class Arithmetic {
         System.out.println("Enter second int: ");
         int secondNumber = input.nextInt();
 
-        int add, diff, multiply, division;
+        int add;
+        int diff;
+        int multiply;
+        int division;
 
         add = firstNumber + secondNumber;
         System.out.printf("addition is %d%n", add);

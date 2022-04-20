@@ -7,7 +7,10 @@ public class ArithmeticSmallLarge {
 
         Scanner input = new Scanner(System.in);
 
-        int add, diff, multiply, division;
+        int add;
+        int multiply;
+        int division;
+        
         System.out.println("Enter number: "); //2.17
         int fifthNumber = input.nextInt();
 

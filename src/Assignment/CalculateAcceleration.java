@@ -17,7 +17,7 @@ public class CalculateAcceleration{
 
 	double sum = (velocity1 - velocity) / time;
 
-	System.out.print("The averageacceleration is:  "); 
+	System.out.print("The average acceleration is:  ");
 	System.out.print(sum);
 }
 }
