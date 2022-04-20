@@ -14,21 +14,24 @@ public class Time {
     }
 
     public Time() {
+        this(0,0, 0);
     }
 
     public Time(int minute, int second) {
-        validateMinute(minute);
+        /*validateMinute(minute);
         validateSecond(second);
         this.hour = 0;
         this.minute = minute;
-        this.second = second;
+        this.second = second;*/
+        this(0, minute, second);
     }
 
     public Time(int second) {
-        validateSecond(second);
+        /*validateSecond(second);
         this.hour = 0;
         this.minute = 0;
-        this.second = second;
+        this.second = second;*/
+        this(0, 0, second);
     }
 
     public void setTime(int hour, int minute, int second) {
