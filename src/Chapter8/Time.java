@@ -13,6 +13,24 @@ public class Time {
 
     }
 
+    public Time() {
+    }
+
+    public Time(int minute, int second) {
+        validateMinute(minute);
+        validateSecond(second);
+        this.hour = 0;
+        this.minute = minute;
+        this.second = second;
+    }
+
+    public Time(int second) {
+        validateSecond(second);
+        this.hour = 0;
+        this.minute = 0;
+        this.second = second;
+    }
+
     public void setTime(int hour, int minute, int second) {
         validate(hour, minute, second);
 
