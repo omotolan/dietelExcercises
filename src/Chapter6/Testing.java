@@ -18,12 +18,12 @@ public class Testing {
         double number3 = input.nextDouble(); // read third double
         // display maximum value
         System.out.println();
-        double result = maximum(number1, number2, number3);
+        double result = maximumOfNumbers(number1, number2, number3);
         System.out.println("Maximum is: " + result);
 
     }
 
-    public static double maximum(double x, double y, double z) {
+    public static double maximumOfNumbers(double x, double y, double z) {
         double maximumValue = x;
         if (y > maximumValue) {
             maximumValue = y;
