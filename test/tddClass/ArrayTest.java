@@ -1,6 +1,6 @@
 package tddClass;
 
-import Classwork.Arrays;
+import Chapter7.Arrays;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
