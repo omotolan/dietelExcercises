@@ -22,7 +22,6 @@ public class HealthProfile {
     java.util.Date currentYear = new Date();
 
 
-
     // constructor
     public HealthProfile(String firstName, String lastName, int day, int month,
                          int year, String gender, double weightInPounds, double heightInInches) {
@@ -75,6 +74,7 @@ public class HealthProfile {
     public void setYears(int year) {
         this.year = year;
     }
+
     public String getGender() {
         return gender;
     }
@@ -99,34 +99,36 @@ public class HealthProfile {
         this.heightInInches = heightInInches;
     }
 
-    public int getAge(int year){
+    public int getAge(int year) {
         int thisYear = currentYear.getYear();
         //added 1900 to get the current year
         age = thisYear + 1900 - year;
         return age;
     }
 
-    public String birthDetails(){
+    public String birthDetails() {
         dateOfBirth = month + "/" + day + "/" + year;
         return dateOfBirth;
     }
 
-    public int maximumHeartRate(){
+    public int maximumHeartRate() {
         maxHeartRate = 220 - age;
         return maxHeartRate;
     }
-    public int getTargetHeartRate(){
+
+    public int getTargetHeartRate() {
         targetHeartRate = (maxHeartRate * 100) / 220;
         return targetHeartRate;
     }
-    public double getBodyMaxIndex(){
+
+    public double getBodyMaxIndex() {
         double weightInKg = weightInPounds / 2.205;
         double heightInMeters = heightInInches / 39.37;
         bodyMaxIndex = weightInKg / heightInMeters;
         return bodyMaxIndex;
     }
 
-    public String getFullName(){
+    public String getFullName() {
         fullName = firstName + lastName;
         return fullName;
     }

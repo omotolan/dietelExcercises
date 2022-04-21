@@ -1,7 +1,6 @@
 package Chapter7;
 
 import java.util.Arrays;
-import java.util.Collections;
 
 public class SortingArrays {
     public static void main(String[] args) {
@@ -17,23 +16,34 @@ public class SortingArrays {
         int[] figures = {45, 45, 2, 3, 6, 87, 6, 34, 23};
         sortNumbersFromOneIndexToAnother(figures, 1, 5);
 
+        System.out.println();
+        // called on method reverse print
+        printArrayFromReverse(figures);
     }
-    private static void sortNumbersInAscendingOrder(int[] array){
+
+    public static void sortNumbersInAscendingOrder(int[] array) {
         Arrays.sort(array);
-        for (int i = 0; i < array.length; i++) {
-            System.out.print(array[i] + " ");
-        }
+        loopThroughArray(array);
     }
-    private static void sortNumbersFromOneIndexToAnother(int[] array, int fromIndex, int toIndex){
+
+    public static void sortNumbersFromOneIndexToAnother(int[] array, int fromIndex, int toIndex) {
         Arrays.sort(array, fromIndex, toIndex);
-        for (int i = 0; i < array.length; i++) {
-            System.out.print(array[i] + " ");
+        loopThroughArray(array);
+    }
+
+    public static void printArrayFromReverse(int[] array) {
+        for (int i = array.length - 1; i > 0; i--) {
+            printLoopedArray(array, i);
         }
     }
-    private static void sortNumbersInDescendingOrder(int[] array){
-        Arrays.sort(array, Collections.reverseOrder());
+
+    private static void printLoopedArray(int[] array, int i) {
+        System.out.print(array[i] + " ");
+    }
+
+    private static void loopThroughArray(int[] array) {
         for (int i = 0; i < array.length; i++) {
-            System.out.print(array[i] + " ");
+            printLoopedArray(array, i);
         }
     }
 
