@@ -7,7 +7,7 @@ public class EmployeeTest {
 
         // for first object
         System.out.println("---- first employee---");
-        employee1.setYearlySalary(20000.0);
+        employee1.setMonthlySalary(20000.0);
         System.out.println("monthly salary is " + employee1.getMonthlySalary());
         employee1.getYearlySalary(20000.0);
         System.out.println("yearly salary is " + employee1.getYearlySalary(20000.0));
@@ -19,7 +19,7 @@ public class EmployeeTest {
 
         //for second object
         System.out.println("----second employee----");
-        employee2.setYearlySalary(40000.0);
+        employee2.setMonthlySalary(40000.0);
         System.out.println("monthly salary is " + employee2.getMonthlySalary());
         employee2.getYearlySalary(40000.0);
         System.out.println("yearly salary is " + employee2.getYearlySalary(40000.0));
