@@ -1,4 +1,4 @@
-package tddClass;
+package Chapter3Test;
 
 import Chapter3.Car;
 import org.junit.jupiter.api.Test;
