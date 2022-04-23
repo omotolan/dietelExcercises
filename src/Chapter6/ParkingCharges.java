@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class ParkingCharges {
     static Scanner input = new Scanner(System.in);
-    private static final double chargeFor3Hours = 2.00;
-    private static final double chargeFor3HoursAbove = 0.50;
+    private static final double CHARGE_FOR_3_HOURS = 2.00;
+    private static final double CHARGE_FOR_3_HOURS_ABOVE = 0.50;
 
     public static void main(String[] args) {
         System.out.println("Hours spent: ");
@@ -19,7 +19,7 @@ public class ParkingCharges {
 
         double charge = 0.00;
         if (hours <= 3) {
-            charge = hours * chargeFor3Hours;
+            charge = hours * CHARGE_FOR_3_HOURS;
 
         } else {
             charge += calculateInExcessOf3Hours(hours);
@@ -32,9 +32,9 @@ public class ParkingCharges {
         double newCharge = 0.00;
         int newHours = 0;
         if (hours > 3 /*&& hours < 24*/) {
-            charge = 3 * chargeFor3Hours;
+            charge = 3 * CHARGE_FOR_3_HOURS;
             newHours = hours - 3;
-            newCharge = newHours * chargeFor3HoursAbove;
+            newCharge = newHours * CHARGE_FOR_3_HOURS_ABOVE;
             charge += newCharge;
         }
         return charge;

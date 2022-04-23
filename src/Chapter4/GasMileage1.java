@@ -3,7 +3,7 @@ package Chapter4;
 public class GasMileage1 {
     private int gallons;
     private int miles;
-    private final int oneGallonEqualsTwelveMiles = 12; //miles
+    private final int ONE_GALLON_EQUALS_TWELVE_MILES = 12; //miles
 
     public GasMileage1(int gallons, int miles) {
         this.gallons = gallons;
@@ -28,10 +28,10 @@ public class GasMileage1 {
 
     public double getMilesPerGallon() {
 
-        return oneGallonEqualsTwelveMiles * gallons;
+        return ONE_GALLON_EQUALS_TWELVE_MILES * gallons;
     }
 
     public double getGallonsPerMiles() {
-        return miles / oneGallonEqualsTwelveMiles;
+        return miles / ONE_GALLON_EQUALS_TWELVE_MILES;
     }
 }

@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class SalesCommission {
     static Scanner keyboard = new Scanner(System.in);
-    private final double commission = 0.09;
-    private final double wage = 200.0;
+    private final double COMMISSION = 0.09;
+    private final double WAGE = 200.0;
     private int numberOfItem;
     private double price;
 
@@ -66,13 +66,13 @@ public class SalesCommission {
     public double calculateCommissionOnItem() {
         int itemNumber = getNumberOfItem();
         double itemPrice = getPrice();
-        double amount = (itemPrice * itemNumber) * commission;
+        double amount = (itemPrice * itemNumber) * COMMISSION;
         return amount;
     }
 
     public double takeHome() {
         double amount = sentinelLoop();
-        double amountToTakeHome = amount + wage;
+        double amountToTakeHome = amount + WAGE;
         return amountToTakeHome;
     }
 

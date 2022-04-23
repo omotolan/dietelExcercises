@@ -5,10 +5,10 @@ import java.util.Scanner;
 public class SalesCommissionCalculator {
     public static void main(String[] args) {
         Scanner keyboard = new Scanner(System.in);
-        final double  item1Price = 239.99;
-        final double  item2Price = 129.75;
-        final double  item3Price = 99.95;
-        final double  item4Price = 350.89;
+        final double  ITEM_ONE_PRICE = 239.99;
+        final double  ITEM_TWO_PRICE = 129.75;
+        final double  ITEM_THREE_PRICE = 99.95;
+        final double  ITEM_FOUR_PRICE = 350.89;
         final int wage = 200;
 
         for(int i =0; i != -1; i++) {
@@ -28,7 +28,7 @@ public class SalesCommissionCalculator {
             int counter = 0;
             double item1Sales = 0;
             while (item1Quantity != -1) {
-                item1Sales += item1Price * item1Quantity;
+                item1Sales += ITEM_ONE_PRICE * item1Quantity;
                 counter++;
                 System.out.println("enter number of item 1: ");
                 item1Quantity = keyboard.nextInt();
@@ -37,7 +37,7 @@ public class SalesCommissionCalculator {
 
             double item2Sales = 0;
             while (item2Quantity != -1) {
-                item2Sales += item2Price * item2Quantity;
+                item2Sales += ITEM_TWO_PRICE * item2Quantity;
                 counter++;
                 System.out.println("enter number of item 2: ");
                 item2Quantity = keyboard.nextInt();
@@ -46,7 +46,7 @@ public class SalesCommissionCalculator {
 
             double item3Sales = 0;
             while (item3Quantity != -1) {
-                item3Sales += item3Price * item3Quantity;
+                item3Sales += ITEM_THREE_PRICE * item3Quantity;
                 counter++;
                 System.out.println("enter number of item 3: ");
                 item3Quantity = keyboard.nextInt();
@@ -55,7 +55,7 @@ public class SalesCommissionCalculator {
 
             double item4Sales = 0;
             while (item4Quantity != -1) {
-                item4Sales += item4Price * item4Quantity;
+                item4Sales += ITEM_FOUR_PRICE * item4Quantity;
                 counter++;
                 System.out.println("enter number of item 4: ");
                 item4Quantity = keyboard.nextInt();
