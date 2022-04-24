@@ -8,13 +8,16 @@ public class Report {
     public Report(int[][] grades) {
         this.grades = grades;
     }
+    public void setGrades(int[][] grades){
+        this.grades =grades;
+    }
 
     public int totalSum() {
         int sum = 0;
 
         for (int student = 0; student < grades.length; student++) {
-            for (int grade = 0; grade < student; grade++) {
-                sum += grade;
+            for (int grade = 0; grade < grades[student].length; grade++) {
+                sum += grades[student][grade];
 
             }
         }
@@ -69,7 +72,7 @@ public class Report {
         return Arrays.asList(gradeSum).indexOf(sum) + 1;
     }
 
-    public int highestScoreInSubject(int subjectIndex) {
+    public int highestScoreInEachSubject(int subjectIndex) {
         int highestScore = grades[0][subjectIndex];
 
         // loop to get the highest score
@@ -82,7 +85,7 @@ public class Report {
         return highestScore;
     }
 
-    public int totalGradeInSubject(int subjectIndex) {
+    public int totalGradeForEachSubject(int subjectIndex) {
         int total = 0;
         for (int i = 0; i < grades.length; i++) {
             total += grades[i][subjectIndex];
@@ -91,8 +94,8 @@ public class Report {
         return total;
     }
 
-    public double averageScoreInSubject(int subjectIndex) {
-        int sum = totalGradeInSubject(subjectIndex);
+    public double averageScoreForEachSubject(int subjectIndex) {
+        int sum = totalGradeForEachSubject(subjectIndex);
         return (double) sum / grades.length;
     }
 
