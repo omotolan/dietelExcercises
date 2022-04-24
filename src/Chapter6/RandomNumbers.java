@@ -16,11 +16,12 @@ public class RandomNumbers {
         randomNumbers.displayExpressions();
 
     }
-    public void setRandomNumbers(){
-        int firstNumber = random.nextInt(5) +1;
-        firstExpression = "2 <= " + firstNumber +  " <= 6";
 
-        int secondNumber = random.nextInt(49)+ 1;
+    public void setRandomNumbers() {
+        int firstNumber = random.nextInt(5) + 1;
+        firstExpression = "2 <= " + firstNumber + " <= 6";
+
+        int secondNumber = random.nextInt(49) + 1;
         secondExpression = "4 <= " + secondNumber + " <= 50";
 
         int thirdNumber = random.nextInt(6) + 1;
@@ -29,14 +30,15 @@ public class RandomNumbers {
         int forthNumber = random.nextInt(1029) + 1;
         forthExpression = "1000 <= " + forthNumber + " <= 1030";
 
-        int fifthNumber = random.nextInt(-6, 1) ;
+        int fifthNumber = random.nextInt(-6, 1);
         fifthExpression = "-5 <= " + fifthNumber + " <= 1";
 
-        int sixthNumber = random.nextInt(-3,8) + 1;
+        int sixthNumber = random.nextInt(-3, 8) + 1;
         sixthExpression = "-2 <= " + sixthNumber + " <= 9 ";
 
     }
-    public void displayExpressions(){
+
+    public void displayExpressions() {
         setRandomNumbers();
         System.out.println(firstExpression);
         setRandomNumbers();

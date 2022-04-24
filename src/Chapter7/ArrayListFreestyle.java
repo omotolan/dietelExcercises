@@ -45,7 +45,7 @@ public class ArrayListFreestyle {
                 list.get(i).add(input.nextInt());
 
             }
-            
+
         }
         System.out.println(list);
 

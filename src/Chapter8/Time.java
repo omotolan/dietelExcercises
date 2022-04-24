@@ -19,6 +19,7 @@ public class Time {
 
     public Time(int minute, int second) {
         /*validateMinute(minute);
+
         validateSecond(second);
         this.hour = 0;
         this.minute = minute;
