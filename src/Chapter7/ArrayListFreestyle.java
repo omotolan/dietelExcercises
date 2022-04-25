@@ -13,6 +13,11 @@ public class ArrayListFreestyle {
         //manual addition to list
         myList.add(23);
         myList.add(1);
+        myList.add(34);
+        myList.add(34);
+        myList.add(34);
+        myList.add(34);
+        myList.add(34);
 
         System.out.println(myList);
         //access array list with loop
