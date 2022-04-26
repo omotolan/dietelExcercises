@@ -26,8 +26,8 @@ public class Report {
 
     public int gradeSumOfEachStudent(int studentIndex) {
         int total = 0;
-        for (int i = 0; i < grades[studentIndex].length; i++) {
-            total += grades[studentIndex][i];
+        for (int columns = 0; columns < grades[studentIndex].length; columns++) {
+            total += grades[studentIndex][columns];
 
         }
         return total;
