@@ -8,7 +8,7 @@ public class AnimalTest {
 
     @Test
     public void main(){
-        Animal animal = new Animal();
+        Animal animal = new Animal(23);
         animal.move();
     }
     @Test
