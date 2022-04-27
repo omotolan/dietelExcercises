@@ -17,4 +17,8 @@ public class AnimalTest {
         animal.move();
         animal.yourFathesMove();
     }
+    @Test
+    public void constructorTest(){
+        Vertebrate vertebrate = new Vertebrate();
+    }
 }
