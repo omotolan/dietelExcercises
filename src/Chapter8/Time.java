@@ -14,7 +14,7 @@ public class Time {
     }
 
     public Time() {
-        this(0,0, 0);
+        this(0, 0, 0);
     }
 
     public Time(int minute, int second) {

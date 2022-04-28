@@ -23,12 +23,12 @@ public class EnterNumber {
         int userInput = input.nextInt();
 
 
-        if(userInput == 1) {
+        if (userInput == 1) {
             System.out.println(0);
         }
-        if(userInput == 0) {
+        if (userInput == 0) {
             System.out.println(1);
         }
-        }
-
     }
+
+}

@@ -16,20 +16,20 @@ public class Login {
                 """);
         int userInput = keyboard.nextInt();
 
-         switch (userInput){
-             case 1: {
-                 System.out.println("Enter your name");
-                 String name = keyboard.next();
-                 System.out.println("Enter your password");
-                 String password = keyboard.next();
-                 System.out.println("\n".repeat(50));
-                 switch (password){
-                     case "ojo":
-                         System.out.println("correct");
-                         break;
-                 }
-             }
-         }
+        switch (userInput) {
+            case 1: {
+                System.out.println("Enter your name");
+                String name = keyboard.next();
+                System.out.println("Enter your password");
+                String password = keyboard.next();
+                System.out.println("\n".repeat(50));
+                switch (password) {
+                    case "ojo":
+                        System.out.println("correct");
+                        break;
+                }
+            }
+        }
 
     }
 }

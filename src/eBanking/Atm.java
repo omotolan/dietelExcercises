@@ -4,7 +4,8 @@ import java.util.Scanner;
 
 public class Atm {
     private static Scanner keyboard = new Scanner(System.in);
-    private  static Bank zuBank = new Bank("Zubank", 10);
+    private static Bank zuBank = new Bank("Zubank", 10);
+
     public static void main(String[] args) {
         runApp();
     }

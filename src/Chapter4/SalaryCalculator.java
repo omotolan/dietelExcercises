@@ -14,11 +14,11 @@ public class SalaryCalculator {
 
         int wage;
         int wage1 = 0;
-            wage = 40 * amount;
-             if(workHours > 40){
-                int newWorkHours = workHours - 40;
-                wage1 = newWorkHours * (amount / 2);
-            }
+        wage = 40 * amount;
+        if (workHours > 40) {
+            int newWorkHours = workHours - 40;
+            wage1 = newWorkHours * (amount / 2);
+        }
         System.out.println();
         int wages = wage + wage1;
         System.out.println("your salary is: " + wages);

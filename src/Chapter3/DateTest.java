@@ -2,7 +2,7 @@ package Chapter3;
 
 public class DateTest {
     public static void main(String[] args) {
-        Date date = new Date(01, 01,2000);
+        Date date = new Date(01, 01, 2000);
 
         // using methods
         date.setMonth(04);

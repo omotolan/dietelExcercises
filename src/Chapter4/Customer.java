@@ -8,7 +8,7 @@ public class Customer {
     private int creditLimit;
     private int newBalance;
 
-    public Customer(int accountNumber, int balanceAtBeginningOfMonth, int totalOfItemsCharged, int totalOfCredits, int creditLimit, int newBalance){
+    public Customer(int accountNumber, int balanceAtBeginningOfMonth, int totalOfItemsCharged, int totalOfCredits, int creditLimit, int newBalance) {
         this.accountNumber = accountNumber;
         this.balanceAtBeginningOfMonth = balanceAtBeginningOfMonth;
         this.totalOfItemsCharged = totalOfItemsCharged;
@@ -16,7 +16,6 @@ public class Customer {
         this.creditLimit = creditLimit;
         this.newBalance = newBalance;
     }
-
 
 
     public int getAccountNumber() {
@@ -68,14 +67,15 @@ public class Customer {
 
 
     }
-    public int getCreditLimitCalculator(){
+
+    public int getCreditLimitCalculator() {
         return newBalance;
     }
 
-    public String getNewBalance(){
+    public String getNewBalance() {
         String message = "credit limit exceeded";
-       // this.newBalance = newBalance;
-        if (this.creditLimit < this.newBalance){
+        // this.newBalance = newBalance;
+        if (this.creditLimit < this.newBalance) {
             return message;
         }
 

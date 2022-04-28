@@ -2,10 +2,11 @@ package Chapter9;
 
 public class Vertebrate extends Animal {
 
-    public Vertebrate(){
+    public Vertebrate() {
         super(23);
         System.out.println("i'm creating a vertebrate");
     }
+
     @Override
     public void move() {
         super.move();

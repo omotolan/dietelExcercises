@@ -20,7 +20,8 @@ public class PartTimeEmployee extends Employee {
 
         return numberOfHours * annualSalary;
     }
-    public double calculateWeeklyPay(){
+
+    public double calculateWeeklyPay() {
         return (int) annualSalary / 12;
     }
 }

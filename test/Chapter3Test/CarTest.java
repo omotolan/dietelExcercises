@@ -2,10 +2,11 @@ package Chapter3Test;
 
 import Chapter3.Car;
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertSame;
 
-public class CarTest{
+public class CarTest {
     @Test
     public void CarToyotaTest() {
         Car toyota = new Car(" ", " ", 0.0);
@@ -19,6 +20,7 @@ public class CarTest{
         assertEquals(1_500_000.0, toyota.discountedPrice5());
 
     }
+
     @Test
     public void CarBenzTest() {
         Car benz = new Car(" ", " ", 0.0);

@@ -8,12 +8,13 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class SalesCommissionCalculatorTest {
     @Test
-    public void salesPersonCanBeCreatedTest(){
+    public void salesPersonCanBeCreatedTest() {
         SalesCommissionCalculator1 salesCommissionCalculator1 = new SalesCommissionCalculator1();
         assertNotNull(salesCommissionCalculator1);
     }
+
     @Test
-    public  void numberOfItemsCanBeSetTest(){
+    public void numberOfItemsCanBeSetTest() {
         SalesCommissionCalculator1 salesCommissionCalculator1 = new SalesCommissionCalculator1();
         salesCommissionCalculator1.setNumberOfItem(4);
         assertEquals(4, salesCommissionCalculator1.getNumberOfItem());

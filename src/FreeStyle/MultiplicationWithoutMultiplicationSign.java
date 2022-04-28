@@ -15,7 +15,7 @@ public class MultiplicationWithoutMultiplicationSign {
         int secondNumber = keyboard.nextInt();
 
         int answer = 0;
-        for (int i = 1; i <=secondNumber ; i++) {
+        for (int i = 1; i <= secondNumber; i++) {
             answer += firstNumber;
         }
         System.out.println(answer);

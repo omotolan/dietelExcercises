@@ -4,7 +4,7 @@ import Chapter3.Acc;
 
 public class Bank {
     private final String name;
-    private  Account[] accounts;
+    private Account[] accounts;
     private int numberOfCustomer;
 
     public Bank(String bankName, int numberOfCustomer) {
@@ -21,8 +21,8 @@ public class Bank {
     }
 
     public Account createAccountFor(String firstName, String lastName, String pin) {
-        String accountNumber = (numberOfCustomer+1)+"";
-        Account account = new Account(accountNumber,firstName,lastName,pin);
+        String accountNumber = (numberOfCustomer + 1) + "";
+        Account account = new Account(accountNumber, firstName, lastName, pin);
         accounts[numberOfCustomer] = account;
         numberOfCustomer++;
 
@@ -32,17 +32,20 @@ public class Bank {
     public int getNumberOfCustomers() {
         return numberOfCustomer;
     }
-    public Account findAccount(int accountNumber){
+
+    public Account findAccount(int accountNumber) {
         int indexOfAccount = accountNumber - 1;
         Account theAccount = accounts[indexOfAccount]; //delete this if you want to return the first
-       // return accounts[indexOfAccount];
+        // return accounts[indexOfAccount];
         return theAccount;
     }
-    public void deposit(int amount, String accountNumber){
+
+    public void deposit(int amount, String accountNumber) {
         Account account = findAccount(Integer.parseInt(accountNumber));
         account.deposit(amount);
     }
-    public void withdraw(int amount, String accountNumber, String pin){
+
+    public void withdraw(int amount, String accountNumber, String pin) {
         Account account = findAccount(Integer.parseInt(accountNumber));
         account.withdrawal(amount, pin);
     }

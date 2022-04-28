@@ -28,8 +28,8 @@ public class AccountTest {
         System.out.println(secondAccount.balance);
 
         firstAccount.withdraw(4000);
-       // print(firstAccount.balance);
-       System.out.println(firstAccount.balance);
+        // print(firstAccount.balance);
+        System.out.println(firstAccount.balance);
 
         firstAccount.transfer(secondAccount, 500);
         System.out.println(firstAccount.balance);
@@ -46,7 +46,7 @@ public class AccountTest {
         firstAccount.addInterest();
         secondAccount.addInterest();
 
-        System.out.println("first account number balance is"+firstAccount.addInterest());
-       System.out.println("second account number balance is"+secondAccount.addInterest());
+        System.out.println("first account number balance is" + firstAccount.addInterest());
+        System.out.println("second account number balance is" + secondAccount.addInterest());
     }
 }

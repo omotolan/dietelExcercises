@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CreditLimitCalculatorTest {
     @Test
-    public void accNumberTest(){
+    public void accNumberTest() {
         //given
         Customer myCustomer = new Customer(0, 0, 0, 0, 0, 0);
         //when
@@ -15,8 +15,9 @@ public class CreditLimitCalculatorTest {
         //assert
         assertEquals(12345, myCustomer.getAccountNumber());
     }
+
     @Test
-    public void balanceTest(){
+    public void balanceTest() {
         //given
         Customer myCustomer = new Customer(0, 0, 0, 0, 0, 0);
         //when
@@ -24,10 +25,11 @@ public class CreditLimitCalculatorTest {
         myCustomer.setBalanceAtBeginningOfMonth(2000);
         //assert
         assertEquals(12345, myCustomer.getAccountNumber());
-        assertEquals(2000,  myCustomer.getBalanceAtBeginningOfMonth());
+        assertEquals(2000, myCustomer.getBalanceAtBeginningOfMonth());
     }
+
     @Test
-    public void totalItemsChargedTest(){
+    public void totalItemsChargedTest() {
         //given
         Customer myCustomer = new Customer(0, 0, 0, 0, 0, 0);
         //when
@@ -36,11 +38,12 @@ public class CreditLimitCalculatorTest {
         myCustomer.setTotalOfItemsCharged(4000);
         //assert
         assertEquals(12345, myCustomer.getAccountNumber());
-        assertEquals(2000,  myCustomer.getBalanceAtBeginningOfMonth());
+        assertEquals(2000, myCustomer.getBalanceAtBeginningOfMonth());
         assertEquals(4000, myCustomer.getTotalOfItemsCharged());
     }
+
     @Test
-    public void totalOfCreditsTest(){
+    public void totalOfCreditsTest() {
         //given
         Customer myCustomer = new Customer(0, 0, 0, 0, 0, 0);
         //when
@@ -50,13 +53,14 @@ public class CreditLimitCalculatorTest {
         myCustomer.setTotalOfCredits(2000);
         //assert
         assertEquals(12345, myCustomer.getAccountNumber());
-        assertEquals(2000,  myCustomer.getBalanceAtBeginningOfMonth());
+        assertEquals(2000, myCustomer.getBalanceAtBeginningOfMonth());
         assertEquals(4000, myCustomer.getTotalOfItemsCharged());
         assertEquals(2000, myCustomer.getTotalOfCredits());
 
     }
+
     @Test
-    public void creditLimitTest(){
+    public void creditLimitTest() {
         //given
         Customer myCustomer = new Customer(0, 0, 0, 0, 0, 0);
         //when
@@ -67,14 +71,15 @@ public class CreditLimitCalculatorTest {
         myCustomer.setCreditLimit(3000);
         //assert
         assertEquals(12345, myCustomer.getAccountNumber());
-        assertEquals(2000,  myCustomer.getBalanceAtBeginningOfMonth());
+        assertEquals(2000, myCustomer.getBalanceAtBeginningOfMonth());
         assertEquals(4000, myCustomer.getTotalOfItemsCharged());
         assertEquals(2000, myCustomer.getTotalOfCredits());
         assertEquals(3000, myCustomer.getCreditLimit());
 
     }
+
     @Test
-    public void creditLimitCalculatorTest(){
+    public void creditLimitCalculatorTest() {
         //given
         Customer myCustomer = new Customer(0, 0, 0, 0, 0, 0);
         //when
@@ -87,7 +92,7 @@ public class CreditLimitCalculatorTest {
         String result = myCustomer.getNewBalance();
         //assert
         assertEquals(12345, myCustomer.getAccountNumber());
-        assertEquals(2000,  myCustomer.getBalanceAtBeginningOfMonth());
+        assertEquals(2000, myCustomer.getBalanceAtBeginningOfMonth());
         assertEquals(7000, myCustomer.getTotalOfItemsCharged());
         assertEquals(5000, myCustomer.getTotalOfCredits());
         assertEquals(4000, myCustomer.getCreditLimit());

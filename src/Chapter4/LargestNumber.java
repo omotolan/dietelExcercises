@@ -9,17 +9,17 @@ public class LargestNumber {
         int counter = 0;
         int largestNumber = 0;
         int numbers;
-        while (counter < 10 ){
+        while (counter < 10) {
             System.out.println("Enter numbers: ");
             numbers = keyboard.nextInt();
             counter++;
-            if(numbers>largestNumber){
+            if (numbers > largestNumber) {
                 largestNumber = numbers;
             }
 
         }
         System.out.println(largestNumber);
-        }
-
     }
+
+}
 

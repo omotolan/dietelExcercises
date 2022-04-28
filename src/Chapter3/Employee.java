@@ -36,16 +36,17 @@ public class Employee {
     public void setMonthlySalary(double monthlySalary) {
         this.monthlySalary = monthlySalary;
     }
-    public double getYearlySalary(double monthlySalary){
-         this.monthlySalary = 12 * monthlySalary;
-        if (monthlySalary == 0.0){
+
+    public double getYearlySalary(double monthlySalary) {
+        this.monthlySalary = 12 * monthlySalary;
+        if (monthlySalary == 0.0) {
             return 0.0;
         }
         return this.monthlySalary;
     }
 
-    public double percentageRaise(double monthlySalary){
-        this.monthlySalary = monthlySalary * (10.0/100);
-        return this.monthlySalary+monthlySalary;
+    public double percentageRaise(double monthlySalary) {
+        this.monthlySalary = monthlySalary * (10.0 / 100);
+        return this.monthlySalary + monthlySalary;
     }
 }

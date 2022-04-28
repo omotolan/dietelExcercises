@@ -49,47 +49,47 @@ public class Nokia3310 {
                     break;
             }
         }
-                if (numberSelected == 2) {
+        if (numberSelected == 2) {
+            System.out.println("""
+                    1. Write Messages
+                    2. Inbox
+                    3. Outbox
+                    4. Picture messages
+                    5. Templates
+                    6. Smileys
+                    7. Message settings
+                    8. Info services
+                    9. Voice mailbox number
+                    10. Service command editor
+                    """);
+            System.out.println(" ");
+            numberSelected = keyboard.nextInt();
+            switch (numberSelected) {
+                case 7:
                     System.out.println("""
-                            1. Write Messages
-                            2. Inbox
-                            3. Outbox
-                            4. Picture messages
-                            5. Templates
-                            6. Smileys
-                            7. Message settings
-                            8. Info services
-                            9. Voice mailbox number
-                            10. Service command editor
+                            1. Set 1
+                            2. Common
                             """);
                     System.out.println(" ");
                     numberSelected = keyboard.nextInt();
-                    switch (numberSelected){
-                        case 7 :
-                            System.out.println("""
-                                    1. Set 1
-                                    2. Common
-                                    """);
-                            System.out.println(" ");
-                            numberSelected = keyboard.nextInt();
-                            if(numberSelected==1){
-                                System.out.println("""
-                                        1. Message centre number
-                                        2. Message sent as
-                                        3. Message validity
-                                        """);
-                            }
-                            if(numberSelected == 2){
-                                System.out.println("""
-                                        1. Delivery reports
-                                        2. Reply via same centre
-                                        3. Character support
-                                        """);
-                            }
+                    if (numberSelected == 1) {
+                        System.out.println("""
+                                1. Message centre number
+                                2. Message sent as
+                                3. Message validity
+                                """);
                     }
-                }
-
-
+                    if (numberSelected == 2) {
+                        System.out.println("""
+                                1. Delivery reports
+                                2. Reply via same centre
+                                3. Character support
+                                """);
+                    }
+            }
         }
+
+
     }
+}
 

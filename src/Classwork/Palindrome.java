@@ -1,5 +1,7 @@
 package Classwork;
+
 import java.util.Scanner;
+
 public class Palindrome {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
@@ -20,8 +22,8 @@ public class Palindrome {
 
             System.out.print("Number is a palindrome");
         }
-       // if (firstNumber != forthNumber && secondNumber != thirdNumber) {
-        else{
+        // if (firstNumber != forthNumber && secondNumber != thirdNumber) {
+        else {
             System.out.print("Number is not a palindrome");
         }
     }

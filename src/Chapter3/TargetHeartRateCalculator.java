@@ -17,7 +17,6 @@ public class TargetHeartRateCalculator {
     Date currentYear = new Date();
 
 
-
     // constructor
     public TargetHeartRateCalculator(String firstName, String lastName, int day, int month, int year) {
         this.firstName = firstName;
@@ -67,23 +66,24 @@ public class TargetHeartRateCalculator {
         this.year = year;
     }
 
-    public int getAge(int year){
+    public int getAge(int year) {
         int thisYear = currentYear.getYear();
         //added 1900 to get the current year
         age = thisYear + 1900 - year;
         return age;
     }
 
-    public String birthDetails(){
+    public String birthDetails() {
         dateOfBirth = month + "/" + day + "/" + year;
         return dateOfBirth;
     }
 
-    public int maximumHeartRate(){
+    public int maximumHeartRate() {
         maxHeartRate = 220 - age;
         return maxHeartRate;
     }
-    public int getTargetHeartRate(){
+
+    public int getTargetHeartRate() {
         targetHeartRate = (maxHeartRate * 100) / 220;
         return targetHeartRate;
     }

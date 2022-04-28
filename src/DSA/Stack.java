@@ -6,7 +6,7 @@ public class Stack {
     private int element;
 
     public boolean isEmpty() {
-        if(numberOfElements == 0) return true;
+        if (numberOfElements == 0) return true;
         else return false;
         //return isEmpty; don't need this anymore
     }
@@ -19,7 +19,7 @@ public class Stack {
 
     public int pop() {
         numberOfElements--;
-       // isEmpty = true;
+        // isEmpty = true;
         return element;
     }
 }

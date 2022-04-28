@@ -7,8 +7,8 @@ public class TabularOutput {
         int n100 = 0;
         int n1000 = 0;
         System.out.println("N" + "\t\tN*10" + "\t\tN*100" + "\t\tN*1000");
-        while(n <= 5){
-            n10 +=10;
+        while (n <= 5) {
+            n10 += 10;
             n100 += 100;
             n1000 += 1000;
 

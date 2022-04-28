@@ -8,8 +8,9 @@ public class Report {
     public Report(int[][] grades) {
         this.grades = grades;
     }
-    public void setGrades(int[][] grades){
-        this.grades =grades;
+
+    public void setGrades(int[][] grades) {
+        this.grades = grades;
     }
 
     public int totalSum() {

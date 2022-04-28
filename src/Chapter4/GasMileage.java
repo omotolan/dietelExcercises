@@ -20,7 +20,7 @@ public class GasMileage {
 
         int counter = 0;
         int totalTrips = 0;
-        while(trip != -1){
+        while (trip != -1) {
             totalTrips += trip;
 
             System.out.println("Enter number of trips or -1 to quit");
@@ -36,7 +36,7 @@ public class GasMileage {
 
         System.out.println("total number of trip is " + totalTrips);
         System.out.println("miles travelled per gallon is " + milesPerGallon);
-        System.out.println("quantity of gallons used is " +gallons);
+        System.out.println("quantity of gallons used is " + gallons);
         System.out.println("total miles covered is " + miles);
         System.out.println(counter);
     }

@@ -5,13 +5,13 @@ import java.util.Scanner;
 public class SalesCommissionCalculator {
     public static void main(String[] args) {
         Scanner keyboard = new Scanner(System.in);
-        final double  ITEM_ONE_PRICE = 239.99;
-        final double  ITEM_TWO_PRICE = 129.75;
-        final double  ITEM_THREE_PRICE = 99.95;
-        final double  ITEM_FOUR_PRICE = 350.89;
+        final double ITEM_ONE_PRICE = 239.99;
+        final double ITEM_TWO_PRICE = 129.75;
+        final double ITEM_THREE_PRICE = 99.95;
+        final double ITEM_FOUR_PRICE = 350.89;
         final int wage = 200;
 
-        for(int i =0; i != -1; i++) {
+        for (int i = 0; i != -1; i++) {
             System.out.println("enter number of item 1: ");
             int item1Quantity = keyboard.nextInt();
 

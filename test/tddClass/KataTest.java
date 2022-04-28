@@ -262,14 +262,15 @@ public class KataTest {
         //assert
         assertEquals(8, result);
     }
+
     @Test
-    public void primeTest(){
+    public void primeTest() {
         //given
         Kata prime = new Kata();
         //when
         boolean result = prime.prime(11);
         //assert
-       // assertEquals(2,result);
+        // assertEquals(2,result);
         assertTrue(result);
     }
 }

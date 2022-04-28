@@ -6,16 +6,17 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class AutomaticBikeTest {
     @Test
-    public void startBikeTest(){
-    //given
-    AutomaticBike tjayBike = new AutomaticBike();
-    //when
-    tjayBike.powerBike(false);
-    //assert
+    public void startBikeTest() {
+        //given
+        AutomaticBike tjayBike = new AutomaticBike();
+        //when
+        tjayBike.powerBike(false);
+        //assert
         assertTrue(tjayBike.isOn());
     }
+
     @Test
-    public void offBikeTest(){
+    public void offBikeTest() {
         //given
         AutomaticBike tjayBike = new AutomaticBike();
         tjayBike.powerBike(true);
@@ -26,7 +27,7 @@ public class AutomaticBikeTest {
     }
 
     @Test
-    public void accelerationTest(){
+    public void accelerationTest() {
         AutomaticBike tjayBike = new AutomaticBike();
         tjayBike.accelerate(1);
         tjayBike.accelerate(2);
@@ -49,8 +50,9 @@ public class AutomaticBikeTest {
         tjayBike.accelerate(19);
         assertEquals(20, tjayBike.speedChange());
     }
+
     @Test
-    public void accelerationTestForGear2(){
+    public void accelerationTestForGear2() {
         AutomaticBike tjayBike = new AutomaticBike();
         tjayBike.accelerate(1);
         tjayBike.accelerate(2);
@@ -79,11 +81,12 @@ public class AutomaticBikeTest {
         tjayBike.accelerate(29);
 
 
-        assertEquals(31,tjayBike.speedChange());
+        assertEquals(31, tjayBike.speedChange());
         // assertEquals(31, tjayBike.accelerating());
     }
-   @Test
-    public void accelerationTestForGear3(){
+
+    @Test
+    public void accelerationTestForGear3() {
         AutomaticBike tjayBike = new AutomaticBike();
         tjayBike.accelerate(1);
         tjayBike.accelerate(2);
@@ -115,8 +118,9 @@ public class AutomaticBikeTest {
         tjayBike.accelerate(37);
         assertEquals(40, tjayBike.speedChange());
     }
+
     @Test
-    public void accelerationTestForGear4(){
+    public void accelerationTestForGear4() {
         AutomaticBike tjayBike = new AutomaticBike();
         tjayBike.accelerate(1);
         tjayBike.accelerate(2);
@@ -153,6 +157,7 @@ public class AutomaticBikeTest {
         tjayBike.accelerate(52);
         assertEquals(56, tjayBike.speedChange());
     }
+
     @Test
     public void decelerationTest() {
         AutomaticBike tjayBike = new AutomaticBike();
@@ -197,6 +202,7 @@ public class AutomaticBikeTest {
         tjayBike.decelerate(1);
         assertEquals(0, tjayBike.speedChange());
     }
+
     @Test
     public void decelerationTest2() {
         AutomaticBike tjayBike = new AutomaticBike();
@@ -225,7 +231,7 @@ public class AutomaticBikeTest {
         tjayBike.accelerate(25);
         tjayBike.accelerate(27);
         tjayBike.accelerate(29);
-        assertEquals(31,tjayBike.speedChange());
+        assertEquals(31, tjayBike.speedChange());
         tjayBike.decelerate(29);
         tjayBike.decelerate(27);
         tjayBike.decelerate(25);
@@ -254,4 +260,4 @@ public class AutomaticBikeTest {
         assertEquals(0, tjayBike.speedChange());
     }
 
-    }
+}

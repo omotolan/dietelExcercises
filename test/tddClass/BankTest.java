@@ -6,9 +6,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class BankTest {
     @Test
-    public void depositTest(){
+    public void depositTest() {
         Bank tolaniBank = new Bank();
         tolaniBank.deposit(300);
-        assertEquals (300, tolaniBank.getBalance());
+        assertEquals(300, tolaniBank.getBalance());
     }
 }

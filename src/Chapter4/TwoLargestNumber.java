@@ -10,15 +10,14 @@ public class TwoLargestNumber {
         int largestNumber = 0;
         int secondLargestNumber = 0;
         int numbers;
-        while (counter < 10 ){
+        while (counter < 10) {
             System.out.println("Enter numbers: ");
             numbers = keyboard.nextInt();
             counter++;
-            if(numbers> largestNumber){
+            if (numbers > largestNumber) {
                 secondLargestNumber = largestNumber;
                 largestNumber = numbers;
-            }
-           else if(numbers > secondLargestNumber ){
+            } else if (numbers > secondLargestNumber) {
                 secondLargestNumber = numbers;
             }
 

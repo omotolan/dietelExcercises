@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class HealthProfileTest {
     static Scanner keyboard = new Scanner(System.in);
+
     public static void main(String[] args) {
         HealthProfile user = new HealthProfile(" ", " ", 0, 0, 0000, " ", 0.0, 0.0);
 

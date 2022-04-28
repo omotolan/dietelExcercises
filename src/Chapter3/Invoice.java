@@ -9,7 +9,7 @@ public class Invoice {
     private double amount;
 
     // constructor
-    public Invoice(String partNumber, String partDescription, int quantityOfItemBeingPurchased, double pricePerItem){
+    public Invoice(String partNumber, String partDescription, int quantityOfItemBeingPurchased, double pricePerItem) {
         this.partNumber = partNumber;
         this.partDescription = partDescription;
         this.quantityOfItemBeingPurchased = quantityOfItemBeingPurchased;
@@ -17,12 +17,14 @@ public class Invoice {
     }
 
     // methods
-    public void setPartNumber(String partNumber){
+    public void setPartNumber(String partNumber) {
         this.partNumber = partNumber;
     }
-    public String getPartNumber(){
+
+    public String getPartNumber() {
         return partNumber;
     }
+
     public void setPartDescription(String partDescription) {
         this.partDescription = partDescription;
     }
@@ -34,6 +36,7 @@ public class Invoice {
     public void setQuantityOfItemBeingPurchased(int quantityOfItemBeingPurchased) {
         this.quantityOfItemBeingPurchased = quantityOfItemBeingPurchased;
     }
+
     public int getQuantityOfItemBeingPurchased() {
         return quantityOfItemBeingPurchased;
     }
@@ -41,16 +44,17 @@ public class Invoice {
     public void setPricePerItem(double pricePerItem) {
         this.pricePerItem = pricePerItem;
     }
+
     public double getPricePerItem() {
         return pricePerItem;
     }
 
-    public double getAmount(int quantityOfItemBeingPurchased){
+    public double getAmount(int quantityOfItemBeingPurchased) {
         this.amount = quantityOfItemBeingPurchased * pricePerItem;
-        if(quantityOfItemBeingPurchased < 1){
+        if (quantityOfItemBeingPurchased < 1) {
             return 0;
         }
-        if(pricePerItem < 0){
+        if (pricePerItem < 0) {
             return 0.0;
         }
         return this.amount;

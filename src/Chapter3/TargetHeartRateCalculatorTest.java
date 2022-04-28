@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class TargetHeartRateCalculatorTest {
     static Scanner keyboard = new Scanner(System.in);
+
     public static void main(String[] args) {
         TargetHeartRateCalculator user = new TargetHeartRateCalculator(" ", " ", 0, 0, 0000);
 
@@ -60,6 +61,6 @@ public class TargetHeartRateCalculatorTest {
         // target heart rate calculator
         System.out.println("maximum heart rate is " + user.maximumHeartRate());
         System.out.println();
-        System.out.println("your target heart rate is " + user.getTargetHeartRate()+"%");
+        System.out.println("your target heart rate is " + user.getTargetHeartRate() + "%");
     }
 }

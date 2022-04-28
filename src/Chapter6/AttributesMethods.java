@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class AttributesMethods {
     private static int size;
+
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
@@ -21,7 +22,7 @@ public class AttributesMethods {
         return size;
     }
 
-    public void setSize(int size){
+    public void setSize(int size) {
         this.size = size;
     }
 }
