@@ -16,6 +16,7 @@ public class Patterns {
         for (int rows = 1; rows < triangleSize; rows++) {
             // how many stars do i want to print at each row?
             // cause i want the number of stars to increment by one, i'm using the row index since it increases by one also
+            // the asterisk gets printed at what ever value row is at i.e if row is 3, print the asterisk 3 times
             for (int columns = 1; columns <= rows; columns++) {
                 System.out.print("* ");
 

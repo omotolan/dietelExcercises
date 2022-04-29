@@ -7,7 +7,7 @@ public class DiceRolling {
         Random random = new Random();
 
         int[] counter = new int[11];
-        for (int i = 0; i < 300000; i++) {
+        for (int i = 0; i < 36_000_000; i++) {
 
 
             int die1 = random.nextInt(6) + 1;
