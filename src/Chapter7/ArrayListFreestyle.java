@@ -18,6 +18,9 @@ public class ArrayListFreestyle {
         myList.add(34);
         myList.add(34);
         myList.add(34);
+        System.out.println("enter number");
+        int num = input.nextInt();
+        myList.add(num);
 
         System.out.println(myList);
         //access array list with loop
