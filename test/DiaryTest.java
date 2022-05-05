@@ -60,7 +60,7 @@ public class DiaryTest {
         mine.createEntry("my goat", "may 5", "i love love");
         int size = mine.getNoOfEntry();
         assertEquals(5, size);
-        mine.deleteEntry(2, "1234");
+        mine.deleteEntry("my loveth");
         int sizes = mine.getNoOfEntry();
         assertEquals(4, sizes);
 

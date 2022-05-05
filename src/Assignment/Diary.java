@@ -1,4 +1,4 @@
- package Assignment;
+package Assignment;
 
 import java.util.ArrayList;
 
@@ -15,12 +15,13 @@ public class Diary {
         entries = new ArrayList<Entry>();
     }
 
-    public void isLock(String password){
-        if(this.password.equals(password)){
+    public void isLock(String password) {
+        if (this.password.equals(password)) {
             isLock = true;
+        } else {
+            isLock = false;
+            System.out.println("Wrong password.");
         }
-        else { isLock = false;
-            System.out.println("Wrong password.");}
     }
 
     public void createEntry(String title, String date, String body) {
@@ -42,13 +43,8 @@ public class Diary {
         return -1;
     }
 
-    public void deleteEntry(int indexNumber, String password) {
-        if (password.equals(this.password)) {
-            entries.remove(indexNumber);
-        } else {
-            System.out.println("You can't delete entry cause password is incorrect");
-            deleteEntry(indexNumber, password);
-        }
+    public void deleteEntry(String titleOfEntry) {
+        entries.remove(findEntry(titleOfEntry) - 1);
     }
 
 
@@ -58,5 +54,13 @@ public class Diary {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public void deleteAllEntry(String password) {
+        if (this.password.equals(password)) {
+            entries.removeAll(entries);
+        } else {
+            System.out.println("Action can't be completed cause password is incorrect.");
+        }
     }
 }
