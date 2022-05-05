@@ -7,10 +7,20 @@ public class Diary {
     private String name;
     private String password;
 
+    private boolean isLock;
+
     public Diary(String name, String password) {
         this.name = name;
         this.password = password;
         entries = new ArrayList<Entry>();
+    }
+
+    public void isLock(String password){
+        if(this.password.equals(password)){
+            isLock = true;
+        }
+        else { isLock = false;
+            System.out.println("Wrong password.");}
     }
 
     public void createEntry(String title, String date, String body) {
@@ -37,6 +47,7 @@ public class Diary {
             entries.remove(indexNumber);
         } else {
             System.out.println("You can't delete entry cause password is incorrect");
+            deleteEntry(indexNumber, password);
         }
     }
 
