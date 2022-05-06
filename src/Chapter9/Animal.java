@@ -13,12 +13,12 @@ public class Animal extends LivingThing {
     // if you override, it must match the parameter of the parent or super class
     @Override
     public void move() {
-        // super.move(); // for parent class. if you want the child to exhibit parent method
+        // super.move(); // for parent class. if you want the child to exhibit parent method after 'overriding' the super class's method
         System.out.println("move like animal");
 
     }
 
-    public void yourFathesMove() {
+    public void yourFathersMove() {
         super.move();
     }
 }

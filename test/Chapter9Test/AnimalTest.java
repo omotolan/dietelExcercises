@@ -16,7 +16,7 @@ public class AnimalTest {
     public void vertebrateTest() {
         Vertebrate animal = new Vertebrate();
         animal.move();
-        animal.yourFathesMove();
+        animal.yourFathersMove();
     }
 
     @Test
