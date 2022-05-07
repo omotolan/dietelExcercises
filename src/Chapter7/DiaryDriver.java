@@ -1,4 +1,7 @@
-package Assignment;
+package Chapter7;
+
+import Assignment.Entry;
+import Chapter7.Diary;
 
 import java.util.ArrayList;
 import java.util.Scanner;

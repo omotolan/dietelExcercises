@@ -1,4 +1,6 @@
-package Assignment;
+package Chapter7;
+
+import Assignment.Entry;
 
 import java.util.ArrayList;
 

@@ -1,5 +1,4 @@
-import Assignment.Diary;
-import Assignment.Entry;
+import Chapter7.Diary;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
