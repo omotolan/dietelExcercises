@@ -39,6 +39,7 @@ public class DiaryDriver {
         System.out.println("Enter password: ");
         String password = input.next();
         diary.deleteAllEntry(password);
+        System.out.println("All entries have been deleted.");
     }
 
     public static void instructions() {
