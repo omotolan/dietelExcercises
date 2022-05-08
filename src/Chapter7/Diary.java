@@ -39,10 +39,15 @@ public class Diary {
         for (int i = 0; i < entries.size(); i++) {
             Entry entry = entries.get(i);
             if (entry.getTitle().equals(title)) {
+                System.out.println("Entry " + title + " found at position " + (i + 1));
                 return (i + 1);
             }
+
         }
+        System.out.println("Entry not found.");
         return -1;
+
+
     }
 
     public void deleteEntry(String titleOfEntry) {

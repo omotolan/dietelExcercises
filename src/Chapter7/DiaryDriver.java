@@ -1,7 +1,6 @@
 package Chapter7;
 
 import Assignment.Entry;
-import Chapter7.Diary;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -25,7 +24,8 @@ public class DiaryDriver {
                 case 2 -> numberOfEntries();
                 case 3 -> deleteEntry();
                 case 4 -> clearAllEntries();
-                case 5 -> {
+                case 5 -> findEntry();
+                case 6 -> {
                     quit = true;
                     System.out.println(decor.repeat(20) + " Goodbye!!! " + decor.repeat(20));
                 }
@@ -33,6 +33,12 @@ public class DiaryDriver {
         }
 
 
+    }
+
+    private static void findEntry() {
+        System.out.println("Enter title of entry: ");
+        String titleOfEntry = input.next();
+        diary.findEntry(titleOfEntry);
     }
 
     private static void clearAllEntries() {
@@ -50,7 +56,8 @@ public class DiaryDriver {
                 2. get number of entries
                 3. remove entry
                 4. clear all entry
-                5. quit application
+                5. to find entry
+                6. quit application
                                 
                 """);
     }
