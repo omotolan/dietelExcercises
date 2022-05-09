@@ -25,7 +25,8 @@ public class DiaryDriver {
                 case 3 -> deleteEntry();
                 case 4 -> clearAllEntries();
                 case 5 -> findEntry();
-                case 6 -> {
+                case 6 -> changePassword();
+                case 7 -> {
                     quit = true;
                     System.out.println(decor.repeat(20) + " Goodbye!!! " + decor.repeat(20));
                 }
@@ -57,7 +58,8 @@ public class DiaryDriver {
                 3. remove entry
                 4. clear all entry
                 5. to find entry
-                6. quit application
+                6. change password
+                7. quit application
                                 
                 """);
     }
@@ -90,5 +92,13 @@ public class DiaryDriver {
     private static void numberOfEntries() {
         int numberOfEntries = diary.getNoOfEntry();
         System.out.println("you have " + numberOfEntries + " entries in your diary");
+    }
+
+    private static void changePassword(){
+        System.out.println("Enter old password: ");
+        String oldPassword = input.next();
+        System.out.println("Enter new password: ");
+        String newPassword = input.next();
+        diary.updatePassword(oldPassword, newPassword);
     }
 }

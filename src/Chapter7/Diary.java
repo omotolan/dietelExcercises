@@ -70,4 +70,15 @@ public class Diary {
             System.out.println("Action can't be completed cause password is incorrect.");
         }
     }
+
+    public void updatePassword(String oldPassword, String newPassword){
+        if (password.equals(oldPassword)){
+            password = newPassword;
+            System.out.println("Password successfully changed.");
+        }
+        else {
+            System.out.println("Password can not be changed cause old password is wrong.");
+        }
+
+    }
 }
