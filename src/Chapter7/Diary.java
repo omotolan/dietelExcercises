@@ -17,12 +17,14 @@ public class Diary {
         entries = new ArrayList<Entry>();
     }
 
-    public void isLock(String password) {
+    public boolean isLock(String password) {
         if (this.password.equals(password)) {
-            isLock = true;
+            //isLock = true;
+            return isLock = true;
         } else {
             isLock = false;
             System.out.println("Wrong password.");
+            return isLock = false;
         }
     }
 

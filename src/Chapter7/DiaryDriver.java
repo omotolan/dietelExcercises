@@ -8,7 +8,6 @@ import java.util.Scanner;
 public class DiaryDriver {
     static Scanner input = new Scanner(System.in);
     private static Diary diary = new Diary("tolani", "1234");
-    private static ArrayList<Entry> entries;
 
     public static void main(String[] args) {
         String decor = "-";
@@ -34,6 +33,12 @@ public class DiaryDriver {
         }
 
 
+    }
+
+    private static void unlock(){
+        System.out.println("Enter password: ");
+        String password = input.next();
+        diary.isLock(password);
     }
 
     private static void findEntry() {
