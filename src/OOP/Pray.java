@@ -1,7 +1,7 @@
 package OOP;
 
 public class Pray {
-    public void pray(){
+    public void pray() {
         System.out.println("major pray");
     }
 }
