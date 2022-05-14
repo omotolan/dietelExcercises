@@ -15,6 +15,10 @@ public class PapaNosa {
 
     }
 
+    public Pray getPray(){
+        return pray;
+    }
+
     public void setPray(Pray pray) {
         this.pray = pray;
     }
