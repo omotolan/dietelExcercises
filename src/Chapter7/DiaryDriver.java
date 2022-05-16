@@ -1,8 +1,5 @@
 package Chapter7;
 
-import Assignment.Entry;
-
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class DiaryDriver {

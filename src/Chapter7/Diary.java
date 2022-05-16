@@ -1,7 +1,5 @@
 package Chapter7;
 
-import Assignment.Entry;
-
 import java.util.ArrayList;
 
 public class Diary {
@@ -24,8 +22,9 @@ public class Diary {
         } else {
             isLock = false;
             System.out.println("Wrong password.");
-            return isLock = false;
+           // return isLock = false;
         }
+        return isLock;
     }
 
     public void createEntry(String title, String date, String body) {
