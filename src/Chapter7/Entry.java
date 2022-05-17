@@ -6,9 +6,8 @@ public class Entry {
     private String date;
     private String body;
 
-    public Entry(String title, String date, String body) {
+    public Entry(String title, String body) {
         this.title = title;
-        this.date = date;
         this.body = body;
     }
 
@@ -20,13 +19,6 @@ public class Entry {
         this.title = title;
     }
 
-    public String getDate() {
-        return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
-    }
 
     public String getBody() {
         return body;

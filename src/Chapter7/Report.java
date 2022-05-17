@@ -119,4 +119,24 @@ public class Report {
         }
         return fails;
     }
+
+    public int hardestSubject(){
+        int[] array = new int[grades.length];
+        int hardest = 0;
+
+        for (int student = 0; student <grades.length ; student++) {
+            int fails = 0;
+            for (int subject = 0; subject < grades[student].length; subject++) {
+                if (grades[student][subject] < 50) {
+                    fails++;
+                    array[subject] = fails;
+                }
+            }
+        }
+        hardest = array[0];
+        for (int i = 0; i < array.length; i++) {
+            hardest = array[i];
+        }
+        return hardest;
+    }
 }

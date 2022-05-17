@@ -1,11 +1,15 @@
 package Chapter7;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 
 public class Diary {
     private ArrayList<Entry> entries;
     private String name;
     private String password;
+
+    Calendar calendar = Calendar.getInstance();
+
 
     private boolean isLock;
 
@@ -17,18 +21,16 @@ public class Diary {
 
     public boolean isLock(String password) {
         if (this.password.equals(password)) {
-            //isLock = true;
             return isLock = true;
         } else {
             isLock = false;
             System.out.println("Wrong password.");
-           // return isLock = false;
         }
         return isLock;
     }
 
-    public void createEntry(String title, String date, String body) {
-        Entry diaryEntry = new Entry(title, date, body);
+    public void createEntry(String title, String body) {
+        Entry diaryEntry = new Entry(title, body);
         entries.add(diaryEntry);
     }
 
@@ -40,7 +42,7 @@ public class Diary {
         for (int i = 0; i < entries.size(); i++) {
             Entry entry = entries.get(i);
             if (entry.getTitle().equals(title)) {
-                System.out.println("Entry " + title + " found at position " + (i + 1));
+                System.out.println("Entry " + title + " created on " + calendar.getTime() + " found at position " + (i + 1));
                 return (i + 1);
             }
 
@@ -63,10 +65,13 @@ public class Diary {
     public void setName(String name) {
         this.name = name;
     }
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
     public void deleteAllEntry(String password) {
         if (this.password.equals(password)) {
-            entries.removeAll(entries);
+            entries.clear();
         } else {
             System.out.println("Action can't be completed cause password is incorrect.");
         }

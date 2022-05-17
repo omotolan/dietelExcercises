@@ -4,7 +4,7 @@ public class Chart {
 
     public static void main(String[] args) {
         //  87, 68, 94, 100, 83, 78, 85, 91, 76 and 87
-        int[] array = {0, 0, 0, 0, 0, 0, 1, 2, 4, 2, 1};
+        int[] array = {0, 12, 0, 1, 18, 0, 1, 2, 4, 2, 1};
 
         System.out.println("Grade distribution:");
 

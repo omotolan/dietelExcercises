@@ -1,4 +1,4 @@
-package RoomC9;
+package Room69;
 
 public class Chair {
     private  String size;

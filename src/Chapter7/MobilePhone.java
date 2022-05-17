@@ -56,6 +56,15 @@ public class MobilePhone {
         }
 
     }
+//    public void updateContact(String oldContactName, Contacts newContact){
+//        for (int i = 0; i < myContacts.size(); i++) {
+//            Contacts contact = myContacts.get(i);
+//            if (contact.getContactName().equals(oldContactName)){
+//                myContacts.set(oldContactName,newContact)
+//            }
+//        }
+//
+//    }
 
     public int numberOfContacts() {
         return myContacts.size();

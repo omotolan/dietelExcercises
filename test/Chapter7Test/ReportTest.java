@@ -61,4 +61,12 @@ public class ReportTest {
         assertEquals(194, result);
 
     }
+    @Test
+    public void hardestSubjectTest(){
+        int[][] grades = {{74, 60, 50, 7}, {77, 74, 97, 23}, {76, 60, 20, 15}};
+        report.setGrades(grades);
+        int result = report.hardestSubject();
+        assertEquals(1, result);
+
+    }
 }
