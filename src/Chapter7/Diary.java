@@ -7,6 +7,7 @@ public class Diary {
     private ArrayList<Entry> entries;
     private String name;
     private String password;
+    private boolean isValidatePassword;
 
     Calendar calendar = Calendar.getInstance();
 
@@ -19,15 +20,29 @@ public class Diary {
         entries = new ArrayList<Entry>();
     }
 
-    public boolean isLock(String password) {
+    public void lock() {
+        isLock = true;
+    }
+
+    public void unLock(String password) {
         if (this.password.equals(password)) {
-            return isLock = true;
-        } else {
             isLock = false;
-            System.out.println("Wrong password.");
         }
+    }
+
+    public boolean isLock() {
         return isLock;
     }
+
+//    public boolean isLock(String password) {
+//        if (this.password.equals(password)) {
+//            return isLock = true;
+//        } else {
+//            isLock = false;
+//            System.out.println("Wrong password.");
+//        }
+//        return isLock;
+//    }
 
     public void createEntry(String title, String body) {
         Entry diaryEntry = new Entry(title, body);
@@ -65,6 +80,7 @@ public class Diary {
     public void setName(String name) {
         this.name = name;
     }
+
     public void setPassword(String password) {
         this.password = password;
     }
@@ -77,14 +93,20 @@ public class Diary {
         }
     }
 
-    public void updatePassword(String oldPassword, String newPassword){
-        if (password.equals(oldPassword)){
+    public void updatePassword(String oldPassword, String newPassword) {
+        if (password.equals(oldPassword)) {
             password = newPassword;
             System.out.println("Password successfully changed.");
-        }
-        else {
+           // validatePassword(password);
+        } else {
             System.out.println("Password can not be changed cause old password is wrong.");
         }
 
+    }
+    public boolean validatePassword(String password){
+        if (this.password.equals(password)){
+            isValidatePassword = true;
+        }
+        return isValidatePassword;
     }
 }
