@@ -1,4 +1,4 @@
-package Abstract;
+package Chapter10;
 
 public class FlyFly implements IFlyBehaviour {
     @Override

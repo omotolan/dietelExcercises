@@ -1,4 +1,4 @@
-package Abstract;
+package Chapter10;
 
 public abstract class Vehicle {
     /*when you want a class to be inherited, and you want the subclass to always override the superclass's method, make the method

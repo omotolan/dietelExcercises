@@ -1,4 +1,4 @@
-package Abstract;
+package Chapter10;
 
 public class Duck {
         /* two subclasses cityduck and wildduck use same method. instead of repeating code, we are going to implement the code i.e

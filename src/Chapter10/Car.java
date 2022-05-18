@@ -1,4 +1,4 @@
-package Abstract;
+package Chapter10;
 
 public class Car extends Vehicle {
     /**if car or any class must extend and abstract class (Vehicle), it must become an abstract itself(add abstract) or it must implement

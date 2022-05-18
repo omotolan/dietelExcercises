@@ -1,4 +1,4 @@
-package Abstract;
+package Chapter10;
 
 public class CityDuck extends Duck{
 

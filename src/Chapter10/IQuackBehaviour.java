@@ -1,4 +1,4 @@
-package Abstract;
+package Chapter10;
 
 public interface IQuackBehaviour {
      //every duck must have a quack behaviour
