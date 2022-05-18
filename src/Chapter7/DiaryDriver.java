@@ -71,6 +71,8 @@ public class DiaryDriver {
             }
             catch (InputMismatchException exception){
                 System.out.println("enter an integer!!!");
+               // homePage();
+               // return;
                 System.exit(6);
             }
             switch (selection) {
