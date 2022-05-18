@@ -1,4 +1,4 @@
-package EmployeeC9;
+package Chapter9.EmployeeC9;
 
 public class CommissionCompensationModel extends CommissionModel {
     public CommissionCompensationModel(double grossSales, double commissionRate) {

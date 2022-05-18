@@ -1,4 +1,4 @@
-package LinkedList;
+package Chapter7.LinkedList;
 
 public interface List {
     void add(String item);

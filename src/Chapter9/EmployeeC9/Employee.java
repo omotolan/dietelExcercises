@@ -1,4 +1,4 @@
-package EmployeeC9;
+package Chapter9.EmployeeC9;
 
 public class Employee {
     private String firstName;

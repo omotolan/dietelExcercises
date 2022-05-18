@@ -1,4 +1,4 @@
-package OOP;
+package Chapter10.OOP;
 
 public class Pray1 extends Pray {
     private int halleluyah;

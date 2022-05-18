@@ -1,4 +1,4 @@
-package Room69;
+package Chapter9.Room69;
 
 public class Mattress {
     private String brand;

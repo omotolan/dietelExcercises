@@ -1,4 +1,4 @@
-package EmployeeC9;
+package Chapter9.EmployeeC9;
 
 public class EmployeeDriver {
     public static void main(String[] args) {

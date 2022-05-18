@@ -1,4 +1,4 @@
-package Room69;
+package Chapter9.Room69;
 
 public class Room {
     private Ac ac;
