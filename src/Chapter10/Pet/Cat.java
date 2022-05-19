@@ -1,4 +1,4 @@
-package Chapter10;
+package Chapter10.Pet;
 
 public class Cat extends  Pet{
     @Override

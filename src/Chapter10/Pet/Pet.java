@@ -1,4 +1,4 @@
-package Chapter10;
+package Chapter10.Pet;
 
 public class Pet {
     public void speak(){

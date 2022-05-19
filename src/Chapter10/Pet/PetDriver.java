@@ -1,4 +1,4 @@
-package Chapter10;
+package Chapter10.Pet;
 
 public class PetDriver {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Chapter10;
+package Chapter10.Duck;
 
 public class NoQuack implements IQuackBehaviour {
     @Override
