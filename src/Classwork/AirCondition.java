@@ -1,6 +1,6 @@
-package tddClass;
+package Classwork;
 
-public class AirConditioner {
+public class AirCondition {
     private boolean power;
     private boolean power1;
     private int increasing;

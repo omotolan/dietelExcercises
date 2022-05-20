@@ -1,4 +1,4 @@
-package Chapter9;
+package Chapter9.Book;
 
 public class PrintBook extends Book {
     private final String PUBLISHER;

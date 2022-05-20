@@ -1,7 +1,7 @@
 package Chapter9Test;
 
-import Chapter9.Animal;
-import Chapter9.Vertebrate;
+import Chapter9.LivingThings.Animal;
+import Chapter9.LivingThings.Vertebrate;
 import org.junit.jupiter.api.Test;
 
 public class AnimalTest {

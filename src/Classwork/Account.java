@@ -1,51 +1,57 @@
 package Classwork;
 
 public class Account {
-    String name = "";
-    double amount = 0.0;
-    static double balance = 0.0;
-    private static String accountNumber = "";
-    public static double interestRate = 0;
+    private String name;
+    private double balance;
+    private String accountNumber;
+    private static double interestRate;
 
-    public Account(String accNumber) {
-        this.accountNumber = accNumber;
+    public Account(String name, String accNumber) {
+        this.name = name;
+        accountNumber = accNumber;
+        interestRate = 0.0;
+        balance = 0.0;
     }
 
     public static void setInterestRate(double interest) {
         interestRate = interest;
     }
 
-    public double addInterest() {
-        balance += (balance * interestRate) / 100;
-        return balance;
-    }
 
     public void deposit(int amount) {
-        this.amount += amount;
-        this.balance = this.amount;
-
-    }
-
-    public boolean withdraw(int amount) {
-        if (balance < amount) {
-            System.out.println("insufficient balance");
-            return false;
+        if (amount < 0) {
+            balance = 0;
         } else {
-            this.amount -= amount;
-            this.balance = this.amount;
-            System.out.println("transaction successful");
-            return true;
+            balance += amount;
         }
-
     }
 
     public void transfer(Account name, int amount) {
-        this.balance -= amount;
+        balance -= amount;
         name.balance += amount;
     }
 
-    public double withdrawal(int amount) {
-        this.balance -= amount;
-        return balance;
+    public double withdraw(int amount) {
+        if (amount > balance) {
+            return balance;
+        } else {
+            return balance -= amount;
+        }
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getAccountNumber() {
+        return accountNumber;
+    }
+
+    public double getBalance() {
+        if (interestRate > 0.0) {
+            return balance += (balance * interestRate) / 100;
+        } else {
+            return balance;
+        }
     }
 }

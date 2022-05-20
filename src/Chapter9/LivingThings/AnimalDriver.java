@@ -1,4 +1,4 @@
-package Chapter9;
+package Chapter9.LivingThings;
 
 import java.util.ArrayList;
 

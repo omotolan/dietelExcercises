@@ -1,4 +1,4 @@
-package Chapter9;
+package Chapter9.LivingThings;
 
 public class LivingThing {
 

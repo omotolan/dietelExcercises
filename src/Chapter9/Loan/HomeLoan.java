@@ -1,4 +1,4 @@
-package Chapter9;
+package Chapter9.Loan;
 
 public class HomeLoan extends Loan {
 

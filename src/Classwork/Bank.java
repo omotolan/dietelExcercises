@@ -1,10 +1,9 @@
-package tddClass;
+package Classwork;
 
 public class Bank {
     private int balance;
     public void deposit(int amount){
-        amount = 300;
-        balance = amount;
+        balance += amount;
     }
     public int getBalance(){
         return balance;

@@ -17,7 +17,9 @@ public class DuckDriver {
 
     public static void main(String[] args) {
         start();
-
+        // interface has a is-a relationship with classes that implements it
+        IFlyBehaviour fly = new NonFly();
+        fly.fly();
     }
 
     private static void start() {

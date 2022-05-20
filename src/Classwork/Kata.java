@@ -1,4 +1,4 @@
-package tddClass;
+package Classwork;
 
 public class Kata {
 

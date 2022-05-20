@@ -24,14 +24,14 @@ public class Turtle {
 
     public void turnRight() {
         if (direction == SOUTH){direction = WEST;}
-        if(direction == EAST){direction = SOUTH;}
-        if (direction == WEST){direction = NORTH;}
+         else if(direction == EAST){direction = SOUTH;}
+        else if (direction == WEST){direction = NORTH;}
     }
     public void turnLeft(){
 
         if (direction == NORTH){face(WEST);}
-        if (direction == WEST){face(SOUTH);}
-        if (direction == EAST){ face(NORTH);}
+        else if (direction == WEST){face(SOUTH);}
+        else if (direction == EAST){ face(NORTH);}
 
     }
     public void face(Direction newDirection){

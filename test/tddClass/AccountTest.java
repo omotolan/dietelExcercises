@@ -1,5 +1,6 @@
 package tddClass;
 
+import Classwork.Account;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -9,7 +10,7 @@ public class AccountTest {
     @Test
     public void depositTest() {
         //given
-        Account tolaniAccount = new Account();
+        Account tolaniAccount = new Account("tolani", "1234");
         //when
         tolaniAccount.deposit(100);
         //assert
@@ -20,7 +21,7 @@ public class AccountTest {
     @Test
     public void depositTwiceTest() {
         //given
-        Account tolaniAccount = new Account();
+        Account tolaniAccount = new Account("tolani","1234" );
         //when
         tolaniAccount.deposit(100);
         tolaniAccount.deposit(100);
@@ -31,7 +32,7 @@ public class AccountTest {
     @Test
     public void depositThriceTest() {
         //given
-        Account tolaniAccount = new Account();
+        Account tolaniAccount = new Account("tolani","1234");
         //when
         tolaniAccount.deposit(100);
         tolaniAccount.deposit(100);
@@ -43,7 +44,7 @@ public class AccountTest {
     @Test
     @DisplayName("Test that negative deposit will not work")
     public void negativeDepositTest() {
-        Account tolaniAccount = new Account();
+        Account tolaniAccount = new Account("tolani", "1234");
         tolaniAccount.deposit(1000);
         tolaniAccount.deposit(-500);
         assertEquals(1000, tolaniAccount.getBalance());
@@ -66,7 +67,7 @@ public class AccountTest {
      }*/
     @Test
     public void withdrawalTestWithZeroBalancede() {
-        Account tolaniAccount = new Account();
+        Account tolaniAccount = new Account("tolani","1234");
         tolaniAccount.withdraw(1000);
         assertEquals(0, tolaniAccount.getBalance());
 

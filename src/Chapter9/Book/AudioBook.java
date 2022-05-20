@@ -1,4 +1,4 @@
-package Chapter9;
+package Chapter9.Book;
 
 public class AudioBook extends Book {
     private final double SIZE;
