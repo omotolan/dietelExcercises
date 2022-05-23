@@ -70,6 +70,9 @@ public class Diary {
 
     public void deleteEntry(String titleOfEntry) {
         entries.remove(findEntry(titleOfEntry) - 1);
+//        int indexOfEntry = entries.indexOf(titleOfEntry);
+//        entries.remove(indexOfEntry);
+//        entries.remove(titleOfEntry);
     }
 
 
