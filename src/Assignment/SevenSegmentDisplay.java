@@ -2,7 +2,7 @@ package Assignment;
 
 import java.util.Arrays;
 
-public class SevenSegementDisplay {
+public class SevenSegmentDisplay {
     private static String[][] segments = new String[5][4];
     public static void main(String[] args) {
 
@@ -14,6 +14,7 @@ public class SevenSegementDisplay {
         setSegmentF();
         setSegmentG();
         System.out.println(Arrays.deepToString(segments));
+        setScreen("2");
 
     }
     public static void setSegmentA(){
@@ -63,6 +64,44 @@ public class SevenSegementDisplay {
             for (int j = 0; j <= 3; j++) {
                 segments[i][j] = "*";
             }
+        }
+    }
+    public static void setScreen(String input) {
+        for (int i = 0; i <= 4; i++) {
+            for (int j = 0; j <= 3; j++) {
+                segments[i][j] = " ";
+            }
+        }
+        if (input.charAt(7) == '1') {
+            if (input.charAt(0) == '1') {
+                setSegmentA();
+            }
+            if (input.charAt(1) == '1') {
+                setSegmentB();
+            }
+            if (input.charAt(2) == '1') {
+                setSegmentC();
+            }
+            if (input.charAt(3) == '1') {
+                setSegmentD();
+            }
+            if (input.charAt(4) == '1') {
+                setSegmentE();
+            }
+            if (input.charAt(5) == '1') {
+                setSegmentF();
+            }
+            if (input.charAt(6) == '1') {
+                setSegmentG();
+            }
+        }
+    }
+    public  static void display(){
+        for (int i = 0; i <= 4; i++) {
+            for (int j = 0; j <= 3; j++) {
+                System.out.print(segments[i][j]+" ");
+            }
+            System.out.println();
         }
     }
 
