@@ -1,28 +1,30 @@
 package DSA;
 
-public class MyArrayList implements CustomList{
-    private String[] array = new String[5];
+public class MyArrayList implements CustomList {
+    private int newCapacity =5;
+
+    private String[] array = new String[newCapacity*2];
     private int counter;
 
     @Override
     public boolean isEmpty() {
-        if(counter == 0){
+        if (counter == 0) {
             return true;
-        }
-        else return false;
+        } else return false;
     }
 
     @Override
     public void add(String item) {
         array[counter] = item;
         counter++;
-
+        newCapacity++;
     }
 
     @Override
     public void add(int index, String item) {
-            array[index] = item;
-            counter++;
+        array[index] = item;
+        counter++;
+        newCapacity++;
     }
 
     @Override
@@ -30,14 +32,12 @@ public class MyArrayList implements CustomList{
         for (int i = 0; i < array.length; i++) {
             array[i] = null;
         }
-
-
     }
 
     @Override
     public boolean contains(String item) {
-        for (String element : array){
-            if (item.equals(element)){
+        for (String element : array) {
+            if (item.equals(element)) {
                 return true;
             }
         }
@@ -48,13 +48,12 @@ public class MyArrayList implements CustomList{
     public String get(int index) {
         String item = null;
 
-            try {
-                for (int i = 0; i < array.length; i++) {
-                    item = array[index];
-                }
+        try {
+            for (int i = 0; i < array.length; i++) {
+                item = array[index];
             }
-            catch (Exception e){
-                System.out.println("Index of of bound waray");
+        } catch (Exception e) {
+            System.out.println("Index of of bound waray");
 
         }
         return item;
@@ -65,7 +64,7 @@ public class MyArrayList implements CustomList{
         String element;
         for (int i = 0; i < array.length; i++) {
             element = array[i];
-            if (item.equals(element)){
+            if (item.equals(element)) {
                 return i;
             }
         }
@@ -74,26 +73,20 @@ public class MyArrayList implements CustomList{
 
     @Override
     public void remove(String item) {
-        for(String element : array){
-            if (item.equals(element)){
-
-            }
-        }
+        int index = indexOf(item);
+        String[] newArray = new String[array.length - 1];
+        System.arraycopy(array, 0, newArray, 0, index);
+        System.arraycopy(array, index + 1, newArray, index, array.length - index - 1);
+        array = newArray;
 
     }
 
     @Override
     public void remove(int index) {
-       String[] newArray = new String[array.length -1];
-        for (int i = 0, k = 0; i < array.length; i++) {
-if (i == index){
-    continue;
-}
-            newArray[k++] = array[i];
-           // System.arraycopy(array, 0, newArray, 0, array.length - 1);
-        }
+        String[] newArray = new String[array.length - 1];
+        System.arraycopy(array, 0, newArray, 0, index);
+        System.arraycopy(array, index + 1, newArray, index, array.length - index - 1);
         array = newArray;
-
     }
 
     @Override
@@ -104,11 +97,20 @@ if (i == index){
     @Override
     public void set(int index, String item) {
         for (int i = 0; i < array.length; i++) {
-            if (i == index){
-                array[index] =item;
+            if (i == index) {
+                array[index] = item;
             }
 
         }
+
+    }
+
+    @Override
+    public void expand() {
+        newCapacity = array.length * 2;
+        String[] newArray = new String[newCapacity];
+        System.arraycopy(array, 0, newArray, 0, newCapacity * 2);
+        array = newArray;
 
     }
 }

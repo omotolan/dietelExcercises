@@ -7,40 +7,47 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class MyArrayListTest {
     private MyArrayList myArrayList;
+
     @BeforeEach
-    public void startWith(){
-         myArrayList = new MyArrayList();
+    public void startWith() {
+        myArrayList = new MyArrayList();
     }
+
     @Test
-    public void arrayListCanBeCreatedTest(){
+    public void arrayListCanBeCreatedTest() {
         assertNotNull(myArrayList);
     }
+
     @Test
-    public void arrayListIsEmptyTest(){
+    public void arrayListIsEmptyTest() {
         assertTrue(myArrayList.isEmpty());
     }
+
     @Test
-    public void itemCanBeAddedToArrayListTest(){
+    public void itemCanBeAddedToArrayListTest() {
         myArrayList.add("tolani");
         myArrayList.add("tobi");
         assertEquals(2, myArrayList.size());
     }
+
     @Test
-    public void itemCanBeAddedToArrayListWithIndexTest(){
+    public void itemCanBeAddedToArrayListWithIndexTest() {
         myArrayList.add(2, "tolani");
         assertEquals(1, myArrayList.size());
 
     }
+
     @Test
-    public void findItemInArrayListTest(){
+    public void findItemInArrayListTest() {
         myArrayList.add("tolani");
         myArrayList.add("tobi");
         myArrayList.add("bunmi");
         myArrayList.add("femi");
         assertEquals("bunmi", myArrayList.get(2));
     }
+
     @Test
-    public void ifArrayListContainsItemTest(){
+    public void ifArrayListContainsItemTest() {
         myArrayList.add("tolani");
         myArrayList.add("tobi");
         myArrayList.add("bunmi");
@@ -48,27 +55,49 @@ public class MyArrayListTest {
         assertTrue(myArrayList.contains("tobi"));
 
     }
+
     @Test
-    public void indexOfItemCanBeGottenTest(){
+    public void indexOfItemCanBeGottenTest() {
         myArrayList.add("tolani");
         myArrayList.add("tobi");
         myArrayList.add("bunmi");
         myArrayList.add("femi");
         assertEquals(2, myArrayList.indexOf("bunmi"));
     }
+
     @Test
-    public void removeItemFromArrayListByIndexTest(){
+    public void removeItemFromArrayListByIndexTest() {
         myArrayList.add("tolani");
         myArrayList.add("tobi");
         myArrayList.add("bunmi");
         myArrayList.add("femi");
-        myArrayList.remove(1);
-        assertEquals(3, myArrayList.size());
+        myArrayList.add("biodun");
+        myArrayList.remove(2);
+        assertEquals("femi", myArrayList.get(2));
+        assertFalse(myArrayList.contains("bunmi"));
+        for (int i = 0; i < myArrayList.size(); i++) {
+            System.out.println(myArrayList.get(i));
 
-       // assertEquals(false, myArrayList.contains("tobi"));
+        }
     }
+
     @Test
-    public void itemCanBeSetInTheArrayListTest(){
+    public void removeItemFromArrayListByItemTest() {
+        myArrayList.add("tolani");
+        myArrayList.add("tobi");
+        myArrayList.add("bunmi");
+        myArrayList.add("femi");
+        myArrayList.add("biodun");
+        myArrayList.remove("femi");
+        assertEquals("biodun", myArrayList.get(3));
+        assertFalse(myArrayList.contains("femi"));
+        for (int i = 0; i < myArrayList.size(); i++) {
+            System.out.println(myArrayList.get(i));
+        }
+    }
+
+    @Test
+    public void itemCanBeSetInTheArrayListTest() {
         myArrayList.add("tolani");
         myArrayList.add("tobi");
         myArrayList.add("bunmi");
@@ -77,8 +106,9 @@ public class MyArrayListTest {
         assertTrue(myArrayList.contains("ojo"));
 
     }
+
     @Test
-    public void arrayListCAanBeClearedTest(){
+    public void arrayListCanBeClearedTest() {
         myArrayList.add("tolani");
         myArrayList.add("tobi");
         myArrayList.add("bunmi");
@@ -89,7 +119,17 @@ public class MyArrayListTest {
         assertFalse(myArrayList.contains("tunmi"));
         assertFalse(myArrayList.contains("femi"));
 
-
+    }
+    @Test
+    public void arrayCanBeExpandedTest(){
+        myArrayList.add("tolani");
+        myArrayList.add("tobi");
+        myArrayList.add("bunmi");
+        myArrayList.add("femi");
+        myArrayList.add("tolu");
+        myArrayList.expand();
+        myArrayList.add("d");
+        assertEquals(6, myArrayList.size());
     }
 
 }
