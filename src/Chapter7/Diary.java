@@ -34,16 +34,6 @@ public class Diary {
         return isLock;
     }
 
-//    public boolean isLock(String password) {
-//        if (this.password.equals(password)) {
-//            return isLock = true;
-//        } else {
-//            isLock = false;
-//            System.out.println("Wrong password.");
-//        }
-//        return isLock;
-//    }
-
     public void createEntry(String title, String body) {
         Entry diaryEntry = new Entry(title, body);
         entries.add(diaryEntry);
@@ -100,7 +90,6 @@ public class Diary {
         if (password.equals(oldPassword)) {
             password = newPassword;
             System.out.println("Password successfully changed.");
-           // validatePassword(password);
         } else {
             System.out.println("Password can not be changed cause old password is wrong.");
         }

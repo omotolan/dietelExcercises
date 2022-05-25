@@ -1,4 +1,4 @@
-package DSA;
+package FreeStyle;
 
 import java.util.ArrayList;
 import java.util.Scanner;
