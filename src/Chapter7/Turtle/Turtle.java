@@ -1,7 +1,7 @@
-package Chapter7;
+package Chapter7.Turtle;
 
 
-import static Chapter7.Direction.*;
+import static Chapter7.Turtle.Direction.*;
 
 public class Turtle {
 

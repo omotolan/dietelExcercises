@@ -1,9 +1,7 @@
 package DSA;
 
 public class MyArrayList implements CustomList {
-    private int newCapacity =5;
-
-    private String[] array = new String[newCapacity*2];
+    private Object[] array = new Object[5];
     private int counter;
 
     @Override
@@ -14,17 +12,22 @@ public class MyArrayList implements CustomList {
     }
 
     @Override
-    public void add(String item) {
-        array[counter] = item;
+    public void add(Object obj) {
+
+        array[counter] = obj;
         counter++;
-        newCapacity++;
+
+        Object[] newArray = new Object[array.length + 1];
+        if (counter >= array.length) {
+            array = newArray;
+        }
+
     }
 
     @Override
-    public void add(int index, String item) {
-        array[index] = item;
+    public void add(int index, Object obj) {
+        array[index] = obj;
         counter++;
-        newCapacity++;
     }
 
     @Override
@@ -35,9 +38,9 @@ public class MyArrayList implements CustomList {
     }
 
     @Override
-    public boolean contains(String item) {
-        for (String element : array) {
-            if (item.equals(element)) {
+    public boolean contains(Object obj) {
+        for (Object element : array) {
+            if (obj.equals(element)) {
                 return true;
             }
         }
@@ -45,8 +48,8 @@ public class MyArrayList implements CustomList {
     }
 
     @Override
-    public String get(int index) {
-        String item = null;
+    public Object get(int index) {
+        Object item = null;
 
         try {
             for (int i = 0; i < array.length; i++) {
@@ -60,11 +63,11 @@ public class MyArrayList implements CustomList {
     }
 
     @Override
-    public int indexOf(String item) {
-        String element;
+    public int indexOf(Object obj) {
+        Object element;
         for (int i = 0; i < array.length; i++) {
             element = array[i];
-            if (item.equals(element)) {
+            if (obj.equals(element)) {
                 return i;
             }
         }
@@ -72,9 +75,9 @@ public class MyArrayList implements CustomList {
     }
 
     @Override
-    public void remove(String item) {
-        int index = indexOf(item);
-        String[] newArray = new String[array.length - 1];
+    public void remove(Object obj) {
+        int index = indexOf(obj);
+        Object[] newArray = new Object[array.length - 1];
         System.arraycopy(array, 0, newArray, 0, index);
         System.arraycopy(array, index + 1, newArray, index, array.length - index - 1);
         array = newArray;
@@ -83,7 +86,7 @@ public class MyArrayList implements CustomList {
 
     @Override
     public void remove(int index) {
-        String[] newArray = new String[array.length - 1];
+        Object[] newArray = new Object[array.length - 1];
         System.arraycopy(array, 0, newArray, 0, index);
         System.arraycopy(array, index + 1, newArray, index, array.length - index - 1);
         array = newArray;
@@ -95,22 +98,14 @@ public class MyArrayList implements CustomList {
     }
 
     @Override
-    public void set(int index, String item) {
+    public void set(int index, Object obj) {
         for (int i = 0; i < array.length; i++) {
             if (i == index) {
-                array[index] = item;
+                array[index] = obj;
             }
 
         }
 
     }
 
-    @Override
-    public void expand() {
-        newCapacity = array.length * 2;
-        String[] newArray = new String[newCapacity];
-        System.arraycopy(array, 0, newArray, 0, newCapacity * 2);
-        array = newArray;
-
-    }
 }

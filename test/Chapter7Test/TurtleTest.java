@@ -1,7 +1,7 @@
 package Chapter7Test;
 
-import Chapter7.Direction;
-import Chapter7.Turtle;
+import Chapter7.Turtle.Direction;
+import Chapter7.Turtle.Turtle;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

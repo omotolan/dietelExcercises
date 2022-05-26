@@ -3,25 +3,25 @@ package DSA;
 public interface CustomList {
     boolean isEmpty();
 
-    void add(String item);
+    void add(Object obj);
 
-    void add(int index, String item);
+    void add(int index, Object obj);
 
     void clear();
 
-    boolean contains(String item);
+    boolean contains(Object obj);
 
-    String get(int index);
+    Object get(int index);
 
-    int indexOf(String item);
+    int indexOf(Object obj);
 
-    void remove(String item);
+    void remove(Object obj);
 
     void remove(int index);
 
     int size();
 
-    void set(int index, String item);
-    void expand();
+    void set(int index, Object obj);
+
 
 }

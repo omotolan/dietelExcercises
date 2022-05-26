@@ -1,23 +1,23 @@
 package DSA;
 
 public class Set extends MyArrayList {
-    String[] array = new String[5];
+    Object[] array = new Object[5];
     int counter;
     @Override
-    public void add(String item){
-        if(counter == 0) {
-            array[counter] = item;
-            counter++;
-        }
-        if (counter >= 1){
-        for (String element : array) {
-            if (!item.equals(element)) {
-                array[counter] = item;
-                counter++;
-            }
-        }
-
-        }
+    public void add(Object obj){
+       // if(counter == 0) {
+            array[counter] = obj;
+           counter++;
+//        }
+//        if (counter > 1){
+//        for (String element : array) {
+//            if (!item.equals(element)) {
+//                array[counter] = item;
+//
+//            }
+//        }
+//            counter++;
+//        }
 
     }
 }

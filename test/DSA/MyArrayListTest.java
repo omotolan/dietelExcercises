@@ -72,8 +72,10 @@ public class MyArrayListTest {
         myArrayList.add("bunmi");
         myArrayList.add("femi");
         myArrayList.add("biodun");
+        myArrayList.add("femi");
+        myArrayList.add("biodun");
         myArrayList.remove(2);
-        assertEquals("femi", myArrayList.get(2));
+        assertEquals("femi", myArrayList.get(3));
         assertFalse(myArrayList.contains("bunmi"));
         for (int i = 0; i < myArrayList.size(); i++) {
             System.out.println(myArrayList.get(i));
@@ -127,9 +129,20 @@ public class MyArrayListTest {
         myArrayList.add("bunmi");
         myArrayList.add("femi");
         myArrayList.add("tolu");
-        myArrayList.expand();
         myArrayList.add("d");
-        assertEquals(6, myArrayList.size());
+        myArrayList.add("a");
+        myArrayList.add("t");
+        myArrayList.add("d");
+        myArrayList.add("e");
+        myArrayList.add("f");
+        myArrayList.add("g");
+        myArrayList.add("h");
+        myArrayList.add("i");
+        myArrayList.add("j");
+        myArrayList.add("k");
+        myArrayList.add("l");
+        myArrayList.add("m");
+        assertEquals(18, myArrayList.size());
     }
 
 }
