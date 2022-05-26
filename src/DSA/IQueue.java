@@ -1,12 +1,13 @@
 package DSA;
 
 public interface IQueue {
-    void add();
-    void offer();
-    void element();
-    void peek();
+    void add(Object obj);
+    Object offer();
+    Object element();
+    Object peek();
     Object remove();
-    void poll();
+    Object poll();
     boolean isEmpty();
+    int size();
 
 }
