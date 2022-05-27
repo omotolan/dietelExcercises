@@ -35,7 +35,7 @@ public class MyArrayList implements CustomList {
 
     @Override
     public void add(int index, Object obj) {
-
+        outOfBoundMessage(index);
         int size = array.length + 1;
         Object[] newArray = new Object[size];
         System.arraycopy(array, index, newArray, index + 1, size - index - 1);
@@ -63,16 +63,13 @@ public class MyArrayList implements CustomList {
             }
         }
         return false;
+        // return indexOf(obj) >= 0;
     }
 
     @Override
     public Object get(int index) {
         Object item = null;
-
-        if (index < 0 || index >= array.length) {
-            throw new ArrayIndexOutOfBoundsException("Index is out of bounds");
-
-        }
+        outOfBoundMessage(index);
         for (int i = 0; i < array.length; i++) {
             item = array[index];
         }
@@ -108,6 +105,7 @@ public class MyArrayList implements CustomList {
 //        System.arraycopy(array, 0, newArray, 0, index);
 //        System.arraycopy(array, index + 1, newArray, index, array.length - index - 1);
 //        array = newArray;
+        outOfBoundMessage(index);
         int newSize = array.length - 1;
         System.arraycopy(array, index + 1, array, index, newSize - index);
         array[newSize] = null;
@@ -120,6 +118,7 @@ public class MyArrayList implements CustomList {
 
     @Override
     public void set(int index, Object obj) {
+        outOfBoundMessage(index);
         for (int i = 0; i < array.length; i++) {
             if (i == index) {
                 array[index] = obj;
@@ -128,5 +127,12 @@ public class MyArrayList implements CustomList {
         }
 
     }
+
+    private void outOfBoundMessage(int index) {
+        if (index < 0 || index >= array.length) {
+            throw new ArrayIndexOutOfBoundsException("Index " + index + "is out of bound for ArrayList of size: " + array.length);
+        }
+    }
+
 
 }
