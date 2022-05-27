@@ -37,21 +37,50 @@ public class MyHashMap implements IMap {
 
     @Override
     public boolean containsKey(Object key) {
+        if (!isEmpty()){
+            for (Object o : keys) {
+                if (key.equals(o)){
+                    return true;
+                }
+            }
+        }
         return false;
     }
 
     @Override
     public boolean containsValue(Object value) {
+        if (!isEmpty()){
+            for (Object o : values){
+                if (value.equals(o)){
+                    return true;
+                }
+            }
+        }
         return false;
     }
 
     @Override
     public Object get(Object key) {
+        if (!isEmpty()){
+            for (Object o : keys){
+                if (key.equals(o)){
+
+                }
+            }
+        }
         return null;
     }
 
     @Override
     public void clear() {
+        for(Object o : keys){
+            if (o.equals(keys)){
+                keys = null;
+            }
+            for (Object obj : values){
+                values = null;
+            }
+        }
 
     }
 

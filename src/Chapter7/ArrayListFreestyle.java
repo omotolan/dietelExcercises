@@ -13,11 +13,12 @@ public class ArrayListFreestyle {
         //manual addition to list
         myList.add(23);
         myList.add(1);
+        myList.add(56);
         myList.add(34);
-        myList.add(34);
-        myList.add(34);
-        myList.add(34);
-        myList.add(34);
+        myList.add(8);
+        myList.add(67);
+        myList.add(0);
+        System.out.println(myList.get(3));
         System.out.println("enter number");
         int num = input.nextInt();
         myList.add(num);

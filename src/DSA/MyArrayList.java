@@ -1,7 +1,10 @@
 package DSA;
 
+import java.util.Arrays;
+
 public class MyArrayList implements CustomList {
-    private Object[] array = new Object[5];
+    private final int initialCapacity = 5;
+    private Object[] array = new Object[initialCapacity];
     private int counter;
 
     @Override
@@ -13,28 +16,43 @@ public class MyArrayList implements CustomList {
 
     @Override
     public void add(Object obj) {
-
+        array = grow();
         array[counter] = obj;
         counter++;
 
-        Object[] newArray = new Object[array.length + 1];
-        if (counter >= array.length) {
-            array = newArray;
-        }
+    }
 
+
+    private Object[] grow() {
+        if (counter >= initialCapacity) {
+            Object[] newArray = array;
+            int newSize = array.length + 1;
+            array = Arrays.copyOf(newArray, newSize);
+
+        }
+        return array;
     }
 
     @Override
     public void add(int index, Object obj) {
-        array[index] = obj;
+
+        int size = array.length + 1;
+        Object[] newArray = new Object[size];
+        System.arraycopy(array, index, newArray, index + 1, size - index - 1);
+        System.arraycopy(array, 0, newArray, 0, index);
+        newArray[index] = obj;
+        array = newArray;
         counter++;
+
     }
+
 
     @Override
     public void clear() {
-        for (int i = 0; i < array.length; i++) {
-            array[i] = null;
-        }
+        Arrays.fill(array, null);
+//        for (int i = 0; i < array.length; i++) {
+//            array[i] = null;
+//        }
     }
 
     @Override
@@ -51,14 +69,14 @@ public class MyArrayList implements CustomList {
     public Object get(int index) {
         Object item = null;
 
-        try {
-            for (int i = 0; i < array.length; i++) {
-                item = array[index];
-            }
-        } catch (Exception e) {
-            System.out.println("Index of of bound waray");
+        if (index < 0 || index >= array.length) {
+            throw new ArrayIndexOutOfBoundsException("Index is out of bounds");
 
         }
+        for (int i = 0; i < array.length; i++) {
+            item = array[index];
+        }
+
         return item;
     }
 
@@ -86,10 +104,13 @@ public class MyArrayList implements CustomList {
 
     @Override
     public void remove(int index) {
-        Object[] newArray = new Object[array.length - 1];
-        System.arraycopy(array, 0, newArray, 0, index);
-        System.arraycopy(array, index + 1, newArray, index, array.length - index - 1);
-        array = newArray;
+//        Object[] newArray = new Object[array.length - 1];
+//        System.arraycopy(array, 0, newArray, 0, index);
+//        System.arraycopy(array, index + 1, newArray, index, array.length - index - 1);
+//        array = newArray;
+        int newSize = array.length - 1;
+        System.arraycopy(array, index + 1, array, index, newSize - index);
+        array[newSize] = null;
     }
 
     @Override

@@ -32,8 +32,18 @@ public class MyArrayListTest {
 
     @Test
     public void itemCanBeAddedToArrayListWithIndexTest() {
-        myArrayList.add(2, "tolani");
-        assertEquals(1, myArrayList.size());
+        myArrayList.add("tolani");
+        myArrayList.add("tobi");
+        myArrayList.add("bunmi");
+        myArrayList.add("femi");
+        myArrayList.add("b");
+        myArrayList.add("fe");
+        myArrayList.add("u");
+        myArrayList.add("e");
+        myArrayList.add(6,"azeez");
+        assertEquals(9, myArrayList.size());
+        assertEquals(6, myArrayList.indexOf("azeez"));
+        assertEquals(7, myArrayList.indexOf("u"));
 
     }
 
@@ -62,7 +72,7 @@ public class MyArrayListTest {
         myArrayList.add("tobi");
         myArrayList.add("bunmi");
         myArrayList.add("femi");
-        assertEquals(2, myArrayList.indexOf("bunmi"));
+        assertEquals(3, myArrayList.indexOf("femi"));
     }
 
     @Test
@@ -74,8 +84,9 @@ public class MyArrayListTest {
         myArrayList.add("biodun");
         myArrayList.add("femi");
         myArrayList.add("biodun");
+        assertEquals(3, myArrayList.indexOf("femi"));
         myArrayList.remove(2);
-        assertEquals("femi", myArrayList.get(3));
+        assertEquals("femi", myArrayList.get(2));
         assertFalse(myArrayList.contains("bunmi"));
         for (int i = 0; i < myArrayList.size(); i++) {
             System.out.println(myArrayList.get(i));
@@ -93,9 +104,6 @@ public class MyArrayListTest {
         myArrayList.remove("femi");
         assertEquals("biodun", myArrayList.get(3));
         assertFalse(myArrayList.contains("femi"));
-        for (int i = 0; i < myArrayList.size(); i++) {
-            System.out.println(myArrayList.get(i));
-        }
     }
 
     @Test
@@ -122,8 +130,9 @@ public class MyArrayListTest {
         assertFalse(myArrayList.contains("femi"));
 
     }
+
     @Test
-    public void arrayCanBeExpandedTest(){
+    public void arrayCanBeExpandedTest() {
         myArrayList.add("tolani");
         myArrayList.add("tobi");
         myArrayList.add("bunmi");
@@ -143,6 +152,8 @@ public class MyArrayListTest {
         myArrayList.add("l");
         myArrayList.add("m");
         assertEquals(18, myArrayList.size());
+        assertEquals(0, myArrayList.indexOf("tolani"));
+        assertEquals("d", myArrayList.get(8));
     }
 
 }
