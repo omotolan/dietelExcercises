@@ -1,11 +1,12 @@
 package DSA;
 
 public interface IQueue {
-    void add(Object obj);
+    void add(Object obj) throws MyQueue.QueueIsFullException;
+    boolean isFull();
     Object offer();
     Object element();
     Object peek();
-    Object remove();
+    void remove();
     Object poll();
     boolean isEmpty();
     int size();

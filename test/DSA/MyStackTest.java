@@ -10,7 +10,7 @@ public class MyStackTest {
 
     @BeforeEach
     public void startWith() {
-        myStack = new MyStack();
+        myStack = new MyStack(5);
     }
 
     @Test
@@ -43,7 +43,7 @@ public class MyStackTest {
         myStack.pop();
         myStack.pop();
         myStack.pop();
-        assertEquals(3, myStack.size());
+        assertEquals(0, myStack.size());
     }
 
     @Test

@@ -1,5 +1,7 @@
 package DSA;
 
+import java.util.AbstractList;
+
 public interface CustomList {
     boolean isEmpty();
 

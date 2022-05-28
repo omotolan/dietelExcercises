@@ -1,7 +1,6 @@
 package DSA;
 
 import java.util.ArrayList;
-import java.util.zip.DataFormatException;
 
 public class MyHashMap implements IMap {
     private ArrayList<Object> keys = new ArrayList<>();
@@ -73,14 +72,16 @@ public class MyHashMap implements IMap {
 
     @Override
     public void clear() {
+
         for(Object o : keys){
-            if (o.equals(keys)){
-                keys = null;
+           // if (o.equals(keys)){
+                o = null;
             }
             for (Object obj : values){
-                values = null;
+
+                obj = null;
             }
-        }
+
 
     }
 
@@ -103,4 +104,5 @@ public class MyHashMap implements IMap {
     public boolean replace(Object key, Object oldValue, Object newValue) {
         return false;
     }
+
 }

@@ -3,9 +3,14 @@ package DSA;
 import java.util.Arrays;
 
 public class MyArrayList implements CustomList {
-    private final int initialCapacity = 5;
-    private Object[] array = new Object[initialCapacity];
+    private final int initialCapacity;
+    private Object[] array;
     private int counter;
+
+    public MyArrayList() {
+        initialCapacity = 10;
+        array = new Object[initialCapacity];
+    }
 
     @Override
     public boolean isEmpty() {
@@ -63,7 +68,7 @@ public class MyArrayList implements CustomList {
             }
         }
         return false;
-        // return indexOf(obj) >= 0;
+        // return indexOf(obj) != -1;
     }
 
     @Override
@@ -96,6 +101,7 @@ public class MyArrayList implements CustomList {
         System.arraycopy(array, 0, newArray, 0, index);
         System.arraycopy(array, index + 1, newArray, index, array.length - index - 1);
         array = newArray;
+        counter--;
 
     }
 
@@ -108,7 +114,8 @@ public class MyArrayList implements CustomList {
         outOfBoundMessage(index);
         int newSize = array.length - 1;
         System.arraycopy(array, index + 1, array, index, newSize - index);
-        array[newSize] = null;
+        counter--;
+        // array[newSize] = null;
     }
 
     @Override
