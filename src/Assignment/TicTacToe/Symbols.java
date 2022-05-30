@@ -1,7 +1,15 @@
 package Assignment.TicTacToe;
 
 public enum Symbols {
-    O, X, E
+    O('O'),
+    X('X'),
+    E(' ');
 
-    //enum symbols(){}
+private char symbols;
+    Symbols(char o) {
+        symbols = o;
+    }
+    public char getSymbol(){
+        return symbols;
+    }
 }

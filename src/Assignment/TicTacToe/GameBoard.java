@@ -1,16 +1,13 @@
 package Assignment.TicTacToe;
 
 public class GameBoard {
-   // Symbols symbols = Symbols.X;
-   private  Symbols symbols = Symbols.E;
-    static String name = Symbols.X.name();
-    static char symbolE = name.charAt(0);
+
 
     public char[][] getGameBoard() {
         return gameBoard;
     }
 
-    private     char[][] gameBoard = {
+    public      char[][] gameBoard = {
                 {'_', '|', '_', '|', '_'},
                 {'_', '|', '_', '|', '_'},
                 {' ', '|', ' ', '|', ' '}
