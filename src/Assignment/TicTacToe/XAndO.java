@@ -30,11 +30,9 @@ public class XAndO {
             gameOver = isGameWon(gameBoard);
             if (gameOver) {
                 break;
-             //   if (userInput == 6){
 
-              //  }
             }
-            // playerMove(gameBoard);
+
 
         }
         result = isGameWon(gameBoard);
@@ -218,7 +216,7 @@ public class XAndO {
                 && gameBoard[1][0] != '_' && gameBoard[1][2] != '_' && gameBoard[1][4] != '_'
                 && gameBoard[2][0] != ' ' && gameBoard[2][2] != ' ' && gameBoard[2][4] != ' ') {
             System.out.println("tie");
-            return false;
+           // return false;
         }
         return false;
     }
