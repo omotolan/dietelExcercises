@@ -5,6 +5,9 @@ public class Acc {
     double balance;
 
     public void deposit(double amount) {
+        if (amount < 0){
+            System.out.println("invalid amount");
+        }
         balance += amount;
     }
 

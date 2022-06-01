@@ -28,7 +28,10 @@ public class Car {
     }
 
     public void setPrice(double amount) {
-        this.price = amount;
+        if (amount > 0){
+            this.price = amount;
+        }
+
     }
 
     public double getPrice() {

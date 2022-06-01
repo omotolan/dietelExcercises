@@ -3,7 +3,6 @@ package Chapter7;
 
 public class Entry {
     private String title;
-    private String date;
     private String body;
 
     public Entry(String title, String body) {
@@ -15,16 +14,5 @@ public class Entry {
         return title;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
 
-
-    public String getBody() {
-        return body;
-    }
-
-    public void setBody(String body) {
-        this.body = body;
-    }
 }

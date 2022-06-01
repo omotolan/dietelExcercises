@@ -34,7 +34,9 @@ public class Employee {
     }
 
     public void setMonthlySalary(double monthlySalary) {
-        this.monthlySalary = monthlySalary;
+        if (monthlySalary > 0) {
+            this.monthlySalary = monthlySalary;
+        }
     }
 
     public double getYearlySalary(double monthlySalary) {
@@ -46,7 +48,9 @@ public class Employee {
     }
 
     public double percentageRaise(double monthlySalary) {
-        this.monthlySalary = monthlySalary * (10.0 / 100);
+        if (monthlySalary > 0) {
+            this.monthlySalary = monthlySalary * (10.0 / 100);
+        }
         return this.monthlySalary + monthlySalary;
     }
 }

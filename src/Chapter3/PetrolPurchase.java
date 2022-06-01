@@ -33,7 +33,9 @@ public class PetrolPurchase {
     }
 
     public void setQuantity(int quantity) {
-        this.quantity = quantity;
+        if (quantity > 0) {
+            this.quantity = quantity;
+        }
     }
 
     public int getQuantity() {
@@ -41,7 +43,9 @@ public class PetrolPurchase {
     }
 
     public void setPricePerLiter(double pricePerLiter) {
-        this.pricePerLiter = pricePerLiter;
+        if (pricePerLiter > 0) {
+            this.pricePerLiter = pricePerLiter;
+        }
     }
 
     public double getPricePerLiter() {
@@ -49,7 +53,9 @@ public class PetrolPurchase {
     }
 
     public void setPercentageDiscount(double percentageDiscount) {
-        this.percentageDiscount = percentageDiscount;
+        if (percentageDiscount > 0) {
+            this.percentageDiscount = percentageDiscount;
+        }
     }
 
     public double getPercentageDiscount() {
