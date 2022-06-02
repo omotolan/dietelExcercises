@@ -1,4 +1,4 @@
-package Chapter10.Chapter6;
+package Chapter6;
 
 public class Allowance {
     static private double salary;

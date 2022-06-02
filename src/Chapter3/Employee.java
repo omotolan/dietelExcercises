@@ -9,7 +9,9 @@ public class Employee {
     public Employee(String firstName, String lastName, double monthlySalary) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.monthlySalary = monthlySalary;
+        if (monthlySalary > 0) {
+            this.monthlySalary = monthlySalary;
+        }
     }
 
     // creating methods

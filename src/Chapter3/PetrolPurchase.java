@@ -53,7 +53,7 @@ public class PetrolPurchase {
     }
 
     public void setPercentageDiscount(double percentageDiscount) {
-        if (percentageDiscount > 0) {
+        if (percentageDiscount > 0 && percentageDiscount <= 100) {
             this.percentageDiscount = percentageDiscount;
         }
     }

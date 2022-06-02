@@ -28,11 +28,17 @@ public class HealthProfile {
         this.firstName = firstName;
         this.lastName = lastName;
         this.day = day;
-        this.month = month;
+        if (month > 0 && month < 13) {
+            this.month = month;
+        }
         this.year = year;
         this.gender = gender;
-        this.weightInPounds = weightInPounds;
-        this.heightInInches = heightInInches;
+        if (weightInPounds > 0) {
+            this.weightInPounds = weightInPounds;
+        }
+        if (heightInInches > 0) {
+            this.heightInInches = heightInInches;
+        }
     }
 
     public String getFirstName() {
@@ -88,7 +94,9 @@ public class HealthProfile {
     }
 
     public void setWeightInPounds(double weightInPounds) {
-        this.weightInPounds = weightInPounds;
+        if (weightInPounds > 0) {
+            this.weightInPounds = weightInPounds;
+        }
     }
 
     public double getHeightInInches() {
@@ -96,7 +104,9 @@ public class HealthProfile {
     }
 
     public void setHeightInInches(double heightInInches) {
-        this.heightInInches = heightInInches;
+        if (heightInInches > 0) {
+            this.heightInInches = heightInInches;
+        }
     }
 
     public int getAge(int year) {

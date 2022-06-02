@@ -21,13 +21,13 @@ public class XAndO {
         boolean result;
         while (!gameOver) {
             playerMove(gameBoard);
-            gameOver = isGameWon(gameBoard);
+            gameOver = xWins(gameBoard);
             if (gameOver) {
                 break;
             }
             //computerMove(gameBoard);
             secondPlayerMove(gameBoard);
-            gameOver = isGameWon(gameBoard);
+            gameOver = xWins(gameBoard);
             if (gameOver) {
                 break;
 
@@ -35,11 +35,14 @@ public class XAndO {
 
 
         }
-        result = isGameWon(gameBoard);
-        if (result) {
+
+        if (xWins(gameBoard)) {
             System.out.println("Game won");
-        } else {
+        } else if (oWins(gameBoard)){
             System.out.println("game lost");
+        }
+        else if (isTie(gameBoard)){
+            System.out.println("tie");
         }
         //  System.out.println(result);
     }
@@ -163,62 +166,51 @@ public class XAndO {
         };
     }
 
-    private static boolean isGameWon(char[][] gameBoard) {
-        if (gameBoard[0][0] == 'X' && gameBoard[0][2] == 'X' && gameBoard[0][4] == 'X') {
-            // System.out.println("game won");
-            return true;
-        } else if (gameBoard[1][0] == 'X' && gameBoard[1][2] == 'X' && gameBoard[1][4] == 'X') {
-            //  System.out.println("game won");
-            return true;
-        } else if (gameBoard[2][0] == 'X' && gameBoard[2][2] == 'X' && gameBoard[2][4] == 'X') {
-            // System.out.println("game won");
-            return true;
-        } else if (gameBoard[0][0] == 'X' && gameBoard[1][0] == 'X' && gameBoard[2][0] == 'X') {
-            System.out.println("game won");
-            return true;
-        } else if (gameBoard[0][2] == 'X' && gameBoard[1][2] == 'X' && gameBoard[2][2] == 'X') {
-            // System.out.println("game won");
-            return true;
-        } else if (gameBoard[0][4] == 'X' && gameBoard[1][4] == 'X' && gameBoard[2][4] == 'X') {
-            //  System.out.println("game won");
-            return true;
-        } else if (gameBoard[0][0] == 'X' && gameBoard[1][2] == 'X' && gameBoard[2][4] == 'X') {
-            // System.out.println("game won");
-            return true;
-        } else if (gameBoard[0][4] == 'X' && gameBoard[1][2] == 'X' && gameBoard[2][0] == 'X') {
-            //  System.out.println("game won");
-            return true;
-        } else if (gameBoard[0][0] == 'O' && gameBoard[0][2] == 'O' && gameBoard[0][4] == 'O') {
-            //   System.out.println("game won");
+    private static boolean oWins(char[][] gameBoard) {
+       if (gameBoard[0][0] == 'O' && gameBoard[0][2] == 'O' && gameBoard[0][4] == 'O') {
             return true;
         } else if (gameBoard[1][0] == 'O' && gameBoard[1][2] == 'O' && gameBoard[1][4] == 'O') {
-            //  System.out.println("game won");
             return true;
         } else if (gameBoard[2][0] == 'O' && gameBoard[2][2] == 'O' && gameBoard[2][4] == 'O') {
-            //  System.out.println("game won");
             return true;
         } else if (gameBoard[0][0] == 'O' && gameBoard[1][0] == 'O' && gameBoard[2][0] == 'O') {
-            //  System.out.println("game won");
             return true;
         } else if (gameBoard[0][2] == 'O' && gameBoard[1][2] == 'O' && gameBoard[2][2] == 'O') {
-            // System.out.println("game won");
             return true;
         } else if (gameBoard[0][4] == 'O' && gameBoard[1][4] == 'O' && gameBoard[2][4] == 'O') {
-            //  System.out.println("game won");
             return true;
         } else if (gameBoard[0][0] == 'O' && gameBoard[1][2] == 'O' && gameBoard[2][4] == 'O') {
-            //  System.out.println("game won");
             return true;
         } else if (gameBoard[0][4] == 'O' && gameBoard[1][2] == 'O' && gameBoard[2][0] == 'O') {
-            //  System.out.println("game won");
             return true;
-        } if (gameBoard[0][0] != '_' && gameBoard[0][2] != '_' && gameBoard[0][4] != '_'
-                && gameBoard[1][0] != '_' && gameBoard[1][2] != '_' && gameBoard[1][4] != '_'
-                && gameBoard[2][0] != ' ' && gameBoard[2][2] != ' ' && gameBoard[2][4] != ' ') {
-            System.out.println("tie");
-           // return false;
+        }
+
+        return false;
+    }
+    public static boolean xWins(char[][] gameBoard){
+        if (gameBoard[0][0] == 'X' && gameBoard[0][2] == 'X' && gameBoard[0][4] == 'X') {
+            return true;
+        } else if (gameBoard[1][0] == 'X' && gameBoard[1][2] == 'X' && gameBoard[1][4] == 'X') {
+            return true;
+        } else if (gameBoard[2][0] == 'X' && gameBoard[2][2] == 'X' && gameBoard[2][4] == 'X') {
+            return true;
+        } else if (gameBoard[0][0] == 'X' && gameBoard[1][0] == 'X' && gameBoard[2][0] == 'X') {
+            return true;
+        } else if (gameBoard[0][2] == 'X' && gameBoard[1][2] == 'X' && gameBoard[2][2] == 'X') {
+            return true;
+        } else if (gameBoard[0][4] == 'X' && gameBoard[1][4] == 'X' && gameBoard[2][4] == 'X') {
+            return true;
+        } else if (gameBoard[0][0] == 'X' && gameBoard[1][2] == 'X' && gameBoard[2][4] == 'X') {
+            return true;
+        } else if (gameBoard[0][4] == 'X' && gameBoard[1][2] == 'X' && gameBoard[2][0] == 'X') {
+            return true;
         }
         return false;
+    }
+    public static boolean isTie(char[][] gameBoard) {
+        return gameBoard[0][0] != '_' && gameBoard[0][2] != '_' && gameBoard[0][4] != '_'
+                && gameBoard[1][0] != '_' && gameBoard[1][2] != '_' && gameBoard[1][4] != '_'
+                && gameBoard[2][0] != ' ' && gameBoard[2][2] != ' ' && gameBoard[2][4] != ' ';
     }
 
 }

@@ -13,7 +13,9 @@ public class Invoice {
         this.partNumber = partNumber;
         this.partDescription = partDescription;
         this.quantityOfItemBeingPurchased = quantityOfItemBeingPurchased;
-        this.pricePerItem = pricePerItem;
+        if (pricePerItem > 0) {
+            this.pricePerItem = pricePerItem;
+        }
     }
 
     // methods
@@ -42,7 +44,9 @@ public class Invoice {
     }
 
     public void setPricePerItem(double pricePerItem) {
-        this.pricePerItem = pricePerItem;
+        if (pricePerItem > 0) {
+            this.pricePerItem = pricePerItem;
+        }
     }
 
     public double getPricePerItem() {

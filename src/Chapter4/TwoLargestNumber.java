@@ -10,7 +10,7 @@ public class TwoLargestNumber {
         int largestNumber = 0;
         int secondLargestNumber = 0;
         int numbers;
-        while (counter < 10) {
+        while (counter < 5) {
             System.out.println("Enter numbers: ");
             numbers = keyboard.nextInt();
             counter++;
@@ -22,7 +22,7 @@ public class TwoLargestNumber {
             }
 
         }
-        System.out.println(largestNumber);
-        System.out.println(secondLargestNumber);
+        System.out.println("largest number is: "+largestNumber);
+        System.out.println("second largest number is: "+ secondLargestNumber);
     }
 }

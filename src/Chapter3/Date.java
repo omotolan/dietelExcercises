@@ -9,7 +9,9 @@ public class Date {
 
     // constructor
     public Date(int month, int day, int year) {
-        this.month = month;
+        if (month > 0 && month < 13) {
+            this.month = month;
+        }
         this.day = day;
         this.year = year;
     }
@@ -19,7 +21,9 @@ public class Date {
     }
 
     public void setMonth(int month) {
-        this.month = month;
+        if (month > 0 && month < 13) {
+            this.month = month;
+        }
     }
 
     public int getDay() {

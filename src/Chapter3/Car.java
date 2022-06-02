@@ -8,7 +8,9 @@ public class Car {
     public Car(String model, String year, double price) {
         this.model = model;
         this.year = year;
-        this.price = price;
+        if (price > 0) {
+            this.price = price;
+        }
     }
 
     public void setModel(String model) {
@@ -28,7 +30,7 @@ public class Car {
     }
 
     public void setPrice(double amount) {
-        if (amount > 0){
+        if (amount > 0) {
             this.price = amount;
         }
 

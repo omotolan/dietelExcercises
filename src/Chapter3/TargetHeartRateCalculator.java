@@ -55,7 +55,9 @@ public class TargetHeartRateCalculator {
     }
 
     public void setMonth(int month) {
-        this.month = month;
+        if (month > 0 && month <= 12) {
+            this.month = month;
+        }
     }
 
     public int getYears() {

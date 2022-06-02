@@ -3,7 +3,9 @@ package Chapter7;
 import java.util.ArrayList;
 import java.util.Calendar;
 
-public class Diary {
+public class
+
+Diary {
     private ArrayList<Entry> entries;
     private String name;
     private String password;
