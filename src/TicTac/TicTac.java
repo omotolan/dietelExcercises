@@ -25,7 +25,7 @@ public class TicTac {
     }
     public void updateBoard(Tolani iPlayer, int move, Symbols[][] board){
 
-        if (iPlayer == tolani ) {
+        if (iPlayer.equals(tolani) ) {
             turn = bunmi.getSymbols();
         }
             else
