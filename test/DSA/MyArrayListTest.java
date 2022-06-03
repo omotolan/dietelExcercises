@@ -114,6 +114,7 @@ public class MyArrayListTest {
         myArrayList.add("femi");
         myArrayList.set(1, "ojo");
         assertTrue(myArrayList.contains("ojo"));
+        assertFalse(myArrayList.contains("tobi"));
 
     }
 

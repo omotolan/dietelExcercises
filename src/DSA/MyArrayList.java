@@ -14,9 +14,7 @@ public class MyArrayList implements CustomList {
 
     @Override
     public boolean isEmpty() {
-        if (counter == 0) {
-            return true;
-        } else return false;
+        return counter == 0;
     }
 
     @Override
@@ -73,13 +71,8 @@ public class MyArrayList implements CustomList {
 
     @Override
     public Object get(int index) {
-        Object item = null;
         outOfBoundMessage(index);
-        for (int i = 0; i < array.length; i++) {
-            item = array[index];
-        }
-
-        return item;
+        return array[index];
     }
 
     @Override
@@ -126,12 +119,7 @@ public class MyArrayList implements CustomList {
     @Override
     public void set(int index, Object obj) {
         outOfBoundMessage(index);
-        for (int i = 0; i < array.length; i++) {
-            if (i == index) {
-                array[index] = obj;
-            }
-
-        }
+        array[index] = obj;
 
     }
 
