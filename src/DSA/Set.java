@@ -13,6 +13,7 @@ public class Set implements CustomList {
     public boolean isEmpty() {
         return counter == 0;
 
+
     }
 
     @Override

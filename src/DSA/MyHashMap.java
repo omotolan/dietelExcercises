@@ -36,9 +36,9 @@ public class MyHashMap implements IMap {
 
     @Override
     public boolean containsKey(Object key) {
-        if (!isEmpty()){
+        if (!isEmpty()) {
             for (Object o : keys) {
-                if (key.equals(o)){
+                if (key.equals(o)) {
                     return true;
                 }
             }
@@ -48,9 +48,9 @@ public class MyHashMap implements IMap {
 
     @Override
     public boolean containsValue(Object value) {
-        if (!isEmpty()){
-            for (Object o : values){
-                if (value.equals(o)){
+        if (!isEmpty()) {
+            for (Object o : values) {
+                if (value.equals(o)) {
                     return true;
                 }
             }
@@ -60,9 +60,9 @@ public class MyHashMap implements IMap {
 
     @Override
     public Object get(Object key) {
-        if (!isEmpty()){
-            for (Object o : keys){
-                if (key.equals(o)){
+        if (!isEmpty()) {
+            for (Object o : keys) {
+                if (key.equals(o)) {
 
                 }
             }
@@ -73,14 +73,14 @@ public class MyHashMap implements IMap {
     @Override
     public void clear() {
 
-        for(Object o : keys){
-           // if (o.equals(keys)){
-                o = null;
-            }
-            for (Object obj : values){
+        for (Object o : keys) {
+            // if (o.equals(keys)){
+            o = null;
+        }
+        for (Object obj : values) {
 
-                obj = null;
-            }
+            obj = null;
+        }
 
 
     }

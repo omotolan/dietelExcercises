@@ -7,8 +7,8 @@ public class MyQueue implements IQueue {
 
     private int front;
     private int rear;
-    private int capacity;
-    private Object[] array;
+    private final int capacity;
+    private final Object[] array;
     private int counter;
 
     public MyQueue(int capacity) {
@@ -20,9 +20,8 @@ public class MyQueue implements IQueue {
 
     @Override
     public void add(Object obj) throws QueueIsFullException {
-
         if (isFull()) {
-            throw new QueueIsFullException("Queue is full.");
+            throw new QueueIsFullException();
         } else {
             front = 0;
             rear++;
@@ -34,16 +33,17 @@ public class MyQueue implements IQueue {
 
     @Override
     public Object peek() {
+        if (!isEmpty()) {
+            return array[front];
+        }
 
-        return array[front];
-
+        return -1;
     }
 
     @Override
     public void remove() {
         if (isEmpty()) {
             throw new NoSuchElementException("Queue is empty");
-
 
         } else if (rear == front) {
             front = -1;
@@ -90,7 +90,7 @@ public class MyQueue implements IQueue {
 
     @Override
     public boolean isEmpty() {
-        return front == -1 && rear == -1;
+        return (front > rear) || front == -1 && rear == -1;
     }
 
     @Override
@@ -99,11 +99,8 @@ public class MyQueue implements IQueue {
     }
 
     static class QueueIsFullException extends Throwable {
-        public QueueIsFullException(String s) {
+        public QueueIsFullException() {
         }
     }
 
-    private static void queueEmptyMessage() {
-        throw new NullPointerException("Queue is empty");
-    }
 }

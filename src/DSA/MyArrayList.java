@@ -53,9 +53,9 @@ public class MyArrayList implements CustomList {
     @Override
     public void clear() {
         Arrays.fill(array, null);
-//        for (int i = 0; i < array.length; i++) {
-//            array[i] = null;
-//        }
+/*        for (int i = 0; i < array.length; i++) {
+           array[i] = null;
+        }*/
     }
 
     @Override

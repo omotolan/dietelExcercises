@@ -40,7 +40,7 @@ public class MyArrayListTest {
         myArrayList.add("fe");
         myArrayList.add("u");
         myArrayList.add("e");
-        myArrayList.add(6,"azeez");
+        myArrayList.add(6, "azeez");
         assertEquals(9, myArrayList.size());
         assertEquals(6, myArrayList.indexOf("azeez"));
         assertEquals(7, myArrayList.indexOf("u"));

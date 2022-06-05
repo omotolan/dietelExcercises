@@ -2,12 +2,10 @@ package DSA;
 
 public class MyStack {
     private int counter;
-    private int capacity;
-    private Object[] array;// = new Object[5];
+    private final Object[] array;
 
     public MyStack(int capacity) {
-        this.capacity = capacity;
-        array = new Object[this.capacity];
+        array = new Object[capacity];
     }
 
     public boolean isEmpty() {
