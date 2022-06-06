@@ -6,8 +6,8 @@ public class MyLinkedList implements ILinkedList {
     private int counter;
 
     @Override
-    public void insert(Object item) {
-        Node node = new Node(item);
+    public void insert(Object data) {
+        Node node = new Node(data);
         head = node;
         tail = head;
 
@@ -20,12 +20,31 @@ public class MyLinkedList implements ILinkedList {
     }
 
     @Override
-    public void insertAt(int reference, Object item) {
+    public void insertAt(int reference, Object data) {
 
     }
 
     @Override
-    public void insertAtStart(Object item) {
+    public void insertAtStart(Object data) {
+        Node temp = head;
+        Node node = new Node(data);
+        head = node;
+        head.next = temp;
+        counter++;
+
+    }
+
+    @Override
+    public void insertAtLast(Object data) {
+        Node temp = tail;
+        Node node = new Node(data);
+        tail = node; // or tail
+        if (temp == null) {
+            head = node;
+        } else {
+            temp.next = node;
+        }
+        counter++;
 
     }
 
@@ -46,19 +65,19 @@ public class MyLinkedList implements ILinkedList {
 
     @Override
     public int size() {
-        return 0;
+        return counter;
     }
 
     private class Node {
-        private Object value;
+        private Object data;
         private Node next;
 
-        public Node(Object value) {
-            this.value = value;
+        public Node(Object data) {
+            this.data = data;
         }
 
-        private Node(Object value, Node next) {
-            this.value = value;
+        private Node(Object data, Node next) {
+            this.data = data;
             this.next = next;
         }
     }

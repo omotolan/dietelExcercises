@@ -18,7 +18,7 @@ public class MyHashMap implements IMap {
     }
 
     @Override
-    public void put(Object key, Object value) throws DuplicatedKeyValue {
+    public void put(Object key, Object data) throws DuplicatedKeyValue {
 
         if (!isEmpty()) {
             for (Object o : keys) {
@@ -29,7 +29,7 @@ public class MyHashMap implements IMap {
             }
         }
         keys.add(counter, key);
-        values.add(counter, value);
+        values.add(counter, data);
         counter++;
 
     }
@@ -47,10 +47,10 @@ public class MyHashMap implements IMap {
     }
 
     @Override
-    public boolean containsValue(Object value) {
+    public boolean containsData(Object data) {
         if (!isEmpty()) {
             for (Object o : values) {
-                if (value.equals(o)) {
+                if (data.equals(o)) {
                     return true;
                 }
             }
@@ -91,17 +91,17 @@ public class MyHashMap implements IMap {
     }
 
     @Override
-    public boolean remove(Object key, Object value) {
+    public boolean remove(Object key, Object data) {
         return false;
     }
 
     @Override
-    public Object replace(Object key, Object value) {
+    public Object replace(Object key, Object data) {
         return null;
     }
 
     @Override
-    public boolean replace(Object key, Object oldValue, Object newValue) {
+    public boolean replace(Object key, Object oldData, Object newData) {
         return false;
     }
 

@@ -1,29 +1,27 @@
 package DSA;
 
-import java.util.AbstractList;
-
 public interface CustomList {
     boolean isEmpty();
 
-    void add(Object obj);
+    void add(Object data);
 
-    void add(int index, Object obj);
+    void add(int index, Object data);
 
     void clear();
 
-    boolean contains(Object obj);
+    boolean contains(Object data);
 
     Object get(int index);
 
-    int indexOf(Object obj);
+    int indexOf(Object data);
 
-    void remove(Object obj);
+    void remove(Object data);
 
     void remove(int index);
 
     int size();
 
-    void set(int index, Object obj);
+    void set(int index, Object data);
 
 
 }

@@ -1,9 +1,8 @@
 package DSA;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
-public class Set implements CustomList {
+public class MySet implements CustomList {
     private final int initialCapacity = 5;
     Object[] array = new Object[initialCapacity];
 
@@ -17,10 +16,10 @@ public class Set implements CustomList {
     }
 
     @Override
-    public void add(Object obj) {
-        if (!contains(obj)) {
+    public void add(Object data) {
+        if (!contains(data)) {
             array = grow();
-            array[counter] = obj;
+            array[counter] = data;
             counter++;
         }
     }
@@ -35,13 +34,13 @@ public class Set implements CustomList {
     }
 
     @Override
-    public void add(int index, Object obj) {
+    public void add(int index, Object data) {
 
-        if (!contains(obj)) {
+        if (!contains(data)) {
             Object[] newArray = new Object[array.length + 1];
             System.arraycopy(array, index, newArray, index + 1, newArray.length - index - 1);
             System.arraycopy(array, 0, newArray, 0, index);
-            newArray[index] = obj;
+            newArray[index] = data;
             array = newArray;
             counter++;
         }
@@ -54,9 +53,9 @@ public class Set implements CustomList {
     }
 
     @Override
-    public boolean contains(Object obj) {
+    public boolean contains(Object data) {
         for (Object o : array) {
-            if (obj.equals(o)) {
+            if (data.equals(o)) {
                 return true;
             }
         }
@@ -71,11 +70,11 @@ public class Set implements CustomList {
     }
 
     @Override
-    public int indexOf(Object obj) {
+    public int indexOf(Object data) {
         Object element;
         for (int i = 0; i < array.length; i++) {
             element = array[i];
-            if (obj.equals(element)) {
+            if (data.equals(element)) {
                 return i;
             }
         }
@@ -83,9 +82,9 @@ public class Set implements CustomList {
     }
 
     @Override
-    public void remove(Object obj) {
-        if (contains(obj)) {
-            int indexOfObj = indexOf(obj);
+    public void remove(Object data) {
+        if (contains(data)) {
+            int indexOfObj = indexOf(data);
             int newSize = array.length - 1;
             System.arraycopy(array, indexOfObj + 1, array, indexOfObj, newSize - indexOfObj);
             counter--;
@@ -108,9 +107,9 @@ public class Set implements CustomList {
     }
 
     @Override
-    public void set(int index, Object obj) {
+    public void set(int index, Object data) {
         outOfBoundMessage(index);
-        array[index] = obj;
+        array[index] = data;
 
     }
 

@@ -1,5 +1,7 @@
 package DSA;
 
+import java.util.LinkedList;
+
 public class Link {
     // to create a list you need a node, so create a private class node
     private class Node {
@@ -41,6 +43,33 @@ public class Link {
         size++;
     }
 
+    public void insertAtStart(Object data) {
+        //create a temporary variable to hold the data of the previous head. create a new node and assign the
+        //new node to the head. now link the new head to the previous head(temporary value)
+        Node temp = head;
+        Node node = new Node(data);
+        head = node;
+        head.next = temp;
+        size++;
+
+    }
+
+    public void insertAtLast(Object data) {
+        // create a temp node and assign the tail to it. create a new node and assign it to the tail.
+        // then make the temp variable reference the new node(tail)
+        // condition is for if there is no head, just make it the head
+        Node temp = tail;
+        Node node = new Node(data);
+        tail = node; // or tail
+        if (temp == null) {
+            head = node;
+        } else {
+            temp.next = node;
+        }
+        size++;
+
+    }
+
     public int getSize() {
         return size;
     }
@@ -66,6 +95,10 @@ public class Link {
         li.add(367);
         li.add(10);
         li.add(45);
+        li.insertAtStart(678);
+        li.insertAtStart(76273);
+        li.insertAtLast(1);
+        li.add(2);
         System.out.println(li.getSize());
 
         li.display();

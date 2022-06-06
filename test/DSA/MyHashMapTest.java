@@ -47,7 +47,7 @@ public class MyHashMapTest {
         myHashMap.put(5, "love");
         myHashMap.put(6, "demola");
         myHashMap.put(7, "ayo");
-        assertTrue(myHashMap.containsValue("ayo"));
+        assertTrue(myHashMap.containsData("ayo"));
     }
 
     @Test
@@ -58,7 +58,7 @@ public class MyHashMapTest {
         myHashMap.put(7, "ayo");
         myHashMap.clear();
         assertTrue(myHashMap.containsKey(5));
-        assertTrue(myHashMap.containsValue("ayo"));
+        assertTrue(myHashMap.containsData("ayo"));
 
     }
 

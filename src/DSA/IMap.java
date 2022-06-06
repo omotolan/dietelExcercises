@@ -5,11 +5,11 @@ public interface IMap<k, V> {
 
     int size();
 
-    void put(Object key, Object value) throws DuplicatedKeyValue;
+    void put(Object key, Object data) throws DuplicatedKeyValue;
 
     boolean containsKey(Object key);
 
-    boolean containsValue(Object value);
+    boolean containsData(Object data);
 
     Object get(Object key);
 
@@ -17,11 +17,11 @@ public interface IMap<k, V> {
 
     V remove(Object key);
 
-    boolean remove(Object key, Object value);
+    boolean remove(Object key, Object data);
 
-    V replace(Object key, Object value);
+    V replace(Object key, Object data);
 
-    boolean replace(Object key, Object oldValue, Object newValue);
+    boolean replace(Object key, Object oldData, Object newData);
 
 
 }

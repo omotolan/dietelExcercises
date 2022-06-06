@@ -19,13 +19,13 @@ public class MyQueue implements IQueue {
     }
 
     @Override
-    public void add(Object obj) throws QueueIsFullException {
+    public void add(Object data) throws QueueIsFullException {
         if (isFull()) {
             throw new QueueIsFullException();
         } else {
             front = 0;
             rear++;
-            array[rear] = obj;
+            array[rear] = data;
             counter++;
         }
 

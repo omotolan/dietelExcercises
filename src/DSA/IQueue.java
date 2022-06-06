@@ -1,7 +1,7 @@
 package DSA;
 
 public interface IQueue {
-    void add(Object obj) throws MyQueue.QueueIsFullException;
+    void add(Object data) throws MyQueue.QueueIsFullException;
 
     boolean isFull();
 

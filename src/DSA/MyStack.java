@@ -12,8 +12,8 @@ public class MyStack {
         return counter == 0;
     }
 
-    public void push(Object element) {
-        array[counter] = element;
+    public void push(Object data) {
+        array[counter] = data;
         counter++;
     }
 

@@ -18,9 +18,9 @@ public class MyArrayList implements CustomList {
     }
 
     @Override
-    public void add(Object obj) {
+    public void add(Object data) {
         array = grow();
-        array[counter] = obj;
+        array[counter] = data;
         counter++;
 
     }
@@ -37,13 +37,13 @@ public class MyArrayList implements CustomList {
     }
 
     @Override
-    public void add(int index, Object obj) {
+    public void add(int index, Object data) {
         outOfBoundMessage(index);
         int size = array.length + 1;
         Object[] newArray = new Object[size];
         System.arraycopy(array, index, newArray, index + 1, size - index - 1);
         System.arraycopy(array, 0, newArray, 0, index);
-        newArray[index] = obj;
+        newArray[index] = data;
         array = newArray;
         counter++;
 
@@ -59,9 +59,9 @@ public class MyArrayList implements CustomList {
     }
 
     @Override
-    public boolean contains(Object obj) {
+    public boolean contains(Object data) {
         for (Object element : array) {
-            if (obj.equals(element)) {
+            if (data.equals(element)) {
                 return true;
             }
         }
@@ -76,11 +76,11 @@ public class MyArrayList implements CustomList {
     }
 
     @Override
-    public int indexOf(Object obj) {
+    public int indexOf(Object data) {
         Object element;
         for (int i = 0; i < array.length; i++) {
             element = array[i];
-            if (obj.equals(element)) {
+            if (data.equals(element)) {
                 return i;
             }
         }
@@ -88,8 +88,8 @@ public class MyArrayList implements CustomList {
     }
 
     @Override
-    public void remove(Object obj) {
-        int index = indexOf(obj);
+    public void remove(Object data) {
+        int index = indexOf(data);
         Object[] newArray = new Object[array.length - 1];
         System.arraycopy(array, 0, newArray, 0, index);
         System.arraycopy(array, index + 1, newArray, index, array.length - index - 1);
@@ -117,9 +117,9 @@ public class MyArrayList implements CustomList {
     }
 
     @Override
-    public void set(int index, Object obj) {
+    public void set(int index, Object data) {
         outOfBoundMessage(index);
-        array[index] = obj;
+        array[index] = data;
 
     }
 
