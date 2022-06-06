@@ -28,4 +28,21 @@ public class MyLinkedListTest {
         myLinkedList.insert(67);
         assertEquals(4, myLinkedList.size());
     }
+    @Test
+    public void insertItemAtFirstTest(){
+        myLinkedList.insert(34);
+        myLinkedList.insert(23);
+        myLinkedList.insert(1);
+        myLinkedList.insert(67);
+        myLinkedList.insertAtStart(2);
+
+    }
+    @Test
+    public void insertAtLastTest(){
+        myLinkedList.insert(34);
+        myLinkedList.insert(23);
+        myLinkedList.insert(1);
+        myLinkedList.insert(67);
+        myLinkedList.insertAtLast(2);
+    }
 }

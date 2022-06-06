@@ -6,7 +6,7 @@ public class SumOfSeries {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        System.out.println("Enter a rangr brtween 1 - 100: ");
+        System.out.println("Enter a range between 1 - 100: ");
         int range = input.nextInt();
         sumOfSeriesOfNumbers(range);
 

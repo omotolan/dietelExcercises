@@ -1,6 +1,8 @@
 package DSA;
 
+
 import java.util.LinkedList;
+import java.util.NoSuchElementException;
 
 public class Link {
     // to create a list you need a node, so create a private class node
@@ -53,6 +55,13 @@ public class Link {
         size++;
 
     }
+    public void deleteFirst(){
+
+        if (head != null){
+            Node temp = head;
+        head = temp.next;}
+        --size;
+    }
 
     public void insertAtLast(Object data) {
         // create a temp node and assign the tail to it. create a new node and assign it to the tail.
@@ -68,6 +77,14 @@ public class Link {
         }
         size++;
 
+    }
+    public Object getLast() {
+        if (head == null){
+            throw new NoSuchElementException();
+        }else{
+            Node temp = tail;
+
+            return temp;}
     }
 
     public int getSize() {
@@ -100,6 +117,9 @@ public class Link {
         li.insertAtLast(1);
         li.add(2);
         System.out.println(li.getSize());
+      //  System.out.println(li.getLast());
+        li.deleteFirst();
+      //  LinkedList
 
         li.display();
     }

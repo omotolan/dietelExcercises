@@ -1,5 +1,7 @@
 package DSA;
 
+import java.util.NoSuchElementException;
+
 public class MyLinkedList implements ILinkedList {
     private Node head;
     private Node tail;
@@ -51,6 +53,44 @@ public class MyLinkedList implements ILinkedList {
     @Override
     public boolean isEmpty() {
         return counter == 0;
+    }
+
+    @Override
+    public void deleteFirst() {
+        if (tail == null){
+            throw new NoSuchElementException();
+        }
+        else{ Node temp = head;
+                head = temp.next;
+                counter--;
+        }
+
+    }
+
+    @Override
+    public void deleteLast() {
+        if (head == null){
+            throw new NoSuchElementException();
+        }
+        else {
+            Node temp = tail;
+            tail = temp.next;
+        }
+    }
+
+    @Override
+    public Object getLast() {
+        Node temp = tail;
+        if (head == null){
+            throw new NoSuchElementException();
+        }
+
+        return temp;
+    }
+
+    @Override
+    public Object getFirst() {
+        return null;
     }
 
     @Override

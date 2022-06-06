@@ -11,6 +11,14 @@ public interface ILinkedList {
 
     boolean isEmpty();
 
+    void deleteFirst();
+
+    void deleteLast();
+
+    Object getLast();
+
+    Object getFirst();
+
     void display();
 
     Object get(int index);
