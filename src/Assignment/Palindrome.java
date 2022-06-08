@@ -14,18 +14,16 @@ public class Palindrome {
     }
 
     public static boolean palindrome(int theNumber) {
-        int new1 = (theNumber % 10) / 1;
-        int new2 = (theNumber % 100) / 10;
-        int new3 = (theNumber % 1000) / 100;
-        int new4 = (theNumber % 10000) / 1000;
-        int new5 = (theNumber % 100000) / 10000;
+        if (theNumber > 0) {
+            int new1 = (theNumber % 10);
+            int new2 = (theNumber % 100) / 10;
+            int new3 = (theNumber % 1000) / 100;
+            int new4 = (theNumber % 10000) / 1000;
+            int new5 = (theNumber % 100000) / 10000;
 
-        if (new1 == new5) if (new2 == new4) {
-            return true;
-        }
-        if (new1 != new5) if (new2 != new4) {
-            return false;
+            return new1 == new5 && new2 == new4;
         }
         return false;
+
     }
 }

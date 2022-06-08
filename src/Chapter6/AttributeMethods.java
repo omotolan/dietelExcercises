@@ -2,7 +2,7 @@ package Chapter6;
 
 import java.util.Scanner;
 
-public class AttributesMethods {
+public class AttributeMethods {
     private static int size;
 
     public static void main(String[] args) {
@@ -11,9 +11,9 @@ public class AttributesMethods {
         System.out.println("Enter length: ");
         size = input.nextInt();
 
-        AttributesMethods attributesMethods = new AttributesMethods();
-        attributesMethods.setSize(size);
-        System.out.println(attributesMethods.getSize());
+        AttributeMethods attributeMethods = new AttributeMethods();
+        attributeMethods.setSize(size);
+        System.out.println(attributeMethods.getSize());
 
 
     }

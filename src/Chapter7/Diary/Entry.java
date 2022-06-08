@@ -1,4 +1,4 @@
-package Chapter7;
+package Chapter7.Diary;
 
 
 public class Entry {

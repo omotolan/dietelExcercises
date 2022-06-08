@@ -1,4 +1,4 @@
-package Chapter7;
+package Chapter7.Diary;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
