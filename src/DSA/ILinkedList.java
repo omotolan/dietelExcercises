@@ -15,6 +15,8 @@ public interface ILinkedList {
 
     void deleteLast();
 
+    boolean contains(Object data);
+
     Object getLast();
 
     Object getFirst();

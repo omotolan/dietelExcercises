@@ -7,12 +7,13 @@ public class TwelveDaysOfChristmas {
 
     public static void main(String[] args) {
         Scanner keyboard = new Scanner(System.in);
-        System.out.println("Enter number between 1-12: ");
-        int numberEntered = keyboard.nextInt();
 
-          //  int  i  = numberEntered;
-       // for(int i = 1; i <= numberEntered; i++){
-       // while (i<=12){
+        int numberEntered = 0;
+        while (numberEntered != -1) {
+            System.out.println();
+            System.out.println("Enter number between 1-12 and -1 to end: ");
+            numberEntered = keyboard.nextInt();
+
             switch (numberEntered) {
                 case 1 -> System.out.println("On the first day of christmas My true love said to me");
                 case 2 -> System.out.println("On the second day of Christmas my true love said to me");
@@ -25,7 +26,7 @@ public class TwelveDaysOfChristmas {
                 case 9 -> System.out.println("On the ninth day of Christmas my true love said to me");
                 case 10 -> System.out.println("On the tenth day of Christmas my true love said to me");
                 case 11 -> System.out.println("On the eleventh day of Christmas my true love said to me");
-                case 12 -> System.out.println("On the twelveth day of Christmas my true love said to me");
+                case 12 -> System.out.println("On the twelve day of Christmas my true love said to me");
                 default -> System.out.println("no such number");
             }
             switch (numberEntered) {
@@ -51,13 +52,11 @@ public class TwelveDaysOfChristmas {
                     System.out.println("Three French hens");
                 case 2:
                     System.out.println("Two turtle-doves");
-                case 1 :
+                case 1:
                     System.out.println("A partridge in a pear tree");
-//                    break;
-//                default:
-//                    System.out.println("no such number");
-             }
-      //  i++;
-      //` }
+
+            }
+
+        }
     }
 }

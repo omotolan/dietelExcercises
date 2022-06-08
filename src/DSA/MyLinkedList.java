@@ -57,44 +57,67 @@ public class MyLinkedList implements ILinkedList {
 
     @Override
     public void deleteFirst() {
-        if (tail == null){
+        if (tail == null) {
             throw new NoSuchElementException();
-        }
-        else{ Node temp = head;
-                head = temp.next;
-                counter--;
+        } else {
+            Node temp = head;
+            head = temp.next;
+            counter--;
         }
 
     }
 
     @Override
     public void deleteLast() {
-        if (head == null){
+//        if (head == null) {
+//            throw new NoSuchElementException();
+//        } else {
+//            Node temp = tail;
+//            tail = temp.next;
+//        }
+    }
+
+    @Override
+    public boolean contains(Object data) {
+        if (head == null) {
             throw new NoSuchElementException();
         }
-        else {
-            Node temp = tail;
-            tail = temp.next;
+        Node temp = head;
+        while (temp != null) {
+            temp = temp.next;
+            if (data.equals(temp)) {
+                return true;
+            }
         }
+        return false;
     }
 
     @Override
     public Object getLast() {
-        Node temp = tail;
-        if (head == null){
+
+        if (tail == null) {
             throw new NoSuchElementException();
         }
-
-        return temp;
+        Node temp = tail;
+        return temp.data;
     }
 
     @Override
     public Object getFirst() {
-        return null;
+        if (head == null) {
+            throw new NoSuchElementException();
+        }
+        Node temp = head;
+        return temp.data;
     }
 
     @Override
     public void display() {
+        Node temp = head;
+        while (temp != null) {
+            System.out.println(temp.next);
+            temp = temp.next;
+        }
 
     }
 

@@ -21,7 +21,4 @@ public class VaryingInterestRate {
         }
     }
 
-    public void differentInterestRate() {
-
-    }
 }

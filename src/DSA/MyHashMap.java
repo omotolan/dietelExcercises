@@ -34,6 +34,33 @@ public class MyHashMap implements IMap {
 
     }
 
+    private Object add(Object key, Object data) {
+        if (!isEmpty()) {
+            for (int i = 0; i < keys.size(); i++) {
+                if (key.equals(keys.get(i))) {
+                    values.add(i, data);
+                }
+
+            }
+
+        }
+//        Object temp = null;
+//        if (!isEmpty()){
+//            for (Object o : keys){
+//                if (o.equals(key)){
+//                    temp = data;
+//                    values.add(data);
+//                }
+//            }
+//        }
+        keys.add(counter, key);
+        values.add(counter, data);
+        counter++;
+        return null;
+    }
+
+
+
     @Override
     public boolean containsKey(Object key) {
         if (!isEmpty()) {

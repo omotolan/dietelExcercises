@@ -9,6 +9,8 @@ public class Hassh {
         names.put("1", "tola");
         names.put("4", "ola");
         names.put("5", "omo");
-        System.out.println(names.get("4"));
+        names.put("1", "garri");
+        System.out.println(names.get("1"));
+        System.out.println(names.size());
     }
 }

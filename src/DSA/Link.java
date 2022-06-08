@@ -79,12 +79,21 @@ public class Link {
 
     }
     public Object getLast() {
-        if (head == null){
+        if (tail == null){
             throw new NoSuchElementException();
         }else{
             Node temp = tail;
 
-            return temp;}
+            return temp.object;}
+    }
+    public Object getFirst(){
+        if(head == null){
+            throw new NoSuchElementException();
+        }
+        else{
+            Node temp = head;
+            return temp.object;
+        }
     }
 
     public int getSize() {
@@ -102,6 +111,20 @@ public class Link {
             temp = temp.next;
         }
     }
+    public boolean contains(Object data){
+        if (head == null){
+            throw new NoSuchElementException();
+        }
+        Node temp = head;
+        while (temp != null){
+            temp = temp.next;
+            if (data.equals(temp)){
+                return true;
+            }
+
+        }
+        return false;
+    }
 
     public static void main(String[] args) {
         Link li = new Link();
@@ -117,10 +140,12 @@ public class Link {
         li.insertAtLast(1);
         li.add(2);
         System.out.println(li.getSize());
-      //  System.out.println(li.getLast());
+        System.out.println(li.getLast());
+        System.out.println(li.getFirst());
         li.deleteFirst();
       //  LinkedList
 
         li.display();
+        System.out.println(li.contains(7));
     }
 }
