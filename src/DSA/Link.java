@@ -86,6 +86,20 @@ public class Link {
 
             return temp.object;}
     }
+    public Object getAtIndex(int pos){
+        Node temp = head;
+      // while (head != null){
+           for (int i = 0; i < getSize() && head!=null; i++) {
+
+
+               temp = temp.next;
+               if (pos == i) {
+                   return temp.object;
+               }
+           }
+      // }
+        return null;
+    }
     public Object getFirst(){
         if(head == null){
             throw new NoSuchElementException();
@@ -125,6 +139,29 @@ public class Link {
         }
         return false;
     }
+    public void deleteLast(){
+        int pos = getSize();
+        if (head == null){
+            throw new NoSuchElementException();
+        }
+
+        Node temp = head;
+//        for (int i = 0; i < pos ; i++) {
+//            if (i == pos -2){
+//                tail = temp.next;
+//            }
+//
+//        }
+        size--;
+
+
+            while (temp != null){
+                temp = temp.next;
+                tail = temp;
+            }
+
+
+    }
 
     public static void main(String[] args) {
         Link li = new Link();
@@ -135,17 +172,26 @@ public class Link {
         li.add(367);
         li.add(10);
         li.add(45);
-        li.insertAtStart(678);
-        li.insertAtStart(76273);
-        li.insertAtLast(1);
-        li.add(2);
-        System.out.println(li.getSize());
-        System.out.println(li.getLast());
-        System.out.println(li.getFirst());
-        li.deleteFirst();
-      //  LinkedList
 
-        li.display();
-        System.out.println(li.contains(7));
+      //  li.deleteLast();
+        System.out.println(li.getSize());
+        //li.display();
+        System.out.println(li.getAtIndex(0));
+//        li.insertAtStart(678);
+//
+//
+//        li.insertAtStart(76273);
+//        li.insertAtLast(1);
+//        li.add(2);
+//        System.out.println(li.getSize());
+//        System.out.println(li.getLast());
+//        System.out.println(li.getFirst());
+//        li.deleteFirst();
+//      //  LinkedList
+//li.deleteLast();
+//        li.display();
+//        System.out.println(li.getSize());
+//
+//        System.out.println(li.contains(7));
     }
 }

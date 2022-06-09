@@ -8,7 +8,7 @@ public class MyLinkedList implements ILinkedList {
     private int counter;
 
     @Override
-    public void insert(Object data) {
+    public void add(Object data) {
         Node node = new Node(data);
         head = node;
         tail = head;
@@ -22,12 +22,12 @@ public class MyLinkedList implements ILinkedList {
     }
 
     @Override
-    public void insertAt(int reference, Object data) {
+    public void add(int reference, Object data) {
 
     }
 
     @Override
-    public void insertAtStart(Object data) {
+    public void addAtStart(Object data) {
         Node temp = head;
         Node node = new Node(data);
         head = node;
@@ -37,7 +37,7 @@ public class MyLinkedList implements ILinkedList {
     }
 
     @Override
-    public void insertAtLast(Object data) {
+    public void addAtLast(Object data) {
         Node temp = tail;
         Node node = new Node(data);
         tail = node; // or tail
@@ -69,8 +69,18 @@ public class MyLinkedList implements ILinkedList {
 
     @Override
     public void deleteLast() {
+        if (head == null){
+            throw new NoSuchElementException();
+        }
+        else {
+            Node temp = head;
+            while (temp != null){
+                temp = temp.next;
+            }
+
+        }
 //        if (head == null) {
-//            throw new NoSuchElementException();
+//
 //        } else {
 //            Node temp = tail;
 //            tail = temp.next;

@@ -1,3 +1,5 @@
+package Chapter7Test;
+
 import Chapter7.MobilePhone;
 import org.junit.jupiter.api.Test;
 

@@ -1,10 +1,8 @@
 package Chapter6;
 
-import Assignment.DieRoll;
-
 import java.util.Random;
 
-public class Roll {
+public class CrapsGame {
     private static final int seven = 7;
     private static final int eleven = 11;
     private static final int two = 2;
@@ -19,32 +17,26 @@ public class Roll {
 
         dieRoll();
         System.out.println("Roll result: " + sum);
-
-
-
-
-determine();
-continueIfPoints();
-calculateBalance();
+        determine();
+        continueIfPoints();
+        calculateBalance();
 
         System.out.println(balance);
-      //  winOrLose();
-
 
 
     }
-    private static void calculateBalance(){
+
+    private static void calculateBalance() {
         int wager = 100;
-        if (gameStatus ==Status.WON) {
+        if (gameStatus == Status.WON) {
             balance += wager;
-          //  System.out.println("you win");
 
         } else {
             balance -= wager;
-         //   System.out.println("you lose");
         }
     }
-    private static void determine(){
+
+    private static void determine() {
         switch (sum) {
             case seven, eleven -> gameStatus = Status.WON;
             case two, three, twelve -> gameStatus = Status.LOSE;
@@ -55,14 +47,16 @@ calculateBalance();
             }
         }
     }
-    private static void winOrLose(){
-        if (gameStatus ==Status.WON) {
+
+    private static void winOrLose() {
+        if (gameStatus == Status.WON) {
             System.out.println("you win");
         } else {
             System.out.println("you lose");
         }
     }
-    private static void continueIfPoints(){
+
+    private static void continueIfPoints() {
         while (gameStatus == Status.POINT) {
             dieRoll();
             System.out.println("Roll result: " + sum);

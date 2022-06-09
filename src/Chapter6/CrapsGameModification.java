@@ -98,7 +98,7 @@ public class CrapsGameModification {
 
     }
 
-    public static void calculateBalance() {
+    private static void calculateBalance() {
         if (gameStatus == Status.WON) {
             balance += wager;
         } else {
@@ -106,7 +106,7 @@ public class CrapsGameModification {
         }
     }
 
-    public static int getBalance() {
+    private static int getBalance() {
         return balance;
     }
 

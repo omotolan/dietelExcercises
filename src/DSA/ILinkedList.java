@@ -1,13 +1,13 @@
 package DSA;
 
 public interface ILinkedList {
-    void insert(Object item);
+    void add(Object item);
 
-    void insertAt(int reference, Object data);
+    void add(int reference, Object data);
 
-    void insertAtStart(Object data);
+    void addAtStart(Object data);
 
-    void insertAtLast(Object data);
+    void addAtLast(Object data);
 
     boolean isEmpty();
 

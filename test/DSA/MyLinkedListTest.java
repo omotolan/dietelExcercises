@@ -22,27 +22,27 @@ public class MyLinkedListTest {
     }
     @Test
     public void itemCanBeAddedToLinkedList(){
-        myLinkedList.insert(34);
-        myLinkedList.insert(23);
-        myLinkedList.insert(1);
-        myLinkedList.insert(67);
+        myLinkedList.add(34);
+        myLinkedList.add(23);
+        myLinkedList.add(1);
+        myLinkedList.add(67);
         assertEquals(4, myLinkedList.size());
     }
     @Test
     public void insertItemAtFirstTest(){
-        myLinkedList.insert(34);
-        myLinkedList.insert(23);
-        myLinkedList.insert(1);
-        myLinkedList.insert(67);
-        myLinkedList.insertAtStart(2);
+        myLinkedList.add(34);
+        myLinkedList.add(23);
+        myLinkedList.add(1);
+        myLinkedList.add(67);
+        myLinkedList.addAtStart(2);
 
     }
     @Test
     public void insertAtLastTest(){
-        myLinkedList.insert(34);
-        myLinkedList.insert(23);
-        myLinkedList.insert(1);
-        myLinkedList.insert(67);
-        myLinkedList.insertAtLast(2);
+        myLinkedList.add(34);
+        myLinkedList.add(23);
+        myLinkedList.add(1);
+        myLinkedList.add(67);
+        myLinkedList.addAtLast(2);
     }
 }

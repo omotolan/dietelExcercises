@@ -1,3 +1,5 @@
+package Chapter7Test;
+
 import Chapter7.Diary.Diary;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
