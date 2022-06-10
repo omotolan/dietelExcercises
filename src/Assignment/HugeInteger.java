@@ -1,7 +1,5 @@
 package Assignment;
 
-import java.util.Arrays;
-
 public class HugeInteger {
     private final int ARRAY_SIZE = 40;
     private final int[] array;
@@ -12,8 +10,8 @@ public class HugeInteger {
 
     public int[] parse(String data) throws NotAnIntegerException {
         if (data.length() <= ARRAY_SIZE && data.length() > 0) {
-            //  for (int i = 0; i < data.length(); i++) {
-            for (int i = array.length - 1; i >= 0; i--) {
+            for (int i = 0; i < array.length; i++) {
+                //  for (int i = array.length - 1; i >= 0; i--) {
                 if (Character.isDigit(data.charAt(i))) {
                     array[i] = Character.getNumericValue(data.charAt(i));
                 } else {
@@ -21,40 +19,45 @@ public class HugeInteger {
                 }
 
             }
-            System.out.println(Arrays.toString(array));
         }
         return array;
     }
 
+    private void insert(int index, int number) {
+        for (int i = array.length - 1; i >= 0; i--) {
+            array[i] = number;
+        }
+    }
+
     public String addition(String data, String data2) throws NotAnIntegerException {
-        int sum = 0;
+        int sum;
         int carry = 0;
-        int[] nu = parse(data);
-        int[] num = parse(data2);
+        int[] firstArray = parse(data);
+        int[] secondArray = parse(data2);
 
 
-        for (int i = num.length - 1; i >= 0; i--) {
+        for (int i = array.length - 1; i >= 0; i--) {
 
-            sum = nu[i] + num[i] + carry;
+            sum = firstArray[i] + secondArray[i] + carry;
+            System.out.print(sum + " ");
             if (sum <= 9) {
-                array[i] = sum;
+
                 carry = 0;
+
             } else {
-                // carry = sum / 10;
-                sum = sum - 10;
-
                 carry = 1;
-                array[i] = sum;
+                sum -= 10;
             }
+            array[i] = sum;
 
         }
-        System.out.println(Arrays.toString(array));
-        String result = "";
-        for (int i = 0; i < array.length; i++) {
-            result += array[i];
+
+        StringBuilder result = new StringBuilder();
+        for (int j : array) {
+            result.append(j);
         }
-        return result;
-        // return number;
+        return result.toString();
+
     }
 
 
@@ -73,13 +76,10 @@ public class HugeInteger {
     }
 
 
-
-
-    public class NotAnIntegerException extends Throwable {
+    public static class NotAnIntegerException extends Throwable {
         public NotAnIntegerException(String s) {
         }
     }
-
 
 
 }
