@@ -30,11 +30,18 @@ public class HugeIntegerTest {
     }
 
     @Test
-    public void stringOfHugeIntegerCaBeAddedTest() throws HugeInteger.NotAnIntegerException {
+    public void  hugeIntegerCanPerformAdditionTest() throws HugeInteger.NotAnIntegerException {
         HugeInteger hugeInteger1 = new HugeInteger(secondString);
         HugeInteger hugeInteger2 = hugeInteger.add(hugeInteger1);
         String result = hugeInteger2.toString();
         assertEquals("5529135780247313578704691350803069135789", result);
 
+    }
+    @Test
+    public void hugeIntegerCanPerformSubtractionTest() throws HugeInteger.NotAnIntegerException {
+        HugeInteger hugeInteger1 = new HugeInteger(secondString);
+        HugeInteger hugeInteger2 = hugeInteger.subtract(hugeInteger1);
+        String result = hugeInteger2.toString();
+        assertEquals("3060000000000400000679999993000600000009", result);
     }
 }

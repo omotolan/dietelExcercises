@@ -49,6 +49,26 @@ public class HugeInteger {
 
     }
 
+    public HugeInteger subtract(HugeInteger hugeInteger) {
+
+        int difference;
+        int borrow = 0;
+
+        for (int i = array.length - 1; i >= 0; i--) {
+
+            difference = this.array[i] - hugeInteger.array[i] - borrow;
+            if (difference >= 0) {
+                borrow = 0;
+            } else {
+                difference += 10;
+                borrow = 1;
+            }
+            array[i] = difference;
+        }
+
+        return HugeInteger.this;
+    }
+
     public class NotAnIntegerException extends Throwable {
         public NotAnIntegerException(String s) {
         }
