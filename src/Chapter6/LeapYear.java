@@ -16,7 +16,7 @@ public class LeapYear {
 
     }
 
-    private static boolean isLeapYear(int year) {
+    public static boolean isLeapYear(int year) {
         int month = 2;
         YearMonth yearOfTheMonth = YearMonth.of(year, month);
         int daysInMonth = yearOfTheMonth.lengthOfMonth();

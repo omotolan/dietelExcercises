@@ -2,10 +2,10 @@ package Chapter7;
 
 import java.util.Arrays;
 
-public class Report {
+public class StudentReport {
     private int[][] grades;
 
-    public Report(int[][] grades) {
+    public StudentReport(int[][] grades) {
         this.grades = grades;
     }
 
