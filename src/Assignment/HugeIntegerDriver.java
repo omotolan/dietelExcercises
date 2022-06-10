@@ -3,13 +3,13 @@ package Assignment;
 import java.math.BigInteger;
 
 public class HugeIntegerDriver {
-    public static void main(String[] args) throws  HugeInteger.NotAnIntegerException {
+    public static void main(String[] args) throws HugeIntegerSample.NotAnIntegerException {
         // String num = "1234567890123456789012345678901234567890";
 
-        String n = "0000007890123856789692345671901834567899";
+        //  String n = "0000007890123856789692345671901834567899";
 //        String firstString = "4294567897123856789692345671931834567899";
 //        String secondString = "1234567892123456789512345678931234567892";
-        HugeInteger hugeInteger = new HugeInteger();
+        HugeIntegerSample hugeIntegerSample = new HugeIntegerSample();
         BigInteger bigInteger = new BigInteger("4294567897123856789692345671931834567899");
         BigInteger bigInteger2 = new BigInteger("1234567892123456789512345678931234567892");
 

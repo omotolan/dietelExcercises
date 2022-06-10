@@ -1,104 +1,56 @@
 package Assignment;
 
-import java.util.Arrays;
-
 public class HugeInteger {
-    private final int ARRAY_SIZE = 40;
-    private final int[] array;
+    private final int[] array = new int[40];
 
-    public HugeInteger() {
-        array = new int[ARRAY_SIZE];
+    public HugeInteger(String value) throws NotAnIntegerException {
+
+        parse(value);
     }
 
-    public int[] parse(String data) throws NotAnIntegerException {
-        int[] array = new int[40];
-        if (data.length() <= array.length && data.length() > 0) {
-            // for (int i = 0; i < array.length; i++) {
+    public void parse(String value) throws NotAnIntegerException {
+        if (value.length() <= 40 && value.length() > 0) {
             for (int i = array.length - 1; i >= 0; i--) {
-                if (Character.isDigit(data.charAt(i))) {
-                    array[i] = Character.getNumericValue(data.charAt(i));
+                if (Character.isDigit(value.charAt(i))) {
+                    array[i] = Character.getNumericValue(value.charAt(i));
                 } else {
                     throw new NotAnIntegerException("value at index: " + i + " not an integer.");
                 }
-
             }
         }
-        return array;
     }
 
-    public String addition(String data, String data2) throws NotAnIntegerException {
+    public String toString() {
+        StringBuilder result = new StringBuilder();
+        for (int j : array) {
+            result.append(j);
+        }
+        return result.toString();
+    }
+
+    public HugeInteger add(HugeInteger hugeInteger) throws NotAnIntegerException {
+
         int sum;
         int carry = 0;
-        int[] firstArray = parse(data);
-        int[] secondArray = parse(data2);
 
         for (int i = array.length - 1; i >= 0; i--) {
 
-            sum = firstArray[i] + secondArray[i] + carry;
-            System.out.print(sum + " ");
-            if (sum <= 9) {
-
-                carry = 0;
-
-            } else {
+            sum = this.array[i] + hugeInteger.array[i] + carry;
+            if (sum > 9) {
+                sum = sum - 10;
                 carry = 1;
-                sum -= 10;
-            }
-
-            array[i] = sum;
-
-        }
-
-        StringBuilder result = new StringBuilder();
-        for (int j : array) {
-            result.append(j);
-        }
-        return result.toString();
-
-    }
-
-
-    public String subtraction(String firstString, String secondString) throws NotAnIntegerException {
-        int borrow = 0;
-        int subtraction = 0;
-        int[] firstArray = parse(firstString);
-        int[] secondArray = parse(secondString);
-
-        for (int i = array.length - 1; i >= 0; i--) {
-
-            subtraction = firstArray[i] - secondArray[i] - borrow;
-
-            if (subtraction >= 0) {
-                borrow = 0;
             } else {
-                subtraction += 10;
-                borrow = 1;
+                carry = 0;
             }
-            array[i] = subtraction;
+            array[i] = sum;
         }
-        StringBuilder result = new StringBuilder();
-        for (int j : array) {
-            result.append(j);
-        }
-        return result.toString();
+
+        return HugeInteger.this;
 
     }
-    public boolean isZero(String firstString){
-        return true;
-    }
 
-    public String toString(int[] number) {
-        for (int j : number) {
-            return String.format("%d", j);
-        }
-        return null;
-    }
-
-
-    public static class NotAnIntegerException extends Throwable {
+    public class NotAnIntegerException extends Throwable {
         public NotAnIntegerException(String s) {
         }
     }
-
-
 }
