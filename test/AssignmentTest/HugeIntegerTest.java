@@ -32,12 +32,16 @@ public class HugeIntegerTest {
 
     @Test
     public void parsedIntegerCanBeAddedTest() throws HugeInteger.NotAnIntegerException {
-        String firstString = "4294567897123856789692345671931834567899";
-        // String firstString =   "1111111111111111111111111111111111111110";
-        // String secondString = "1111111111111111111111111111111111111119";
-        String secondString = "1234567892123456789512345678931234567892";
+
         String result = hugeInteger.addition(firstString, secondString);
 
-        assertEquals("2469135784246913579024691357862469135784", result);
+        assertEquals("5529135780247313578704691350803069135789", result);
+    }
+
+    @Test
+    public void subtractHugeIntegerTest() throws HugeInteger.NotAnIntegerException {
+        String result = hugeInteger.subtraction(firstString, secondString);
+
+        assertEquals("3060000000000400000679999993000600000009", result);
     }
 }

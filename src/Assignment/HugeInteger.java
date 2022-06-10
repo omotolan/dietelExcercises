@@ -1,5 +1,7 @@
 package Assignment;
 
+import java.util.Arrays;
+
 public class HugeInteger {
     private final int ARRAY_SIZE = 40;
     private final int[] array;
@@ -9,9 +11,10 @@ public class HugeInteger {
     }
 
     public int[] parse(String data) throws NotAnIntegerException {
-        if (data.length() <= ARRAY_SIZE && data.length() > 0) {
-            for (int i = 0; i < array.length; i++) {
-                //  for (int i = array.length - 1; i >= 0; i--) {
+        int[] array = new int[40];
+        if (data.length() <= array.length && data.length() > 0) {
+            // for (int i = 0; i < array.length; i++) {
+            for (int i = array.length - 1; i >= 0; i--) {
                 if (Character.isDigit(data.charAt(i))) {
                     array[i] = Character.getNumericValue(data.charAt(i));
                 } else {
@@ -23,18 +26,11 @@ public class HugeInteger {
         return array;
     }
 
-    private void insert(int index, int number) {
-        for (int i = array.length - 1; i >= 0; i--) {
-            array[i] = number;
-        }
-    }
-
     public String addition(String data, String data2) throws NotAnIntegerException {
         int sum;
         int carry = 0;
         int[] firstArray = parse(data);
         int[] secondArray = parse(data2);
-
 
         for (int i = array.length - 1; i >= 0; i--) {
 
@@ -48,6 +44,7 @@ public class HugeInteger {
                 carry = 1;
                 sum -= 10;
             }
+
             array[i] = sum;
 
         }
@@ -61,11 +58,33 @@ public class HugeInteger {
     }
 
 
-    public int subtraction(String firstString, String secondString) {
+    public String subtraction(String firstString, String secondString) throws NotAnIntegerException {
+        int borrow = 0;
+        int subtraction = 0;
+        int[] firstArray = parse(firstString);
+        int[] secondArray = parse(secondString);
 
+        for (int i = array.length - 1; i >= 0; i--) {
 
-        return 0;
+            subtraction = firstArray[i] - secondArray[i] - borrow;
 
+            if (subtraction >= 0) {
+                borrow = 0;
+            } else {
+                subtraction += 10;
+                borrow = 1;
+            }
+            array[i] = subtraction;
+        }
+        StringBuilder result = new StringBuilder();
+        for (int j : array) {
+            result.append(j);
+        }
+        return result.toString();
+
+    }
+    public boolean isZero(String firstString){
+        return true;
     }
 
     public String toString(int[] number) {
