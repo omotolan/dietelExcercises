@@ -18,5 +18,7 @@ public class HugeIntegerDriver {
 
         BigInteger bigInteger4 = bigInteger.subtract(bigInteger2);
         System.out.println(bigInteger4);
+        bigInteger.equals(bigInteger4);
+
     }
 }

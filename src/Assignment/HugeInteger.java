@@ -14,7 +14,7 @@ public class HugeInteger {
                 if (Character.isDigit(value.charAt(i))) {
                     array[i] = Character.getNumericValue(value.charAt(i));
                 } else {
-                    throw new NotAnIntegerException("value at index: " + i + " not an integer.");
+                    throw new NotAnIntegerException();
                 }
             }
         }
@@ -69,8 +69,29 @@ public class HugeInteger {
         return HugeInteger.this;
     }
 
-    public class NotAnIntegerException extends Throwable {
-        public NotAnIntegerException(String s) {
+    public boolean isEqualTo(HugeInteger hugeInteger) {
+
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] != hugeInteger.array[i]) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    public boolean isNotEqualTo(HugeInteger hugeInteger) {
+
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] != hugeInteger.array[i]) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static class NotAnIntegerException extends Throwable {
+        public NotAnIntegerException() {
         }
     }
 }
