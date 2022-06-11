@@ -8,7 +8,7 @@ public class AirlineReservationSystem {
 
 
     private static int firstClassSeat;
-    private static int economyClassSeat = 6;
+    private static int economyClassSeat = 5;
 
     private static int select;
 
