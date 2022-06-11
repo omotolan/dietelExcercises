@@ -1,4 +1,4 @@
-package Chapter7;
+package Chapter7.Phon;
 
 import java.util.Scanner;
 

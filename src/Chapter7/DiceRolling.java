@@ -38,23 +38,13 @@ public class DiceRolling {
                     counter[9]++;
                 case 12:
                     counter[10]++;
-                    ;
+
             }
         }
-        for (int i = 0; i < counter.length; i++) {
-            System.out.println(counter[i]);
+        for (int j : counter) {
+            System.out.println(j);
 
         }
-//        System.out.println(counter[0]);
-//        System.out.println(counter[1]);
-//        System.out.println(counter[2]);
-//        System.out.println(counter[3]);
-//        System.out.println(counter[4]);
-//        System.out.println(counter[5]);
-//        System.out.println(counter[6]);
-//        System.out.println(counter[7]);
-//        System.out.println(counter[8]);
-//        System.out.println(counter[9]);
-//        System.out.println(counter[10]);
+
     }
 }

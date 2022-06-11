@@ -1,4 +1,4 @@
-package Chapter7;
+package Chapter7.Phon;
 
 public class Contacts {
     private String contactName;
