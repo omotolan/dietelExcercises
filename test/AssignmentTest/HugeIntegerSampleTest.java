@@ -1,6 +1,6 @@
 package AssignmentTest;
 
-import Assignment.HugeIntegerSample;
+import Assignment.HugeInteger.HugeIntegerSample;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

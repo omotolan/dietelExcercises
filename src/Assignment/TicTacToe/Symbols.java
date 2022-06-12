@@ -5,11 +5,13 @@ public enum Symbols {
     X('X'),
     E(' ');
 
-private char symbols;
-    Symbols(char o) {
-        symbols = o;
+    private final char symbols;
+
+    Symbols(char symbols) {
+        this.symbols = symbols;
     }
-    public char getSymbol(){
+
+    public char getSymbols() {
         return symbols;
     }
 }

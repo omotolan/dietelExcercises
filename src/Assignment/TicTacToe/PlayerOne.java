@@ -1,8 +1,8 @@
 package Assignment.TicTacToe;
 
-public class PlayerOne implements IPlayer{
+public class PlayerOne implements IPlayer {
     @Override
     public int move(int move) {
-return move;
+        return move;
     }
 }

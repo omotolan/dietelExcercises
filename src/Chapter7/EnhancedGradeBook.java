@@ -4,17 +4,30 @@ package Chapter7;
 public class EnhancedGradeBook {
 
 
-    private int[][] gradeBook;
 
-    public EnhancedGradeBook(int[][] gradeBook) {
-       this.gradeBook = gradeBook;
+    private int numberOfStudents;
+    private int numberOfSubjects;
+    private  int[][] gradeBook = new int[numberOfStudents][numberOfSubjects];
+
+
+//    public EnhancedGradeBook(int[][] gradeBook) {
+//       this.gradeBook= gradeBook;
+//    }
+
+
+    public void setNumberOfStudents(int numberOfStudents){
+        this.numberOfStudents = numberOfStudents;
+        System.out.println("num of stud " + this.numberOfStudents);
+    }
+    public void setNumberOfSubjects(int numberOfSubjects) {
+        this.numberOfSubjects = numberOfSubjects;
+        System.out.println("num of sub " + this.numberOfSubjects);
     }
 
-
-
     public void displayGradeBook(){
+        System.out.println(gradeBook.length);
         for (int student = 0; student < gradeBook.length; student++) {
-            System.out.println();
+            System.out.println("something");
             for (int subject = 0; subject < gradeBook[student].length; subject++) {
                 System.out.print(gradeBook[student][subject] + " ");
             }

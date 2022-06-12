@@ -1,4 +1,4 @@
-package Assignment;
+package Assignment.HugeInteger;
 
 public class HugeIntegerSample {
     private final int ARRAY_SIZE = 40;

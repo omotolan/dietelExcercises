@@ -1,6 +1,8 @@
 package AssignmentTest;
 
-import Assignment.HugeInteger;
+import Assignment.HugeInteger.HugeInteger;
+import Assignment.HugeInteger.NotAnIntegerException;
+import Assignment.HugeInteger.ValueLengthGreaterThanForty;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -13,7 +15,7 @@ public class HugeIntegerTest {
     private HugeInteger hugeInteger;
 
     @BeforeEach
-    public void startWith() throws HugeInteger.NotAnIntegerException, HugeInteger.ValueLengthGreaterThanForty {
+    public void startWith() throws ValueLengthGreaterThanForty, NotAnIntegerException {
         hugeInteger = new HugeInteger(firstString);
     }
 
@@ -23,13 +25,13 @@ public class HugeIntegerTest {
     }
 
     @Test
-    public void stringCanBeParsedToArrayIntegerTest() throws HugeInteger.NotAnIntegerException, HugeInteger.ValueLengthGreaterThanForty {
+    public void stringCanBeParsedToArrayIntegerTest() throws ValueLengthGreaterThanForty, NotAnIntegerException {
         hugeInteger.parse(firstString);
         assertEquals("4294567890123856789692345671901834567899", hugeInteger.toString());
     }
 
     @Test
-    public void hugeIntegerCanPerformAdditionTest() throws HugeInteger.NotAnIntegerException, HugeInteger.ValueLengthGreaterThanForty {
+    public void hugeIntegerCanPerformAdditionTest() throws ValueLengthGreaterThanForty, NotAnIntegerException {
         HugeInteger hugeInteger1 = new HugeInteger(secondString);
         HugeInteger hugeInteger2 = hugeInteger.add(hugeInteger1);
         String result = hugeInteger2.toString();
@@ -38,7 +40,7 @@ public class HugeIntegerTest {
     }
 
     @Test
-    public void hugeIntegerCanPerformSubtractionTest() throws HugeInteger.NotAnIntegerException, HugeInteger.ValueLengthGreaterThanForty {
+    public void hugeIntegerCanPerformSubtractionTest() throws ValueLengthGreaterThanForty, NotAnIntegerException {
         HugeInteger hugeInteger1 = new HugeInteger(secondString);
         HugeInteger hugeInteger2 = hugeInteger.subtract(hugeInteger1);
         String result = hugeInteger2.toString();
@@ -46,7 +48,7 @@ public class HugeIntegerTest {
     }
 
     @Test
-    public void hugeIntegerIsEqualToAnotherHugeIntegerTest() throws HugeInteger.NotAnIntegerException, HugeInteger.ValueLengthGreaterThanForty {
+    public void hugeIntegerIsEqualToAnotherHugeIntegerTest() throws ValueLengthGreaterThanForty, NotAnIntegerException {
         String firstString = "1111111111111111111111111111111111111111";
         String secondString = "1111111111111111111111111111111111111111";
         HugeInteger hugeInteger1 = new HugeInteger(firstString);
@@ -56,7 +58,7 @@ public class HugeIntegerTest {
     }
 
     @Test
-    public void methodHugeIntegerIsEqualToAnotherHugeIntegerDoesNotWorkOtherWayTest() throws HugeInteger.NotAnIntegerException, HugeInteger.ValueLengthGreaterThanForty {
+    public void methodHugeIntegerIsEqualToAnotherHugeIntegerDoesNotWorkOtherWayTest() throws ValueLengthGreaterThanForty, NotAnIntegerException {
         String firstString = "2111111111111111111111111111111111111111";
         String secondString = "1111111111111111111111111111111111111111";
         HugeInteger hugeInteger1 = new HugeInteger(firstString);
@@ -66,7 +68,7 @@ public class HugeIntegerTest {
     }
 
     @Test
-    public void hugeIntegerIsNotEqualToAnotherHugeIntegerTest() throws HugeInteger.NotAnIntegerException, HugeInteger.ValueLengthGreaterThanForty {
+    public void hugeIntegerIsNotEqualToAnotherHugeIntegerTest() throws ValueLengthGreaterThanForty, NotAnIntegerException {
         String firstString = "2111111111111111111111111111111111111111";
         String secondString = "1111111111111111111111111111111111111111";
         HugeInteger hugeInteger1 = new HugeInteger(firstString);
@@ -76,7 +78,7 @@ public class HugeIntegerTest {
     }
 
     @Test
-    public void methodHugeIntegerIsNotEqualToAnotherHugeIntegerDoesNotWorkOtherWayTest() throws HugeInteger.NotAnIntegerException, HugeInteger.ValueLengthGreaterThanForty {
+    public void methodHugeIntegerIsNotEqualToAnotherHugeIntegerDoesNotWorkOtherWayTest() throws ValueLengthGreaterThanForty, NotAnIntegerException {
         String firstString = "1111111111111111111111111111111111111111";
         String secondString = "1111111111111111111111111111111111111111";
         HugeInteger hugeInteger1 = new HugeInteger(firstString);
@@ -86,7 +88,7 @@ public class HugeIntegerTest {
     }
 
     @Test
-    public void hugeIntegerIsGreaterThanAnotherHugeIntegerTest() throws HugeInteger.NotAnIntegerException, HugeInteger.ValueLengthGreaterThanForty {
+    public void hugeIntegerIsGreaterThanAnotherHugeIntegerTest() throws ValueLengthGreaterThanForty, NotAnIntegerException {
         String firstString = "2111111111111111111111111111111111111111";
         String secondString = "1111111111111111111111111111111111111111";
         HugeInteger hugeInteger1 = new HugeInteger(firstString);
@@ -96,7 +98,7 @@ public class HugeIntegerTest {
     }
 
     @Test
-    public void hugeIntegerIsGreaterThanAnotherHugeIntegerDoesNotWorkOtherWayTest() throws HugeInteger.NotAnIntegerException, HugeInteger.ValueLengthGreaterThanForty {
+    public void hugeIntegerIsGreaterThanAnotherHugeIntegerDoesNotWorkOtherWayTest() throws ValueLengthGreaterThanForty, NotAnIntegerException {
         String firstString = "1111111111111111111111111111111111111111";
         String secondString = "2111111111111111111111111111111111111111";
         HugeInteger hugeInteger1 = new HugeInteger(firstString);
@@ -106,7 +108,7 @@ public class HugeIntegerTest {
     }
 
     @Test
-    public void hugeIntegerIsLessThanAnotherHugeIntegerTest() throws HugeInteger.NotAnIntegerException, HugeInteger.ValueLengthGreaterThanForty {
+    public void hugeIntegerIsLessThanAnotherHugeIntegerTest() throws ValueLengthGreaterThanForty, NotAnIntegerException {
         String firstString = "2111111111111111111111111111111111111111";
         String secondString = "1111111111111111111111111111111111111111";
         HugeInteger hugeInteger1 = new HugeInteger(firstString);
@@ -116,7 +118,7 @@ public class HugeIntegerTest {
     }
 
     @Test
-    public void hugeIntegerIsLessThanAnotherHugeIntegerDoesNotWorkOtherWayTest() throws HugeInteger.NotAnIntegerException, HugeInteger.ValueLengthGreaterThanForty {
+    public void hugeIntegerIsLessThanAnotherHugeIntegerDoesNotWorkOtherWayTest() throws ValueLengthGreaterThanForty, NotAnIntegerException {
         String firstString = "2111111111111111111111111111111111111111";
         String secondString = "1111111111111111111111111111111111111111";
         HugeInteger hugeInteger1 = new HugeInteger(firstString);
@@ -126,7 +128,7 @@ public class HugeIntegerTest {
     }
 
     @Test
-    public void isGreaterThanOrEqualToTest() throws HugeInteger.NotAnIntegerException, HugeInteger.ValueLengthGreaterThanForty {
+    public void isGreaterThanOrEqualToTest() throws ValueLengthGreaterThanForty, NotAnIntegerException {
         String firstString = "2111111111111111111111111111111111111111";
         String secondString = "1111111111111111111111111111111111111111";
         HugeInteger hugeInteger1 = new HugeInteger(firstString);
@@ -136,7 +138,7 @@ public class HugeIntegerTest {
     }
 
     @Test
-    public void isLessThanOrEqualToTest() throws HugeInteger.NotAnIntegerException, HugeInteger.ValueLengthGreaterThanForty {
+    public void isLessThanOrEqualToTest() throws ValueLengthGreaterThanForty, NotAnIntegerException {
         String firstString = "0111111111111111111111111111111111111111";
         String secondString = "1111111111111111111111111111111111111111";
         HugeInteger hugeInteger1 = new HugeInteger(firstString);
@@ -146,7 +148,7 @@ public class HugeIntegerTest {
     }
 
     @Test
-    public void multiplyTest() throws HugeInteger.ValueLengthGreaterThanForty, HugeInteger.NotAnIntegerException {
+    public void multiplyTest() throws ValueLengthGreaterThanForty, NotAnIntegerException {
        // yet to crack
         String firstString = "2111111111111111111111111111111111111111";
         String secondString = "2111111111111111111111111111111111111111";

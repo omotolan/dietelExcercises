@@ -1,4 +1,4 @@
-package Assignment;
+package Assignment.HugeInteger;
 
 public class HugeInteger {
     private final int[] array = new int[40];
@@ -84,32 +84,39 @@ public class HugeInteger {
 
     public boolean isNotEqualTo(HugeInteger hugeInteger) {
 
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] != hugeInteger.array[i]) {
-                return true;
-            }
-        }
-        return false;
+        return (!isEqualTo(hugeInteger));
     }
 
     public boolean isGreaterThan(HugeInteger hugeInteger) {
-
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] > hugeInteger.array[i]) {
-                return true;
-            }
+        int counter = 0;
+        while (array[counter] == hugeInteger.array[counter]) {
+            counter++;
         }
-        return false;
+
+        return (array[counter] > hugeInteger.array[counter]);
+
+//        for (int i = 0; i < array.length; i++) {
+//            if (array[i] > hugeInteger.array[i]) {
+//                return true;
+//            }
+//        }
+//        return false;
     }
 
     public boolean isLessThan(HugeInteger hugeInteger) {
 
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] < hugeInteger.array[i]) {
-                return true;
-            }
+        int counter = 0;
+        while (array[counter] == hugeInteger.array[counter]) {
+            counter++;
         }
-        return false;
+        return (array[counter] < hugeInteger.array[counter]);
+
+//        for (int i = 0; i < array.length; i++) {
+//            if (array[i] < hugeInteger.array[i]) {
+//                return true;
+//            }
+//        }
+//        return false;
     }
 
     public boolean isGreaterThanOrEqualTo(HugeInteger hugeInteger) {
@@ -147,13 +154,5 @@ public class HugeInteger {
         return HugeInteger.this;
     }
 
-    public static class NotAnIntegerException extends Throwable {
-        public NotAnIntegerException(String s) {
-        }
-    }
 
-    public class ValueLengthGreaterThanForty extends Throwable {
-        public ValueLengthGreaterThanForty(String s) {
-        }
-    }
 }

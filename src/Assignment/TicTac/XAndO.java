@@ -1,4 +1,4 @@
-package Assignment.TicTacToe;
+package Assignment.TicTac;
 
 
 import java.util.Random;
@@ -14,7 +14,7 @@ public class XAndO {
                 {'_', '|', '_', '|', '_'},
                 {' ', '|', ' ', '|', ' '}
         };
-       // int userInput = input.nextInt();
+
 
         printBoard(gameBoard);
         boolean gameOver = false;
@@ -38,13 +38,11 @@ public class XAndO {
 
         if (xWins(gameBoard)) {
             System.out.println("Game won");
-        } else if (oWins(gameBoard)){
+        } else if (oWins(gameBoard)) {
             System.out.println("game lost");
-        }
-        else if (isTie(gameBoard)){
+        } else if (isTie(gameBoard)) {
             System.out.println("tie");
         }
-        //  System.out.println(result);
     }
 
     private static void printBoard(char[][] gameBoard) {
@@ -84,8 +82,9 @@ public class XAndO {
             isValid = isValidMove(move, gameBoard);
         }
         updateMoves(move, 1, gameBoard);
-       // input.next();
+        // input.next();
     }
+
     private static void secondPlayerMove(char[][] gameBoard) {
 
         System.out.println("Enter options, (1-9)");
@@ -98,7 +97,7 @@ public class XAndO {
             isValid = isValidMove(move, gameBoard);
         }
         updateMoves(move, 2, gameBoard);
-       // input.next();
+
     }
 
 
@@ -167,7 +166,7 @@ public class XAndO {
     }
 
     private static boolean oWins(char[][] gameBoard) {
-       if (gameBoard[0][0] == 'O' && gameBoard[0][2] == 'O' && gameBoard[0][4] == 'O') {
+        if (gameBoard[0][0] == 'O' && gameBoard[0][2] == 'O' && gameBoard[0][4] == 'O') {
             return true;
         } else if (gameBoard[1][0] == 'O' && gameBoard[1][2] == 'O' && gameBoard[1][4] == 'O') {
             return true;
@@ -187,7 +186,8 @@ public class XAndO {
 
         return false;
     }
-    public static boolean xWins(char[][] gameBoard){
+
+    public static boolean xWins(char[][] gameBoard) {
         if (gameBoard[0][0] == 'X' && gameBoard[0][2] == 'X' && gameBoard[0][4] == 'X') {
             return true;
         } else if (gameBoard[1][0] == 'X' && gameBoard[1][2] == 'X' && gameBoard[1][4] == 'X') {
@@ -207,6 +207,7 @@ public class XAndO {
         }
         return false;
     }
+
     public static boolean isTie(char[][] gameBoard) {
         return gameBoard[0][0] != '_' && gameBoard[0][2] != '_' && gameBoard[0][4] != '_'
                 && gameBoard[1][0] != '_' && gameBoard[1][2] != '_' && gameBoard[1][4] != '_'
