@@ -11,7 +11,7 @@ public class EnhancedGradeBookDriver {
         // System.out.println("enter score: ");
         // sey(input.nextInt());
 
-setInput();
+        setInput();
 
       //  setGrade();
         enhancedGradeBook.displayGradeBook();

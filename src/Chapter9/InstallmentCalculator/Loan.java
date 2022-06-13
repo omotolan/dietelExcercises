@@ -1,4 +1,4 @@
-package Chapter9.Loan;
+package Chapter9.InstallmentCalculator;
 
 public class Loan {
     private int principalLoanAmount;

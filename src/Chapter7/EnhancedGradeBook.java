@@ -4,10 +4,23 @@ package Chapter7;
 public class EnhancedGradeBook {
 
 
+    public int getNumberOfStudents() {
+        return numberOfStudents;
+    }
+
+    public int getNumberOfSubjects() {
+        return numberOfSubjects;
+    }
+
+    public int[][] getGradeBook() {
+        return gradeBook;
+    }
 
     private int numberOfStudents;
     private int numberOfSubjects;
-    private  int[][] gradeBook = new int[numberOfStudents][numberOfSubjects];
+    private  int[][] gradeBook;
+
+
 
 
 //    public EnhancedGradeBook(int[][] gradeBook) {
@@ -26,11 +39,12 @@ public class EnhancedGradeBook {
 
     public void displayGradeBook(){
         System.out.println(gradeBook.length);
-        for (int student = 0; student < gradeBook.length; student++) {
+        for (int student = 0; student < getNumberOfStudents(); student++) {
             System.out.println("something");
-            for (int subject = 0; subject < gradeBook[student].length; subject++) {
+            for (int subject = 0; subject < getNumberOfSubjects(); subject++) {
                 System.out.print(gradeBook[student][subject] + " ");
             }
+            System.out.println();
         }
     }
 

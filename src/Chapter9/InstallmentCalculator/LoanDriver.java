@@ -1,4 +1,4 @@
-package Chapter9.Loan;
+package Chapter9.InstallmentCalculator;
 
 import java.util.Scanner;
 
