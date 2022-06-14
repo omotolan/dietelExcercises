@@ -57,41 +57,39 @@ public class DiaryDriver {
     private static void homePage() {
         String decor = "-";
         boolean quit = false;
-        int selection = 0;
+        int selection;
         System.out.println(decor.repeat(20) + " Diary " + decor.repeat(20));
 
-        while (!quit) {
-            instructions();
-            numberOfEntries();
-            System.out.println("Enter selection: ");
+        do {
             try {
+                instructions();
+                numberOfEntries();
+                System.out.println("Enter selection: ");
 
                 selection = input.nextInt();
+
+                switch (selection) {
+                    case 1 -> createEntry();
+                    case 2 -> findEntry();
+                    case 3 -> deleteEntry();
+                    case 4 -> clearAllEntries();
+                    case 5 -> changePassword();
+                    case 6 -> lockDiary();
+                    case 7 -> {
+                        quit = true;
+                        System.out.println(decor.repeat(20) + " Goodbye!!! " + decor.repeat(20));
+                    }
+                    default -> {
+                        System.out.println("Selection Invalid.");
+                        homePage();
+                    }
+                }
+            } catch (InputMismatchException exception) {
+                System.err.println("Input mismatch");
                 input.nextLine();
+                System.out.println("You must enter an integer. Try again !!!");
             }
-            catch (InputMismatchException exception){
-                System.out.println("enter an integer!!!");
-               // homePage();
-               // return;
-                System.exit(6);
-            }
-            switch (selection) {
-                case 1 -> createEntry();
-                case 2 -> findEntry();
-                case 3 -> deleteEntry();
-                case 4 -> clearAllEntries();
-                case 5 -> changePassword();
-                case 6 -> lockDiary();
-                case 7 -> {
-                    quit = true;
-                    System.out.println(decor.repeat(20) + " Goodbye!!! " + decor.repeat(20));
-                }
-                default -> {
-                    System.out.println("Selection Invalid.");
-                    homePage();
-                }
-            }
-        }
+        } while (!quit);
     }
 
     private static void createEntry() {

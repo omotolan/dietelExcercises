@@ -1,5 +1,6 @@
 package Chapter7;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class AirlineReservationSystemDriver {
@@ -36,22 +37,29 @@ public class AirlineReservationSystemDriver {
 
     private static void choice() {
         prompt();
-        int choice = input.nextInt();
-        switch (choice) {
-            case 1 -> {
-                air.setFirstClass();
-                firstClassSeatNumber();
-            }
-            case 2 -> {
-                air.setEconomy();
-                economyClassSeatNumber();
-            }
-            default -> {
-                System.out.println("Invalid selection, Try again");
-                prompt();
-                choice();
-            }
+        try {
 
+            int choice = input.nextInt();
+            switch (choice) {
+                case 1 -> {
+                    air.setFirstClass();
+                    firstClassSeatNumber();
+                }
+                case 2 -> {
+                    air.setEconomy();
+                    economyClassSeatNumber();
+                }
+                default -> {
+                    System.out.println("Invalid selection, Try again");
+                    prompt();
+                    choice();
+                }
+
+            }
+        } catch (InputMismatchException inputMismatchException) {
+            System.err.println("Input mismatch. Try again.");
+            input.nextLine();
+            System.out.println("Enter an integer");
         }
     }
 
@@ -99,25 +107,40 @@ public class AirlineReservationSystemDriver {
     }
 
     private static void responseForFirstClass() {
-        System.out.println("Press 1 yes to proceed and 2 to cancel: ");
-        int response = input.nextInt();
-        if (response == 1) {
-            air.setEconomy();
-        } else {
-            nextFlightSchedule();
-            System.exit(-1);
+        try {
+
+            System.out.println("Press 1 yes to proceed and 2 to cancel: ");
+            int response = input.nextInt();
+            if (response == 1) {
+                air.setFirstClass();
+            } else {
+                nextFlightSchedule();
+
+            }
+        } catch (InputMismatchException inputMismatchException) {
+            System.out.println("Input mismatch. Try again!!!");
+            input.nextLine();
+            System.out.println("Press 1 yes to proceed and 2 to cancel: ");
+
         }
 
     }
 
     private static void responseForEconomyClass() {
-        System.out.println("Press 1 yes to proceed: ");
-        int response = input.nextInt();
-        if (response == 1) {
-            air.setEconomy();
-        } else {
-            nextFlightSchedule();
-            System.exit(-1);
+        try {
+            System.out.println("Press 1 yes to proceed and 2 to cancel: ");
+            int response = input.nextInt();
+            if (response == 1) {
+                air.setEconomy();
+            } else {
+                nextFlightSchedule();
+
+            }
+        } catch (InputMismatchException inputMismatchException) {
+            System.out.println("Input mismatch. Try again!!!");
+            input.nextLine();
+            System.out.println("Press 1 yes to proceed and 2 to cancel: ");
+
         }
     }
 
