@@ -16,10 +16,10 @@ public class MySet implements CustomList {
     }
 
     @Override
-    public void add(Object data) {
-        if (!contains(data)) {
+    public void add(Object value) {
+        if (!contains(value)) {
             array = grow();
-            array[counter] = data;
+            array[counter] = value;
             counter++;
         }
     }
@@ -34,13 +34,13 @@ public class MySet implements CustomList {
     }
 
     @Override
-    public void add(int index, Object data) {
+    public void add(int index, Object value) {
 
-        if (!contains(data)) {
+        if (!contains(value)) {
             Object[] newArray = new Object[array.length + 1];
             System.arraycopy(array, index, newArray, index + 1, newArray.length - index - 1);
             System.arraycopy(array, 0, newArray, 0, index);
-            newArray[index] = data;
+            newArray[index] = value;
             array = newArray;
             counter++;
         }
@@ -53,9 +53,9 @@ public class MySet implements CustomList {
     }
 
     @Override
-    public boolean contains(Object data) {
+    public boolean contains(Object value) {
         for (Object o : array) {
-            if (data.equals(o)) {
+            if (value.equals(o)) {
                 return true;
             }
         }
@@ -70,11 +70,11 @@ public class MySet implements CustomList {
     }
 
     @Override
-    public int indexOf(Object data) {
+    public int indexOf(Object value) {
         Object element;
         for (int i = 0; i < array.length; i++) {
             element = array[i];
-            if (data.equals(element)) {
+            if (value.equals(element)) {
                 return i;
             }
         }
@@ -82,9 +82,9 @@ public class MySet implements CustomList {
     }
 
     @Override
-    public void remove(Object data) {
-        if (contains(data)) {
-            int indexOfObj = indexOf(data);
+    public void remove(Object value) {
+        if (contains(value)) {
+            int indexOfObj = indexOf(value);
             int newSize = array.length - 1;
             System.arraycopy(array, indexOfObj + 1, array, indexOfObj, newSize - indexOfObj);
             counter--;
@@ -107,9 +107,9 @@ public class MySet implements CustomList {
     }
 
     @Override
-    public void set(int index, Object data) {
+    public void set(int index, Object value) {
         outOfBoundMessage(index);
-        array[index] = data;
+        array[index] = value;
 
     }
 

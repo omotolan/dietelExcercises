@@ -8,8 +8,8 @@ public class MyLinkedList implements ILinkedList {
     private int counter;
 
     @Override
-    public void add(Object data) {
-        Node node = new Node(data);
+    public void add(Object value) {
+        Node node = new Node(value);
         head = node;
         tail = head;
 
@@ -22,29 +22,30 @@ public class MyLinkedList implements ILinkedList {
     }
 
     @Override
-    public void add(int reference, Object data) {
+    public void add(int reference, Object value) {
 
     }
 
     @Override
-    public void addAtStart(Object data) {
+    public void addAtStart(Object value) {
         Node temp = head;
-        Node node = new Node(data);
+        Node node = new Node(value);
         head = node;
-        head.next = temp;
+        node.next = temp;
         counter++;
 
     }
 
     @Override
-    public void addAtLast(Object data) {
+    public void addAtLast(Object value) {
+
         Node temp = tail;
-        Node node = new Node(data);
-        tail = node; // or tail
+        Node node = new Node(value);
         if (temp == null) {
             head = node;
         } else {
             temp.next = node;
+            tail = node;
         }
         counter++;
 
@@ -88,14 +89,14 @@ public class MyLinkedList implements ILinkedList {
     }
 
     @Override
-    public boolean contains(Object data) {
+    public boolean contains(Object value) {
         if (head == null) {
             throw new NoSuchElementException();
         }
         Node temp = head;
         while (temp != null) {
             temp = temp.next;
-            if (data.equals(temp)) {
+            if (value.equals(temp)) {
                 return true;
             }
         }
@@ -109,7 +110,7 @@ public class MyLinkedList implements ILinkedList {
             throw new NoSuchElementException();
         }
         Node temp = tail;
-        return temp.data;
+        return temp.value;
     }
 
     @Override
@@ -118,7 +119,7 @@ public class MyLinkedList implements ILinkedList {
             throw new NoSuchElementException();
         }
         Node temp = head;
-        return temp.data;
+        return temp.value;
     }
 
     @Override
@@ -142,15 +143,15 @@ public class MyLinkedList implements ILinkedList {
     }
 
     private class Node {
-        private Object data;
+        private Object value;
         private Node next;
 
-        public Node(Object data) {
-            this.data = data;
+        public Node(Object value) {
+            this.value = value;
         }
 
-        private Node(Object data, Node next) {
-            this.data = data;
+        private Node(Object value, Node next) {
+            this.value = value;
             this.next = next;
         }
     }
