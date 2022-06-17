@@ -1,13 +1,13 @@
 package DSA;
 
-public interface ILinkedList {
-    void add(Object value);
+public interface ILinkedList<E> {
+    void add(E value);
 
-    void add(int reference, Object value);
+    void add(int reference, E value);
 
-    void addAtStart(Object value);
+    void addAtStart(E value);
 
-    void addAtLast(Object value);
+    void addAtLast(E value);
 
     boolean isEmpty();
 
@@ -15,15 +15,15 @@ public interface ILinkedList {
 
     void deleteLast();
 
-    boolean contains(Object value);
+    boolean contains(E value);
 
-    Object getLast();
+    E getLast();
 
-    Object getFirst();
+    E getFirst();
 
     void display();
 
-    Object get(int index);
+    E get(int index);
 
     int size();
 }

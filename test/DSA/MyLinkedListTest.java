@@ -6,11 +6,11 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class MyLinkedListTest {
-    private MyLinkedList myLinkedList;
+    private MyLinkedList<Integer> myLinkedList;
 
     @BeforeEach
     public void startWith() {
-        myLinkedList = new MyLinkedList();
+        myLinkedList = new MyLinkedList<>();
     }
     @Test
     public void linkedListCanBeCreatedTest(){

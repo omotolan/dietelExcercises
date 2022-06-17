@@ -1,7 +1,7 @@
 package Chapter7;
 
+import java.util.*;
 import java.util.Arrays;
-import java.util.Scanner;
 
 public class SortArrayDescendingOrder {
     static Scanner input = new Scanner(System.in);
@@ -14,7 +14,10 @@ public class SortArrayDescendingOrder {
         sortArrayInDescendingOrder(numbers);
         printArray(numbers);
 
+
+
     }
+
     public static int[] collectInput(int number){
         System.out.println("Enter " + number + " numbers: ");
         int[] values = new int[number];
@@ -32,12 +35,11 @@ public class SortArrayDescendingOrder {
 
     }
     public static void sortArrayInDescendingOrder(int [] array){
-        Arrays.sort(array);
-
-        for (int i = 0; i < array.length ; i++) {
-            
-        }
-
+        Integer[] numbers = {45, 45, 2, 3, 6, 87, 6, 34, 23};
+        Arrays.sort(numbers);
+        List<Integer> nums = Arrays.asList(numbers);
+        nums.sort(Collections.reverseOrder());
+        printArray(array);
     }
 
 }

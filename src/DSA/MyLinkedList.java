@@ -2,13 +2,13 @@ package DSA;
 
 import java.util.NoSuchElementException;
 
-public class MyLinkedList implements ILinkedList {
+public class MyLinkedList<E> implements ILinkedList<E> {
     private Node head;
     private Node tail;
     private int counter;
 
     @Override
-    public void add(Object value) {
+    public void add(E value) {
         Node node = new Node(value);
         head = node;
         tail = head;
@@ -22,12 +22,12 @@ public class MyLinkedList implements ILinkedList {
     }
 
     @Override
-    public void add(int reference, Object value) {
+    public void add(int reference, E value) {
 
     }
 
     @Override
-    public void addAtStart(Object value) {
+    public void addAtStart(E value) {
         Node temp = head;
         Node node = new Node(value);
         head = node;
@@ -37,7 +37,7 @@ public class MyLinkedList implements ILinkedList {
     }
 
     @Override
-    public void addAtLast(Object value) {
+    public void addAtLast(E value) {
 
         Node temp = tail;
         Node node = new Node(value);
@@ -104,7 +104,7 @@ public class MyLinkedList implements ILinkedList {
     }
 
     @Override
-    public Object getLast() {
+    public E getLast() {
 
         if (tail == null) {
             throw new NoSuchElementException();
@@ -114,7 +114,7 @@ public class MyLinkedList implements ILinkedList {
     }
 
     @Override
-    public Object getFirst() {
+    public E getFirst() {
         if (head == null) {
             throw new NoSuchElementException();
         }
@@ -133,7 +133,7 @@ public class MyLinkedList implements ILinkedList {
     }
 
     @Override
-    public Object get(int index) {
+    public E get(int index) {
         return null;
     }
 
@@ -143,14 +143,14 @@ public class MyLinkedList implements ILinkedList {
     }
 
     private class Node {
-        private Object value;
+        private E value;
         private Node next;
 
-        public Node(Object value) {
+        public Node(E value) {
             this.value = value;
         }
 
-        private Node(Object value, Node next) {
+        private Node(E value, Node next) {
             this.value = value;
             this.next = next;
         }
