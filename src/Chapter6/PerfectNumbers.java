@@ -6,6 +6,7 @@ public class PerfectNumbers {
     static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
+        //perfect number, a positive integer that is equal to the sum of its proper divisors.
         System.out.println("To determine is a number is a perfect number.");
         int number = 0;
         while (number != -1) {
